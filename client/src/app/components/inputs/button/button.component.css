@@ -1,0 +1,92 @@
+.button {
+    /* width: fit-content; */
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "League Gothic", sans-serif !important;
+    text-transform: uppercase;
+    border-radius: 0.1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.button-type-sharp {
+    border-radius: 0px;
+}
+
+.button-type-round {
+    border-radius: 100px !important;
+}
+
+.button-variant-fill-dark {
+    background: white;
+    color: #080909;
+}
+
+.button-variant-outline-dark {
+    background: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-variant-fill-light {
+    background: #080909;
+    color: white;
+}
+
+.button-variant-outline-light {
+    background: none;
+    border: 1px solid #080909;
+    color: #080909;
+}
+
+.button-variant-fill-red {
+    background: #FD1313;
+    color: white;
+}
+
+.button-variant-outline-red {
+    background: none;
+    border: 1px solid #FD1313;
+    color: #FD1313;
+}
+
+/* BUTTON ANIMATION */
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    /* width: fit-content; */
+    height: 100%;
+    border-radius: inherit;
+    visibility: hidden;
+    background-color: var(--color);
+}
+
+.button::before {
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease, visibility 0s 0.4s;
+}
+
+.button::after {
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s ease 0.2s, visibility 0s 0.4s;
+}
+
+.button:hover::before,
+.button:hover::after {
+    transform: scale(2);
+    visibility: visible;
+}
+
+.button:hover {
+    border-color: var(--color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

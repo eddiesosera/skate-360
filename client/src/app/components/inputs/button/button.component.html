@@ -1,0 +1,13 @@
+<div [ngClass]="{
+    'button-type-sharp': type === 'sharp',
+    'button-type-round': type === 'round',
+    'button-variant-fill-dark': variant === 'fill' && accent==='dark',
+    'button-variant-fill-light': variant === 'fill' && accent==='light',
+    'button-variant-fill-red': variant === 'fill' && accent==='red',
+    'button-variant-outline-dark': variant === 'outline' && accent==='dark',
+    'button-variant-outline-light': variant === 'outline' && accent==='light',
+    'button-variant-outline-red': variant === 'outline' && accent==='red',
+    'button': true
+  }" [style.width]="width">
+    <ng-content></ng-content>
+</div>
