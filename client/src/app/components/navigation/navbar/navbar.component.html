@@ -3,7 +3,9 @@
     <app-search-bar style="width: 100%;"></app-search-bar>
     <ul class="navbar-items-wrap">
 
-        <li class="navbar-item" *ngFor="let navItem of navItems" aria-describedby="tooltip">
+        <li class="navbar-item" [id]="'navbar-item'" *ngFor="let navItem of navItems"
+            (mouseenter)="showTooltip(); tooltipText=navItem.title" (mouseleave)="isTooltipVisible=true"
+            (mouseleave)="isTooltipVisible=false" aria-describedby="tooltip">
             <a [ngClass]="{'activePage':currentPage===navItem.link}" class="navbar-item-link"
                 [routerLink]="navItem.link" routerLinkActive="active" ariaCurrentActive="active">
                 <i [class]="navItem.icon" class="icon-20"></i>
@@ -11,7 +13,7 @@
                     {{navItem.title}}
                 </div>
             </a>
-            <!-- <div id="tooltip" role="tooltip">My tooltip</div> -->
+            <app-tooltip *ngIf="isTooltipVisible" [text]="tooltipText" role="tooltip"></app-tooltip>
         </li>
 
     </ul>
