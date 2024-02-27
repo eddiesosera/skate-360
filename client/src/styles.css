@@ -3,3 +3,26 @@ body {
     background-color: black;
     color: white;
 }
+
+.font-ibm-plex-mono {
+    font-family: "IBM Plex Mono", monospace;
+    ;
+}
+
+.icon-24 {
+    font-size: 24px;
+}
+
+.icon-22 {
+    font-size: 22px;
+}
+
+.icon-20 {
+    font-size: 20px;
+}
+
+.heading-ibm {
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 400;
+}
