@@ -4,8 +4,7 @@
     <ul class="navbar-items-wrap">
 
         <li class="navbar-item" [id]="'navbar-item'" *ngFor="let navItem of navItems"
-            (mouseenter)="showTooltip(); tooltipText=navItem.title" (mouseleave)="isTooltipVisible=true"
-            (mouseleave)="isTooltipVisible=false" aria-describedby="tooltip">
+            (mouseenter)="showTooltip(); tooltipText=navItem.title" aria-describedby="tooltip">
             <a [ngClass]="{'activePage':currentPage===navItem.link}" class="navbar-item-link"
                 [routerLink]="navItem.link" routerLinkActive="active" ariaCurrentActive="active">
                 <i [class]="navItem.icon" class="icon-20"></i>
@@ -13,7 +12,7 @@
                     {{navItem.title}}
                 </div>
             </a>
-            <app-tooltip *ngIf="isTooltipVisible" [text]="tooltipText" role="tooltip"></app-tooltip>
+            <app-tooltip *ngIf="showTooltip" [text]="tooltipText" role="tooltip"></app-tooltip>
         </li>
 
     </ul>
