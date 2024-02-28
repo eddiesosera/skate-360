@@ -3,10 +3,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #222;
-    color: white;
+    background: rgba(8, 9, 9, 0.8);
+    color: rgb(182, 182, 182);
+    border: 0.5px solid rgb(31, 31, 31);
     font-weight: bold;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 90%;
+    padding: 5px 10px;
+    border-radius: 0.1rem;
+    font-size: 0.5rem;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    /* text-transform: uppercase; */
+    font-weight: 500;
+    filter: blur(10);
 }
