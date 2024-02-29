@@ -1,0 +1,21 @@
+/* main warehouse page container */
+.warehouse-main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* side navbar */
+.warehouse-sidebar-container{
+    width: 60px;
+    height: 1067px;
+}
+
+/* heading text container */
+.warehouse-text-heading-container{
+    width: 100%;
+}
+
+/* card conatainer */
+.warehouse-card-container{
+width: 100%;
+}
