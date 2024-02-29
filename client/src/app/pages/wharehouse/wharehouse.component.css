@@ -1,21 +1,86 @@
+/* doenst seem to work */
+/* :root {
+    --red: '#FD1313';
+} */
+
+*{
+    scroll-behavior: smooth;
+}
+
+.warehouse-divider{
+    height: 2px;
+    width: 95%;
+    background-color: #ffffff31;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /* main warehouse page container */
-.warehouse-main-container{
+.warehouse-main-container {
     display: flex;
     flex-direction: row;
 }
 
 /* side navbar */
-.warehouse-sidebar-container{
+.warehouse-sidebar-container {
     width: 60px;
     height: 1067px;
 }
 
-/* heading text container */
-.warehouse-text-heading-container{
+.wharehouse-rightside-con {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
     width: 100%;
 }
 
+/* heading text container */
+.warehouse-text-heading-container {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.warehouse-text-heading-container h1 {
+    font-size: 64px;
+    margin: 0;
+    margin-top: 20px;
+    color: #FD1313;
+    user-select: none;
+}
+
+.warehouse-text-heading-container p {
+    margin: 0;
+    font-family: 16px;
+    color: #FD1313;
+    user-select: none;
+}
+
 /* card conatainer */
-.warehouse-card-container{
-width: 100%;
+.warehouse-card-container {
+    margin-top: 20px;
+    width: 95%;
+    /* border-top: 1px solid #ffffff5d; */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: self-start; */
+    gap: 20px;
+
+    /* padding: 20px; */
+}
+
+.warehouse-card-test{
+    width: 435px;
+    height: 796px;
+    background-color: rgba(255, 255, 255, 0.11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

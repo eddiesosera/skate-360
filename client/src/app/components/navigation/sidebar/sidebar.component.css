@@ -1,0 +1,5 @@
+.sideNavbar-main-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
