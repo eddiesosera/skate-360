@@ -5,9 +5,13 @@
     z-index: 1;
     top: 0;
     left: 0;
+    width: 100%;
+    object-fit: cover;
 }
 
 .home-hero-img-letterhead-blur {
+    width: 100%;
+    object-fit: cover;
     filter: blur(0px);
     animation: pulse 4s infinite;
 }
