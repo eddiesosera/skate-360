@@ -1,0 +1,25 @@
+.home-hero {}
+
+.home-hero-img-letterhead {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.home-hero-img-letterhead-blur {
+    filter: blur(0px);
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        filter: blur(0px);
+    }
+
+    50% {
+        filter: blur(15px);
+    }
+}

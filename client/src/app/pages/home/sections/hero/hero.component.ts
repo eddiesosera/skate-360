@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  letterhead: any = '../../../../../assets/img/skateLetterFX2.png'
+
 }
