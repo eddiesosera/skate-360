@@ -13,6 +13,11 @@
     justify-content: space-between;
 }
 
+.navbar-logo {
+    text-decoration: none !important;
+    color: #686C68;
+}
+
 .navbar-items-wrap {
     display: flex;
     padding: 0;
