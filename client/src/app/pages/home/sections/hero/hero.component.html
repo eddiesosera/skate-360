@@ -1,20 +1,37 @@
-<div class="home-hero">
+<atropos>
+    <div class="home-hero">
+        <div slot="root">
+            <div slot="scale">
+                <div slot="rotate">
 
-    <div class="home-hero-img-letterhead-wrap">
+                    <atropos>
+                        <div slot="root">
+                            <div slot="scale">
+                                <div slot="rotate">
+                                    <div class="home-hero-img-letterhead-wrap" slot="scale">
+                                        <img class="home-hero-img-letterhead-blur" [src]="letterhead"
+                                            alt="Skate Letterhead" />
+                                        <div class="home-hero-img-letterhead-imagewrap">
+                                            <img class="home-hero-img-letterhead" [src]="letterhead"
+                                                alt="Skate Letterhead" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </atropos>
 
-        <img class="home-hero-img-letterhead-blur" [src]="letterhead" alt="Skate Letterhead" />
-        <div class="home-hero-img-letterhead-imagewrap">
-            <img class="home-hero-img-letterhead" [src]="letterhead" alt="Skate Letterhead" />
+
+                    <div class="hero-skateboard-wrap">
+                        <div class="hero-text-wrap">
+                            <div class="hero-text">Skate 360</div>
+                            <div class="hero-text-bg"></div>
+                        </div>
+                        <img class="hero-img-skateboard" [src]="skateboardImg" alt="Skateboard Image" />
+                    </div>
+
+                </div>
+            </div>
         </div>
-
     </div>
-
-    <div class="hero-skateboard-wrap">
-        <div class="hero-text-wrap">
-            <div class="hero-text">Skate 360</div>
-            <div class="hero-text-bg"></div>
-        </div>
-        <img class="hero-img-skateboard" [src]="skateboardImg" alt="Skateboard Image" />
-    </div>
-
-</div>
+</atropos>

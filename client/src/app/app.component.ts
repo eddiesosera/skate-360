@@ -2,6 +2,8 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
+import 'atropos/css'
+import 'atropos/atropos.css'
 
 @Component({
   selector: 'app-root',
