@@ -1,6 +1,17 @@
-<app-navbar></app-navbar>
+<div>
+    <app-navbar></app-navbar>
+    <main class="main">
+    </main>
 
-<main class="main">
-</main>
+    <div class="background-video-wrap">
+        <div class="background-video-blur"></div>
+        <video class="background-video" autoplay muted loop>
+            <source class="background-video" src="../assets/video/grunge_textures.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- <button onclick="document.querySelector('.background-video').play()">Play Video</button> -->
+
+</div>
 
 <router-outlet />

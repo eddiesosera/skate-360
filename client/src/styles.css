@@ -5,6 +5,16 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Skate Fall';
+    src: url('./assets/font/Skate\ Fall\ -\ TTF.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Skate Fall Italic';
+    src: url('./assets/font/Skate\ Fall\ Italic\ -\ TTF.ttf') format('truetype');
+}
+
 .font-ibm-plex-mono {
     font-family: "IBM Plex Mono", monospace;
     ;

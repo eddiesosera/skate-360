@@ -1,0 +1,28 @@
+.background-video-wrap {
+    /* background: blue; */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.background-video-blur {
+    background: #080909;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.95;
+    filter: blur(20px);
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    z-index: -2;
+    filter: blur(10px);
+}
