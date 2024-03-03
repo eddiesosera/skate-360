@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import simpleParallax from 'simple-parallax-js';
 import Atropos, { AtroposInstance, AtroposOptions } from 'atropos';
 import { AtroposComponent, AtroposModule } from 'atropos-angular';
@@ -33,7 +33,7 @@ export class HeroComponent implements AfterViewInit {
         console.log('Rotate', x, y);
       }
     });
-  }
+  };
 
   ngAfterViewInit(): void {
     new simpleParallax(this.image1, {
