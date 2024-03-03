@@ -93,17 +93,17 @@ atropos {
 }
 
 .hero-down-icon {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .hero-down-icon-bg {
     height: 10px;
-    width: 40px;
+    width: 30px;
     border-radius: 20px;
     z-index: -1;
     background: #121212;
     position: absolute;
-    filter: blur(15px);
+    filter: blur(12.5px);
 }
 
 @keyframes bounce {
