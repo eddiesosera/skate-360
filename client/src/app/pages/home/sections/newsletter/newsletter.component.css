@@ -1,0 +1,32 @@
+.hero-newsletter {}
+
+.hero-heading {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    /* color: red; */
+    text-transform: uppercase;
+    font-size: 58px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-body {}
+
+.hero-body-img {
+    height: 375px;
+    mix-blend-mode: screen;
+}
+
+.text-outline {
+    fill: none;
+    stroke: #FF2A1F;
+    stroke-width: 2px;
+    font-weight: 900;
+}
+
+.text-regular {}
+
+.text-bold-filled {
+    font-weight: 900;
+}

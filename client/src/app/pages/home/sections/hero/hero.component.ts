@@ -1,12 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import simpleParallax from 'simple-parallax-js';
-import Atropos, { AtroposInstance, AtroposOptions } from 'atropos';
-import { AtroposComponent, AtroposModule } from 'atropos-angular';
+import VanillaTilt from 'vanilla-tilt';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [AtroposModule],
+  imports: [],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
@@ -16,34 +15,30 @@ export class HeroComponent implements AfterViewInit {
   skateboardImg = '../../../../../assets/img/skateboard.png'
   image1 = document.getElementsByClassName('home-hero-img-letterhead');
   image2 = document.getElementsByClassName('home-hero-img-letterhead-blur');
-  myAtropos: AtroposInstance;
+  @ViewChild('heroElement') heroElement: ElementRef;
 
-  constructor() {
-    this.myAtropos = Atropos({
-      el: '.home-hero',
-      activeOffset: 40,
-      shadowScale: 1.05,
-      onEnter() {
-        console.log('Enter');
-      },
-      onLeave() {
-        console.log('Leave');
-      },
-      onRotate(x, y) {
-        console.log('Rotate', x, y);
-      }
-    });
+
+  constructor(private elementRef: ElementRef) {
+    this.heroElement = elementRef.nativeElement;
+
   };
 
   ngAfterViewInit(): void {
     new simpleParallax(this.image1, {
-      orientation: 'right'
+      orientation: 'right',
     });
     new simpleParallax(this.image2, {
       orientation: 'right',
       delay: .6,
       transition: 'cubic-bezier(0,0,0,1)'
     });
+
+    VanillaTilt.init(this.heroElement.nativeElement, {
+      max: 50,
+      speed: 400
+    });
   }
+
+
 
 }

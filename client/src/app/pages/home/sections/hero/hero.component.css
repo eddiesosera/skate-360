@@ -1,12 +1,15 @@
-atropos {
-    overflow: hidden;
+.home-hero {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    cursor: default;
 }
-
-.home-hero {}
 
 .home-hero-img-letterhead-wrap {
     width: 100%;
     height: 100vh;
+    /* transform: translateZ(20px); */
+    transform: translateZ(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 .home-hero-img-letterhead-imagewrap {
@@ -23,6 +26,15 @@ atropos {
     height: 100vh;
     object-fit: cover;
 }
+
+/* 
+.home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead {
+    transform: translateZ(10px) scale(1.1);
+}
+
+.home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead-blur {
+    transform: translateZ(20px) scale(1.2);
+} */
 
 .home-hero-img-letterhead-blur {
     z-index: 1;
@@ -56,6 +68,21 @@ atropos {
     position: absolute;
     top: 0;
     z-index: 1;
+    transform: translateZ(20px)
+}
+
+.hero-skateboard-wrap:hover .hero-text-wrap {
+    transform: translateZ(10px) scale(1.2);
+    z-index: 3;
+}
+
+.hero-skateboard-wrap:hover .hero-img-skateboard {
+    transform: translateZ(50px) scale(1.8);
+}
+
+
+.home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead-wrap {
+    transform: translateZ(10px) scale(1.5);
 }
 
 .hero-text-wrap {
