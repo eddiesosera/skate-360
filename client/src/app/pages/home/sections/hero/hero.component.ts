@@ -34,7 +34,7 @@ export class HeroComponent implements AfterViewInit {
     });
 
     VanillaTilt.init(this.heroElement.nativeElement, {
-      max: 50,
+      max: 15,
       speed: 400
     });
   }
