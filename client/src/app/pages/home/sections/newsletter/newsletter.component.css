@@ -1,6 +1,7 @@
 .home-newsletter {
     padding: 0 40px;
     padding-top: 60px !important;
+    overflow: hidden;
 }
 
 .home-newsletter-heading {
