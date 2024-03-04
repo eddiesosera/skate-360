@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmailInputComponent } from '../../../newsletter/sections/email-input/email-input.component';
+import { EmailInputComponent } from './sections/email-input/email-input.component';
 
 @Component({
   selector: 'app-newsletter',

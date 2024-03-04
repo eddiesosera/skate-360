@@ -37,3 +37,10 @@ body {
     text-transform: uppercase;
     font-weight: 400;
 }
+
+.bare-input {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "IBM Plex Mono", monospace;
+}

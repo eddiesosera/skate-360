@@ -1,0 +1,36 @@
+.home-newsletter-emailinput {
+    display: flex;
+    border: 1px solid white;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+.home-newsletter-emailinput-wrap {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.home-newsletter-emailinput-icon {
+    font-size: 24px;
+}
+
+.home-newsletter-emailinput-input {
+    color: white;
+    width: 100%;
+}
+
+.home-newsletter-emailinput-arrow-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #090909;
+    width: 48px;
+    /* height: 48px; */
+}
+
+.home-newsletter-emailinput-arrow-icon {
+    font-size: 24px;
+}
