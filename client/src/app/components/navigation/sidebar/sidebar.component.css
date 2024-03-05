@@ -1,5 +1,53 @@
-.sideNavbar-main-con{
+.sideNavbar-mian-con {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 120px;
+    width: 70px;
+    height: 1067px;
+    overflow: hidden;
+}
+
+.sideNavbar-mian-con ul {}
+
+.sidenav-home-btn button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.sidenav-page-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidenav-page-links button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.sidenav-page-links button:hover{
+
+}
+
+.sideNavbar-mian-con a {
+    margin-left: 0;
 }

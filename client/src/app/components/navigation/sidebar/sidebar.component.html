@@ -1,33 +1,41 @@
 <div class="sideNavbar-mian-con">
+
     <!-- home button -->
     <div class="sidenav-home-btn">
-        <a href=""></a>
+        <a routerLink="" routerLinkActive="active" areaCurrentActive="page">
+            <button class="">
+                <i class="ri-home-line"></i>
+            </button>
+        </a>
     </div>
-    <!-- nav links -->
-    <ul>
-        <!-- <li>
-            <a href="">
 
-            </a>
-            <app-tooltip></app-tooltip>
-        </li>
-        <li>
-            <a href="">
-
-            </a>
-            <app-tooltip></app-tooltip>
-        </li>
-        <li>
-            <a href="">
-
-            </a>
-            <app-tooltip></app-tooltip>
-        </li>
-        <li>
-            <a href="">
-
-            </a>
-            <app-tooltip></app-tooltip>
-        </li> -->
-    </ul>
+    <!-- nav sublinks links -->
+    <div class="sidenav-page-links">
+        <ul>
+            <!-- craft page link -->
+            <li>
+                <a routerLink="" routerLinkActive="active" areaCurrentActive="page">
+                    <button class="">
+                        <i class="ri-tools-fill"></i>
+                    </button>
+                </a>
+            </li>
+            <!-- skate board page link -->
+            <li>
+                <a routerLink="skateboards" routerLinkActive="active" areaCurrentActive="page">
+                    <button class="">
+                        <i class="ri-box-2-line"></i>
+                    </button>
+                </a>
+            </li>
+            <!-- warehouse page -->
+            <li>
+                <a routerLink="wharehouse" routerLinkActive="active" areaCurrentActive="page">
+                    <button class="">
+                        <i class="ri-building-2-line"></i>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
