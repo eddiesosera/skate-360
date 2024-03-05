@@ -23,8 +23,9 @@
 
 /* side navbar */
 .warehouse-sidebar-container {
-    width: 60px;
-    height: 1067px;
+    /* width: 160px; */
+    /* height: 1067px; */
+    width: fit-content;
 }
 
 .wharehouse-rightside-con {
