@@ -1,3 +1,22 @@
 <div class="product-card">
-    <app-card-options></app-card-options>
+    <div class="product-card-content-wrap">
+        <app-card-options></app-card-options>
+        <!--Where we wil render the 3D object: -->
+        <!-- <div id="product-canvas"></div> -->
+        <div class="product-placeholder"></div>
+    </div>
+    <div class="product-card-details-wrap">
+        <div class="product-card-details-wrap">
+            <div class="product-card-details-type">
+                {{skateboard?.type}}
+            </div>
+            <div class="product-card-details-type">
+                by {{skateboard?.craftedBy}}
+            </div>
+            <div class="product-card-details-type">
+                R {{skateboard?.price}} <!-- | currencyPipe -->
+            </div>
+        </div>
+    </div>
+
 </div>

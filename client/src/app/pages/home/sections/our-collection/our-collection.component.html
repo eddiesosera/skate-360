@@ -8,8 +8,9 @@
             </app-button>
         </div>
         <div class="home-ourcollection-grid grid">
-            <app-product-card class="grid-item" *ngFor="let skateboard of skateboardCollection">
-            </app-product-card>
+            <div class="grid-item" *ngFor="let skateboard of skateboardCollection">
+                <app-product-card></app-product-card>
+            </div>
         </div>
     </div>
 </div>

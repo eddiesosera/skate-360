@@ -4,6 +4,7 @@ import { dummdata } from './dummy data';
 import Masonry from 'masonry-layout';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../../../components/data-display/product-card/product-card.component';
+import { ProductDataService } from '../../../../services/component/product-data.service';
 
 @Component({
   selector: 'app-our-collection',
@@ -14,16 +15,27 @@ import { ProductCardComponent } from '../../../../components/data-display/produc
 })
 export class OurCollectionComponent implements AfterViewInit {
   skateboardCollection = dummdata
-  masonry = new Masonry
+
+  constructor(private dataService: ProductDataService) { }
 
   ngAfterViewInit(): void {
     var grid = document.querySelector('.grid');
     var masonry = new Masonry(grid!, {
       itemSelector: '.grid-item',
-      // columnWidth: 200,
       percentPosition: true,
-      gutter: 10
+      // gutter: 20,
     });
+
+    this.dataService.setData({
+      id: 0,
+      type: 'Classic LLL',
+      craftedBy: '',
+      price: 0,
+      location: ''
+    })
   }
+
+  // this.dataService.setData({ key: 'value' });
+
 
 }
