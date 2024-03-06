@@ -1,1 +1,14 @@
-<div>card-options works!</div>
+<div class="product-card-options">
+    <div *ngIf="!isOptionVisible" class="product-card-options-icon" (click)="viewOptions()">
+        <i class="ri-more-fill"></i>
+    </div>
+    <div *ngIf="isOptionVisible" class="product-card-options-content" (click)="viewOptions()">
+        <div class="product-card-options-content-close">
+            <i class="ri-close-line product-card-options-close-icon"></i>
+        </div>
+        <div class="product-card-options-content-buttons">
+            <app-button variant="fill" accent="dark" type="round" width="50px">Edit</app-button>
+            <app-button variant="outline" accent="dark" type="round" width="50px">Delete</app-button>
+        </div>
+    </div>
+</div>
