@@ -8,6 +8,6 @@
     'button-variant-outline-light': variant === 'outline' && accent==='light',
     'button-variant-outline-red': variant === 'outline' && accent==='red',
     'button': true
-  }" [style.width]="width">
-    <ng-content></ng-content>
+  }" [style.width]="width" [style.gap]="gap+'px'">
+  <ng-content></ng-content>
 </div>
