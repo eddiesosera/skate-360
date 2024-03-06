@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CardOptionsComponent } from './card-options/card-options.component';
 import { ProductDataService } from '../../../services/component/product-data.service';
 import { ProductData } from '../../../models/components/data-display/product-data.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CardOptionsComponent],
+  imports: [CommonModule, CardOptionsComponent],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css'
 })
