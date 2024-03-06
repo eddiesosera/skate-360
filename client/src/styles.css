@@ -44,3 +44,9 @@ body {
     outline: none;
     font-family: "IBM Plex Mono", monospace;
 }
+
+/* Tippy: Tooltip library customization */
+.tippy-backdrop[data-theme~='dark360'] {
+    background-color: rgb(21, 21, 21);
+    color: rgb(249, 242, 242);
+}

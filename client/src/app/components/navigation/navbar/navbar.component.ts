@@ -1,26 +1,25 @@
-import { AfterViewChecked, Component, DoCheck, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnInit } from '@angular/core';
 import { SearchBarComponent } from '../../inputs/search-bar/search-bar.component';
 import { NavItem } from '../../../models/components/navigation/navbar.models';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { computePosition } from '@floating-ui/dom';
-import { TooltipComponent } from '../../feedback/tooltip/tooltip.component';
+import tippy, { Instance, roundArrow } from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
 
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, SearchBarComponent, TooltipComponent],
+  imports: [CommonModule, RouterLink, RouterLinkActive, SearchBarComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 
-export class NavbarComponent implements OnInit, AfterViewChecked {
+export class NavbarComponent implements OnInit {
   @Input() currentPage: string = ''
   tooltipText: string = '';
-  isTooltipVisible: boolean = false
-
+  isTooltipVisible: boolean = false;
   navItems: NavItem[] = [
     {
       link: 'craft',
@@ -43,6 +42,7 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
       title: 'Account',
     },
   ];
+  navItemHovered: string = '';
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -52,29 +52,19 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
     ).subscribe(() => {
       this.getPage();
     });
-    console.log(this.isTooltipVisible)
-  }
-
-  ngAfterViewChecked(): void {
-    console.log(this.isTooltipVisible)
   }
 
   getPage(): void {
     this.currentPage = this.activatedRoute.snapshot.firstChild?.routeConfig?.path || '';
-    console.log(this.currentPage);
   }
 
-  showTooltip() {
-    const targetElement = document.getElementById('navbar-item'); // Replace with your element id
-    const tooltipElement = document.getElementById('tooltip'); // Replace with your tooltip component id
-
-    computePosition(targetElement!, tooltipElement!)
-      .then(({ x, y }) => {
-        // this.tooltipText = 'Your tooltip content goes here'; // Set your desired content
-        tooltipElement!.style.left = `${x}px`;
-        tooltipElement!.style.top = `${y}px`;
-        tooltipElement!.style.display = 'block'; // Make tooltip visible
-      });
+  showTooltip(value: string, navbarItem: string) {
+    tippy(`#${navbarItem}`, {
+      content: value,
+      theme: 'dark360',
+      // arrow: roundArrow
+    });
   }
+
 
 }

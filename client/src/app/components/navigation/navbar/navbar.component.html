@@ -1,19 +1,20 @@
 <div class="navbar">
     <a class="navbar-logo" routerLink="" routerLinkActive="active" ariaCurrentActive="active">LOGO</a>
     <app-search-bar style="width: 100%;"></app-search-bar>
+
     <ul class="navbar-items-wrap">
 
-        <li class="navbar-item" [id]="'navbar-item'" *ngFor="let navItem of navItems"
-            (mouseenter)="showTooltip(); tooltipText=navItem.title" aria-describedby="tooltip">
-            <a [ngClass]="{'activePage':currentPage===navItem.link}" class="navbar-item-link"
+        <li class="navbar-item" [id]="navItem.link" *ngFor="let navItem of navItems" aria-describedby="tooltip">
+            <a (mouseenter)="showTooltip(navItem.title,navItem.link)"
+                [ngClass]="{'activePage':currentPage===navItem.link}" class="navbar-item-link"
                 [routerLink]="navItem.link" routerLinkActive="active" ariaCurrentActive="active">
                 <i [class]="navItem.icon" class="icon-20"></i>
                 <div *ngIf="currentPage===navItem.link" class="navbar-item-title heading-ibm">
                     {{navItem.title}}
                 </div>
             </a>
-            <app-tooltip *ngIf="showTooltip" [text]="tooltipText" role="tooltip"></app-tooltip>
         </li>
 
     </ul>
+
 </div>
