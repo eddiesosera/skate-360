@@ -1,0 +1,16 @@
+.home-locations {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.home-locations-heading {
+    font-family: 'League Gothic';
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #FC1E1E;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
