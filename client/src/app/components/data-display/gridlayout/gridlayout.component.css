@@ -1,0 +1,21 @@
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* gap: 10px; */
+    /* Adjust the gap between items */
+}
+
+.grid-item {
+    /* Additional styling for grid items */
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    /* Adjust the number of columns for smaller screens */
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+}

@@ -5,11 +5,12 @@ import Masonry from 'masonry-layout';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../../../components/data-display/product-card/product-card.component';
 import { ProductDataService } from '../../../../services/component/product-data.service';
+import { GridlayoutComponent } from '../../../../components/data-display/gridlayout/gridlayout.component';
 
 @Component({
   selector: 'app-our-collection',
   standalone: true,
-  imports: [CommonModule, ProductCardComponent, ButtonComponent],
+  imports: [CommonModule, GridlayoutComponent, ProductCardComponent, ButtonComponent],
   templateUrl: './our-collection.component.html',
   styleUrl: './our-collection.component.css'
 })
