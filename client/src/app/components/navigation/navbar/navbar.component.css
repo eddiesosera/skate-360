@@ -17,7 +17,8 @@
 
 .navbar-logo {
     text-decoration: none !important;
-    color: #686C68;
+    font-family: 'Skate Fall';
+    color: #edf5ed;
 }
 
 .navbar-items-wrap {
