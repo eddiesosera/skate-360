@@ -45,14 +45,14 @@
 }
 
 .button-variant-fill-red {
-    background: #FD1313;
+    background: #FC1E1E;
     color: white;
 }
 
 .button-variant-outline-red {
     background: none;
-    border: 1px solid #FD1313;
-    color: #FD1313;
+    border: 1px solid #FC1E1E;
+    color: #FC1E1E;
 }
 
 /* BUTTON ANIMATION */

@@ -1,21 +1,21 @@
 <div class="home-ourcollection">
-    <div>
-        <div class="home-ourcollection-top-wrap">
-            <div class="home-ourcollection-top-heading">
-                <div class="home-ourcollection-top-heading-text">Our 2024 Collection</div>
-                <div class="home-ourcollection-top-heading-shadow"></div>
-            </div>
-            <app-button [gap]="20">
-                <div>View All</div>
-                <i class="ri-arrow-right-line"></i>
-            </app-button>
+    <!-- <div> -->
+    <div class="home-ourcollection-top-wrap">
+        <div class="home-ourcollection-top-heading">
+            <div class="home-ourcollection-top-heading-text">Our 2024 Collection</div>
+            <div class="home-ourcollection-top-heading-shadow"></div>
         </div>
-        <div class="home-ourcollection-grid">
-            <app-gridlayout [gap]="20">
-                <div class="grid-item" *ngFor="let skateboard of skateboardCollection">
-                    <app-product-card></app-product-card>
-                </div>
-            </app-gridlayout>
-        </div>
+        <app-button accent="red" [gap]="20">
+            <div>View All</div>
+            <i class="ri-arrow-right-line"></i>
+        </app-button>
     </div>
+    <div class="home-ourcollection-grid">
+        <app-gridlayout [gap]="20">
+            <div class="grid-item" *ngFor="let skateboard of skateboardCollection">
+                <app-product-card></app-product-card>
+            </div>
+        </app-gridlayout>
+    </div>
+    <!-- </div> -->
 </div>

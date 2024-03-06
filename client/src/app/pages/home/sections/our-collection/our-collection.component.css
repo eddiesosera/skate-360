@@ -1,3 +1,31 @@
+.home-ourcollection {
+    border-top: 1px solid #2e2e2e;
+    padding: 0 40px;
+    padding-top: 60px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-ourcollection-top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-ourcollection-top-heading {}
+
+.home-ourcollection-top-heading-text {
+    font-size: 48px;
+    font-family: 'Skate Fall';
+    color: #FC1E1E;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.home-ourcollection-top-heading-shadow {}
+
 .home-ourcollection-grid {
     /* padding: 20px; */
 }
