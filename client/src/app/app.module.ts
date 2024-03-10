@@ -12,7 +12,6 @@ import { NgxPopperModule } from 'ngx-popper';
     CommonModule,
     RouterModule, // Import RouterModule if you use router-related functionality
     NgxPopperModule.forRoot()
-    // Other modules
   ],
   exports: [
     // Other components, directives, pipes to be used in other modules
