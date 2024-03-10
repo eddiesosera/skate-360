@@ -25,18 +25,56 @@ import { CraftSkateboardComponent } from './windows/craft-skateboard/craft-skate
 })
 export class CraftComponent implements OnInit {
   grid: any;
+  dragContainer: any;
+  itemContainers: any[] = [];
+  columnGrids: any[] = [];
+  boardGrid: any;
 
   ngOnInit() {
-    this.grid = new Muuri('.grid', {
-      dragEnabled: true, // Enable dragging
+    this.dragContainer = document.querySelector('.drag-container');
+
+    this.itemContainers = Array.from(document.querySelectorAll('.dashboard-window-content'));
+
+    this.itemContainers.forEach((container: any) => {
+      const grid = new Muuri(container, {
+        items: '.dashboard-window-content-item',
+        dragEnabled: true,
+        dragSort: () => this.columnGrids,
+        dragContainer: this.dragContainer,
+        dragAutoScroll: {
+          targets: (item: any) => [
+            { element: window, priority: 0 },
+            { element: item.getGrid().getElement().parentNode, priority: 1 },
+          ]
+        }
+      })
+        .on('dragInit', (item: any) => {
+          item.getElement().style.width = item.getWidth() + 'px';
+          item.getElement().style.height = item.getHeight() + 'px';
+        })
+        .on('dragReleaseEnd', (item: any) => {
+          item.getElement().style.width = '';
+          item.getElement().style.height = '';
+          item.getGrid().refreshItems([item]);
+
+          console.log(event);
+          console.log(item);
+        })
+        .on('layoutStart', () => {
+          grid.refreshItems().layout();
+        });
+
+      this.columnGrids.push(grid);
+    });
+
+    this.grid = new Muuri('.dashboard', {
+      dragEnabled: false,
       layout: {
-        fillGaps: true // Fill gaps in layout
+        fillGaps: true
       }
-    }).on('dragEnd', function (item, event) {
+    }).on('dragEnd', (item, event) => {
       console.log(event);
       console.log(item);
-    });;
-
-
+    });
   }
 }

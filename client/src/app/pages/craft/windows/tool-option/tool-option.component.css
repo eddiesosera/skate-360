@@ -1,0 +1,44 @@
+.dashboard-window-content-wrapper {
+    position: relative;
+    padding: 8px;
+    background: #f0f0f0;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
+    border-radius: 0 0 5px 5px;
+    color: black;
+}
+
+.dashboard-window-content {
+    position: relative;
+    min-height: 100%;
+}
+
+.dashboard-window-content-item {
+    position: absolute;
+    width: calc(100% - 16px);
+    margin: 8px;
+}
+
+.dashboard-window-content-item-content {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-window-content-item-content.muuri-item-releasing {
+    z-index: 9998;
+}
+
+.dashboard-window-content-item-content.muuri-item-dragging {
+    z-index: 9999;
+    cursor: move;
+}
+
+.dashboard-window-content-item-content.muuri-item-hidden {
+    z-index: 0;
+}

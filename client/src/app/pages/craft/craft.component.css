@@ -2,11 +2,18 @@
     text-decoration: none;
 }
 
-.grid {
+.drag-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.dashboard {
     position: relative;
 }
 
-.item {
+.window {
     display: block;
     position: absolute;
     width: 100px;
@@ -15,6 +22,15 @@
     z-index: 1;
     background: #000;
     color: #fff;
+}
+
+.window.muuri-item-releasing {
+    z-index: 2;
+}
+
+.window.muuri-item-dragging {
+    z-index: 3;
+    cursor: move;
 }
 
 .item.muuri-item-dragging {
