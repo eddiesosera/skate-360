@@ -1,0 +1,145 @@
+.warehouseCard-main-con {
+    /* padding: 10px 20px; */
+    background-color: rgb(196, 79, 104);
+    /* font-family: 'Skate Fall Italic'; */
+}
+
+/* hero section start */
+.warehouseCard-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    width: 435px;
+    height: 323px;
+}
+
+.warehouse-hero-title {
+    width: 215px;
+    height: 60px;
+    border-radius: 34px;
+    overflow: hidden;
+    /* border: 2px solid black; */
+}
+
+.warehouse-hero-title h1 {
+    color: #fd1313;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.warehouse-about-btn {
+    width: 73px;
+    height: 26px;
+    color: #fff;
+    background-color: black;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* hero section end */
+
+/* data section start */
+.warehouse-card-data-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #000;
+    padding: 10px 15px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.warehouse-card-data-display-con{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.warehouse-data-boards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.warehouse-data-wheels-con{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.warehouse-data-row-primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0;
+    
+}
+
+.warehouse-data-row-primary p {
+    text-transform: uppercase;
+    color: #fd1313;
+    margin: 0;font-weight: bold;
+    font-size: 16px;
+}
+
+.warehouse-data-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.warehouse-data-row p {
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 13px;
+}
+
+/* data section end  */
+/* buttons */
+.warehouse-btn-con{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+#warehouse-addItem-btn{
+    width: 259px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd1313;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+#warehouse-view-btn{
+    width: 126px;
+    height: 48px;
+    border: 2px solid #fd1313;
+    background-color: #000;
+    color: #fd1313;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
