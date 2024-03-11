@@ -1,1 +1,45 @@
-<p>craft-skateboard works!</p>
+<div class="craft-skateboard">
+    <div class="craft-skateboard-btm-half">
+        <div class="craft-skateboard-title">
+            Craft Skateboard
+        </div>
+        <div class="craft-skateboard-cost-summary">
+            <div class="craft-skateboard-cost-summary-title">
+                Cost Summary
+            </div>
+            <table class="craft-skateboard-cost-summary-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+                <tr *ngFor="let item of selectedItems">
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.price|currency:'R'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="craft-skateboard-btm-half">
+        <div class="craft-skateboard-total">
+            <div class="craft-skateboard-total-qty">
+                <div class="craft-skateboard-total-qty-title">
+                    Quanitity
+                </div>
+                <input type="number" value="1" />
+            </div>
+            <div class="craft-skateboard-total-price">
+                <div class="craft-skateboard-total-price-title">
+                    Total
+                </div>
+                <div class="craft-skateboard-total-price-amount">
+                    {{300|currency:'R'}}
+                </div>
+            </div>
+        </div>
+        <app-button accent="red" variant="fill">Craft Skateboard</app-button>
+    </div>
+
+</div>
