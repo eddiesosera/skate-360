@@ -1,0 +1,14 @@
+.dashboard-editor-selected-item {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid #2E3232;
+    border-left: 1px solid #2E3232;
+}
+
+.dashboard-editor-selected-item-head {}
+
+.dashboard-editor-selected-item-content {}
+
+.dashboard-editor-selected-item-details {}
