@@ -1,6 +1,6 @@
 .warehouseCard-main-con {
     /* padding: 10px 20px; */
-    background-color: rgb(196, 79, 104);
+    background-color: rgb(26, 26, 26);
     /* font-family: 'Skate Fall Italic'; */
 }
 
@@ -44,6 +44,23 @@
     align-items: center;
     gap: 5px;
     cursor: pointer;
+}
+
+.warehouse-card-worker-data{
+    position: relative;
+    left: 350px;
+    bottom: 10px;
+    background-color: #000;
+    padding: 6px 20px;
+    color: #fff;
+    width: fit-content;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
 }
 
 /* hero section end */
