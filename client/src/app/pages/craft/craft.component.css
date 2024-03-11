@@ -1,5 +1,12 @@
 .craft-floating-button-top {
     text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 99;
+    border: 1px solid #2E3232 !important;
 }
 
 .drag-container {
@@ -11,17 +18,55 @@
 
 .dashboard {
     position: relative;
+    display: grid;
+    height: 93vh;
+    width: 95.5vw;
+    grid-template-rows: 70% 30%;
+    /* Set the height distribution for the two rows */
+    grid-template-columns: 75% 25%;
+    /* Set the width distribution for the two columns */
+
+    /* Set the grid to have two rows and the flex-direction to column */
+    grid-template-areas:
+        "first-column second-column"
+        "third-column fourth-column";
+
+    grid-gap: 10px;
+    margin: 20px;
+}
+
+/* Styling for the first row, first column */
+.first-column {
+    grid-area: first-column;
+}
+
+/* Styling for the first row, second column */
+.second-column {
+    grid-area: second-column;
+}
+
+/* Styling for the second row, first column */
+.third-column {
+    grid-area: third-column;
+}
+
+/* Styling for the second row, second column */
+.fourth-column {
+    grid-area: fourth-column;
 }
 
 .window {
     display: block;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+    transform: none !important;
+    /* position: absolute; */
+    /* width: 100px;
+    height: 100px; */
+    /* margin: 5px;
     z-index: 1;
     background: #000;
-    color: #fff;
+    width: 100%;
+    color: #fff; */
+    border: 1px solid #2E3232;
 }
 
 .window.muuri-item-releasing {
@@ -31,22 +76,4 @@
 .window.muuri-item-dragging {
     z-index: 3;
     cursor: move;
-}
-
-.item.muuri-item-dragging {
-    z-index: 3;
-}
-
-.item.muuri-item-releasing {
-    z-index: 2;
-}
-
-.item.muuri-item-hidden {
-    z-index: 0;
-}
-
-.item-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
 }

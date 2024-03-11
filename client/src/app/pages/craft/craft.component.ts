@@ -57,7 +57,6 @@ export class CraftComponent implements OnInit {
           item.getElement().style.height = '';
           item.getGrid().refreshItems([item]);
 
-          console.log(event);
           console.log(item);
         })
         .on('layoutStart', () => {

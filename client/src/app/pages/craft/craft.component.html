@@ -1,17 +1,19 @@
 <a class="craft-floating-button-top" href="">
-    <app-button onclick="">
-        <i class="ri-home-line"></i>
+    <app-button>
+        <i class="ri-home-fill"></i>
     </app-button>
 </a>
 
 <div class="drag-container"></div>
+
 <div class="dashboard">
-    <app-editor class="window"></app-editor>
+    <!-- <div class="dashboard-first-row"> -->
+    <app-editor class="window first-column"></app-editor>
+    <app-craft-skateboard class="window second-column"></app-craft-skateboard>
+    <!-- </div> -->
 
-    <app-craft-skateboard class="window"></app-craft-skateboard>
-
-    <app-tool-option class="window"></app-tool-option>
-
-    <app-configure-tool-option class="window"></app-configure-tool-option>
-
+    <!-- <div class="dashboard-second-row"> -->
+    <app-tool-option class="window third-column"></app-tool-option>
+    <app-configure-tool-option class="window forth-column"></app-configure-tool-option>
+    <!-- </div> -->
 </div>
