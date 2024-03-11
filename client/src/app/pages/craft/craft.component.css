@@ -19,53 +19,51 @@
 .dashboard {
     position: relative;
     display: grid;
-    height: 93vh;
-    width: 95.5vw;
-    grid-template-rows: 70% 30%;
-    /* Set the height distribution for the two rows */
-    grid-template-columns: 75% 25%;
-    /* Set the width distribution for the two columns */
-
-    /* Set the grid to have two rows and the flex-direction to column */
-    grid-template-areas:
-        "first-column second-column"
-        "third-column fourth-column";
-
-    grid-gap: 10px;
+    /* height: 93vh !important; */
+    /* width: 95.5vw; */
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* /* width: 100%; */
+    height: calc(100vh - 40px) !important;
 }
 
-/* Styling for the first row, first column */
+.dashboard_row {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row;
+    gap: 5px;
+    transform: none !important;
+}
+
+.dashboard_first_row {
+    height: 70%;
+}
+
+.dashboard_second_row {
+    height: 30%;
+}
+
 .first-column {
-    grid-area: first-column;
+    width: 75%;
 }
 
-/* Styling for the first row, second column */
 .second-column {
-    grid-area: second-column;
+    width: 25%;
 }
 
-/* Styling for the second row, first column */
 .third-column {
-    grid-area: third-column;
+    width: 50%;
 }
 
-/* Styling for the second row, second column */
 .fourth-column {
-    grid-area: fourth-column;
+    width: 50%;
 }
 
 .window {
     display: block;
     transform: none !important;
-    /* position: absolute; */
-    /* width: 100px;
-    height: 100px; */
-    /* margin: 5px;
-    z-index: 1;
-    background: #000;
-    width: 100%;
-    color: #fff; */
     border: 1px solid #2E3232;
 }
 
