@@ -1,1 +1,20 @@
-<p>configure-tool-option works!</p>
+<div class="configure-tool-option">
+    <div class="configure-tool-option-title">
+        Configure Tool Option
+    </div>
+    <div class="configure-tool-option-content">
+        <div class="configure-tool-option-slider-wrap">
+            <input class="slider" type="range" min="0" max="10" [value]="sliderValue" id="range" step="1"
+                [style.background]="getSliderColor()" (input)="getSliderColor()" (change)="changeValue($event)" />
+            <div class="configure-tool-option-slider-sliderticks-wrap">
+                <span *ngFor="let stick of sliderticks" class="configure-tool-option-slider-slidertick"
+                    [class]="sliderValue==stick&&'slider-stick-active'">
+                    {{stick}}
+                </span>
+            </div>
+        </div>
+        <div class="configure-tool-option-measurement">
+            {{sliderValue}} N/m
+        </div>
+    </div>
+</div>

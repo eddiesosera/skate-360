@@ -84,9 +84,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/toolcool-range-slider/dist/css/tcrs.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/toolcool-range-slider/dist/js/tcrs.min.js",
+  "node_modules/toolcool-range-slider/dist/plugins/tcrs-generated-labels.min.js"
+            ]
           }
         }
       }

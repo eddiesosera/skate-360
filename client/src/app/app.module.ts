@@ -1,20 +1,31 @@
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { NgxPopperModule } from 'ngx-popper';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { Ng5SliderModule } from 'ng5-slider';
+import { ConfigureToolOptionComponent } from './pages/craft/windows/configure-tool-option/configure-tool-option.component';
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './components/navigation/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    // Other components, directives, pipes
+    // AppComponent
   ],
   imports: [
+    BrowserModule,
     CommonModule,
-    RouterModule, // Import RouterModule if you use router-related functionality
-    NgxPopperModule.forRoot()
+    RouterModule,
+    HomeComponent, RouterOutlet, NavbarComponent,
+    // Ng5SliderModule,
+    ConfigureToolOptionComponent
   ],
   exports: [
-    // Other components, directives, pipes to be used in other modules
+    ConfigureToolOptionComponent
+  ],
+  bootstrap: [
+    // AppComponent
   ]
 })
 export class AppModule { }
