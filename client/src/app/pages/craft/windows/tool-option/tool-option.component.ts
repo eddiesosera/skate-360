@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ToolOptionCardComponent } from './component/tool-option-card/tool-option-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tool-option',
   standalone: true,
-  imports: [ToolOptionCardComponent],
+  imports: [CommonModule, ToolOptionCardComponent],
   templateUrl: './tool-option.component.html',
   styleUrl: './tool-option.component.css'
 })
-export class ToolOptionComponent {
+export class ToolOptionComponent implements OnInit {
   componentType: string = 'Wheel';
-  selectedComponent = 'none'
+  selectedComponent = 'none';
+  selectedIndex = 0;
   inventoryList = [
     {
       type: 'wheels',
@@ -83,6 +85,18 @@ export class ToolOptionComponent {
         },
       ]
     }
-  ]
+  ];
+
+  selectedList = this.inventoryList[this.selectedIndex].inventory
+
+  ngOnInit(): void {
+    this.selectedList = this.inventoryList[this.selectedIndex].inventory;
+
+    console.log(this.selectedList)
+  }
+
+  setMargin(index: any): string {
+    return `${index} * 20 px`
+  }
 
 }

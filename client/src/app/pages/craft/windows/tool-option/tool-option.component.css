@@ -28,12 +28,12 @@
 .dashboard-window-content-item {
     position: absolute;
     width: calc(100% - 16px);
-    margin: 8px;
+    margin: 5px;
 }
 
 .dashboard-window-content-item-content {
     position: relative;
-    padding: 20px;
+    /* padding: 20px; */
     background: #282828;
     border-radius: 4px;
     font-size: 17px;

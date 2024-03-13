@@ -1,0 +1,39 @@
+.craft-tool-option-card {
+    width: 100%;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #2E3232;
+}
+
+.craft-tool-option-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.craft-tool-option-card-details-name {
+    font-family: 'League Gothic';
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.craft-tool-option-card-details-type {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 12px;
+}
+
+.craft-tool-option-card-img-wrap {
+    height: 50px;
+    width: 50px;
+    /* border: 1px solid #2E3232; */
+    aspect-ratio: 1/1;
+    padding: 10px;
+}
+
+.craft-tool-option-card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

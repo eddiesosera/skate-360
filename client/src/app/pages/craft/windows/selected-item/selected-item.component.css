@@ -56,8 +56,9 @@
 
 .dashboard-editor-selected-item-content-img {
     height: 100%;
+    max-height: 200px;
     aspect-ratio: 1/1;
-    border: 1px solid #2E3232;
+    /* border: 1px solid #2E3232; */
     object-fit: cover;
 }
 
