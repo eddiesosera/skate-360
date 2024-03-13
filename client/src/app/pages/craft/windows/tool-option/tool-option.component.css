@@ -5,13 +5,23 @@
     /* height: calc(100vh - 90px); */
     width: 100%;
     height: 100%;
-    overflow-y: auto;
     border-radius: 0 0 5px 5px;
     /* color: black; */
+    overflow: hidden;
+}
+
+.configure-tool-option-title {
+    font-family: 'League Gothic';
+    font-size: 24px;
+    padding: 20px;
+    border-bottom: 1px solid #2E3232;
+    text-transform: uppercase;
 }
 
 .dashboard-window-content {
     position: relative;
+    overflow-y: scroll;
+    height: 64% !important;
     /* min-height: 100%; */
 }
 
