@@ -17,5 +17,8 @@ export class ButtonComponent implements OnInit {
   @Input() variant: 'fill' | 'outline' = 'outline';
   @Input() accent: 'dark' | 'light' | 'red' = 'dark';
   @Input() width: any = 'fit-content';
-  @Input() gap: number = 0
+  @Input() height: any = 'fit-content';
+  @Input() padding: any = '10px 15px';
+  @Input() gap: number = 0;
+  @Input() custom: any;
 }
