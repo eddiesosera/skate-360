@@ -17,7 +17,8 @@ import 'tippy.js/dist/tippy.css';
 })
 
 export class NavbarComponent implements OnInit {
-  @Input() currentPage: string = ''
+  @Input() currentPage: string = '';
+  @Input() position = 'fixed'
   tooltipText: string = '';
   isTooltipVisible: boolean = false;
   navItems: NavItem[] = [

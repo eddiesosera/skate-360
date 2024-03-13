@@ -9,7 +9,6 @@
     border-bottom: 1px solid #1B1C1C;
     border-radius: 100px;
     backdrop-filter: blur(15px);
-    position: fixed;
     justify-content: space-between;
     width: calc(100vw - 100px);
     z-index: 100;
