@@ -16,6 +16,12 @@ import 'atropos/atropos.css'
 export class AppComponent implements AfterViewInit {
   backgroundVideo = '../assets/video/grunge_textures.mp4';
 
+  // constructor(private navbar: NavbarComponent) {
+  //   if (navbar.currentPage === 'skateboards') {
+  //     navbar.position = 'sticky'
+  //   }
+  // }
+
   autoPlayVideo(): void {
     const videoElement = document.querySelector('.background-video');
 

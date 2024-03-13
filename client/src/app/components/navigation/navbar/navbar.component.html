@@ -1,4 +1,5 @@
-<div class="navbar" *ngIf="currentPage!=='craft'" [style.position]="position">
+<div class="navbar" *ngIf="currentPage!=='craft'" [style.position]="currentPage === ''?'fixed':'sticky'"
+    [style.display]="currentPage !== ''?'none':'flex'">
     <a class="navbar-logo" routerLink="" routerLinkActive="active" ariaCurrentActive="active">
         Skate360
     </a>

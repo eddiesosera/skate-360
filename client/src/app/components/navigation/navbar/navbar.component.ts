@@ -16,7 +16,7 @@ import 'tippy.js/dist/tippy.css';
   styleUrl: './navbar.component.css'
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements AfterViewChecked, OnInit {
   @Input() currentPage: string = '';
   @Input() position = 'fixed'
   tooltipText: string = '';
@@ -55,6 +55,12 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  ngAfterViewChecked(): void {
+    // if (this.currentPage === 'skateboards') {
+    //   this.position = 'sticky'
+    // }
+  }
+
   getPage(): void {
     this.currentPage = this.activatedRoute.snapshot.firstChild?.routeConfig?.path || '';
   }
@@ -66,6 +72,4 @@ export class NavbarComponent implements OnInit {
       // arrow: roundArrow
     });
   }
-
-
 }

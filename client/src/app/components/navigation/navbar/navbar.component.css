@@ -12,6 +12,7 @@
     justify-content: space-between;
     width: calc(100vw - 100px);
     z-index: 100;
+    top: 0;
 }
 
 .navbar-logo {
