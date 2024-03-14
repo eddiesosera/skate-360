@@ -21,7 +21,13 @@
             </div>
 
             <!-- Header Section: Bottom Filter  -->
-            <div class="skateboards-header-btm">Bottom</div>
+            <div class="skateboards-header-btm">
+                <div class="skateboards-header-btm-filterleft-wrap">
+                    <app-dropdown [label]="label1" [options]="filterOptions1"></app-dropdown>
+                    <app-dropdown [label]="label2" [options]="filterOptions2"></app-dropdown>
+                    <app-dropdown [label]="label3" [options]="filterOptions3"></app-dropdown>
+                </div>
+            </div>
 
         </div>
 

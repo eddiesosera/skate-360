@@ -1,1 +1,11 @@
-<p>dropdown works!</p>
+<div class="dropdown" (clickOutside)="closeDropdown()">
+    <button class="dropdown-toggle" (click)="toggleDropdown()">
+        {{label}}
+        <i class="ri-arrow-down-s-line"></i>
+    </button>
+    <div class="dropdown-menu" [hidden]="!isOpen">
+        <div class="dropdown-menu-item" *ngFor="let option of options" (click)="option.action; closeDropdown()">
+            {{option.label}}
+        </div>
+    </div>
+</div>
