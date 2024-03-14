@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'Skate Fall';
     src: url('./assets/font/Skate\ Fall\ -\ TTF.ttf') format('truetype');

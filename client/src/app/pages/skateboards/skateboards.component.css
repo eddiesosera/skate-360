@@ -1,0 +1,52 @@
+.skateboards {
+    display: flex;
+    width: 100%;
+}
+
+.skateboards-content {
+    padding: 20px;
+    width: 100%;
+}
+
+.skateboards-header {
+    width: 100%;
+}
+
+.skateboards-header-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skateboards-header-top-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+}
+
+.skateboards-header-top-title {
+    color: #FD1313;
+    text-align: center;
+    font-family: "League Gothic";
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.skateboards-header-top-title-info {
+    color: #FD1313;
+    text-align: center;
+    font-family: "IBM Plex Mono";
+    font-size: 16px;
+    width: 300px;
+}
+
+.skateboards-header-top-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+}
