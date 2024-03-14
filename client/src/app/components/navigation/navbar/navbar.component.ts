@@ -4,7 +4,7 @@ import { NavItem } from '../../../models/components/navigation/navbar.models';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import tippy, { Instance, roundArrow } from 'tippy.js';
+import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
 
@@ -56,9 +56,6 @@ export class NavbarComponent implements AfterViewChecked, OnInit {
   }
 
   ngAfterViewChecked(): void {
-    // if (this.currentPage === 'skateboards') {
-    //   this.position = 'sticky'
-    // }
   }
 
   getPage(): void {

@@ -1,18 +1,32 @@
 .sideNavbar-mian-con {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    margin-top: 120px;
-    width: 70px;
-    height: 1067px;
+    position: sticky;
+    left: 0;
+    width: fit-content;
+    height: 100vh;
     overflow: hidden;
+    border-right: 1px solid #2D2F2F;
+    background: #0c0d0dee;
+    backdrop-filter: blur(15px);
+}
+
+.side-navbar-top-navs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sideNavbar-mian-con ul {}
 
-.sidenav-home-btn button {
+.sidenav-home-btn {
+    border-bottom: 1px solid #2D2F2F !important;
+}
+
+.sidenav-home-btn,
+button {
     width: 60px;
     height: 60px;
     background-color: transparent;
@@ -26,7 +40,7 @@
     list-style: none;
     margin: 0;
     padding: 0px;
-
+    border-bottom: 1px solid #2D2F2F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,10 +58,20 @@
     color: aliceblue;
     cursor: pointer;
 }
-.sidenav-page-links button:hover{
 
-}
+.sidenav-page-links button:hover {}
 
 .sideNavbar-mian-con a {
     margin-left: 0;
+}
+
+.sidenav-account-btn {
+    border-top: 1px solid #2D2F2F;
+    cursor: pointer;
+}
+
+.activePage {
+    background: #fff;
+    color: #0C0D0D !important;
+    border-radius: 0.1rem;
 }
