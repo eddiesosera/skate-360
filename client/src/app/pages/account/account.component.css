@@ -1,0 +1,106 @@
+/* main con styling */
+.account-main-con {
+    position: absolute;
+    top: 0;
+    width: 1840px;
+    right: 0;
+}
+
+/* the top row of account page */
+.account-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* title div */
+.account-title-div {
+    color: #FD1313;
+}
+
+.account-title-div h1 {
+    font-size: 64px;
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+#accountPage-signout-btn {
+    /* max-width: 88px; */
+    /* max-height: 46px; */
+    border: 1px solid #FD1313;
+    border-radius: 28px;
+    padding: 15px 15px;
+    font-size: 16px;
+    color: #FD1313;
+    background-color: transparent;
+    font-family: "League Gothic", sans-serif;
+    cursor: pointer;
+}
+
+.accountPage-signout-btn-p {
+    margin: 0;
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+/* user info con main styling */
+.account-userInfoDisplay-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+/* image con styling */
+.account-userProfileImg-con {
+    width: 352px;
+    height: 352px;
+    background-color: coral;
+}
+
+.account-right-side-userInfo-con {
+    height: 352px;
+}
+
+.account-infoField-con{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* the user info labels */
+.account-userInfo-lable {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "League Gothic", sans-serif;
+}
+
+/* the user info fields */
+.account-userInfo-con h3 {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.account-userEdit-btn-con{
+    position: relative;
+    float: right;
+}
+
+#account-userInfoEdit-btn{
+    min-width: 88px;
+    border: 1px solid #fff;
+    border-radius: 28px;
+    padding: 15px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "League Gothic", sans-serif;
+    outline: none;
+    cursor: pointer;
+}
