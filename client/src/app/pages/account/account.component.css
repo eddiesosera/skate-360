@@ -1,0 +1,157 @@
+/* main con styling */
+/* todo needs to be responsive */
+.account-main-con {
+    position: absolute;
+    top: 0;
+    /* width: 1800px; */
+    width: 90%;
+    right: 0;
+}
+
+/* the top row of account page */
+.account-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* title div */
+.account-title-div {
+    color: #FD1313;
+}
+
+.account-title-div h1 {
+    font-size: 64px;
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#accountPage-signout-btn {
+    /* max-width: 88px; */
+    /* max-height: 46px; */
+    border: 1px solid #FD1313;
+    border-radius: 28px;
+    padding: 15px 15px;
+    font-size: 16px;
+    color: #FD1313;
+    background-color: transparent;
+    font-family: "League Gothic", sans-serif;
+    cursor: pointer;
+}
+
+.accountPage-signout-btn-p {
+    margin: 0;
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+/* user info con main styling */
+.account-userInfoDisplay-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+/* image con styling */
+.account-userProfileImg-con {
+    width: 352px;
+    height: 352px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+}
+.account-userProfileImg-con input{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 24px;
+    padding: 15px 20px;
+}
+#file-upload-button{
+}
+
+/* Right side of info con (where the user info will be */
+/* todo this needs to made responsive */
+.account-right-side-userInfo-con {
+    height: 352px;
+    /* width: 724px; */
+    width: 74%;
+}
+
+
+
+.account-infoField-con {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* the user info labels */
+.account-userInfo-lable {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "League Gothic", sans-serif;
+    margin: 0;
+}
+
+.account-userInfo-lable p {
+    margin: 0;
+}
+
+/* the user info fields */
+.account-userInfo-con{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.account-userInfo-con h3 {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.account-userEdit-btn-con {
+    position: relative;
+    float: right;
+}
+
+#account-userInfoEdit-btn {
+    min-width: 88px;
+    border: 1px solid #fff;
+    border-radius: 28px;
+    padding: 15px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "League Gothic", sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+/* board created section */
+.account-boardCreated-title{
+    color: #FD1313;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-family: "League Gothic", sans-serif;
+}
+
+/* ccs for account divider line */
+.account-divider-line{
+    width: 95%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 0.25;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
