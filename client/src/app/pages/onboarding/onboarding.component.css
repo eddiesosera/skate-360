@@ -52,7 +52,7 @@
 }
 
 .onboarding-form-wrap {
-    padding: 50px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     border: 1px solid #272A2A;
@@ -73,8 +73,50 @@
 }
 
 .onboarding-form-top-description {
-    font-family: Neue Haas Grotesk Display Pro;
+    font-family: IBM Plex Mono;
     font-size: 16px;
     font-weight: 500;
+    text-transform: uppercase;
     color: #FD1313;
+}
+
+.onboarding-form-mid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.onboarding-form-mid-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.onboarding-form-mid-submit-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.onboarding-form-mid-input {
+    padding: 12px 15px;
+    width: 280px;
+    outline: none;
+    background: #0A0D0D;
+    border: 1px solid #353738;
+    color: #fff;
+    font-family: IBM Plex Mono;
+}
+
+.onboarding-form-btm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.onboarding-form-btm-forget {
+    font-family: League Gothic;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
 }
