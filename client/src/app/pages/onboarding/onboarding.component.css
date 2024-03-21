@@ -1,0 +1,80 @@
+.onboarding {
+    display: flex;
+    width: 100%;
+}
+
+.onboarding-left {
+    width: 60%;
+}
+
+.onboarding-left-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: #020202;
+    border: 1px solid #272A2A;
+    font-size: 21px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.onboarding-left-img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.onboarding-left-text {
+    position: absolute;
+    font-size: 128px;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-weight: 800;
+    text-transform: uppercase;
+    /* -webkit-text-stroke: #020202 1px; */
+}
+
+.onboarding-left-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.onboarding-form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onboarding-form-wrap {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #272A2A;
+    gap: 50px;
+}
+
+.onboarding-form-top {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.onboarding-form-top-head {
+    font-family: League Gothic;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #FD1313;
+}
+
+.onboarding-form-top-description {
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD1313;
+}

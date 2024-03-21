@@ -1,10 +1,40 @@
 <div class="onboarding">
     <div class="onboarding-left">
-        <div>
+        <div class="onboarding-left-icon">
             <i class="ri-home-5-line"></i>
         </div>
+        <div class="onboarding-left-img-wrap">
+            <div class="onboarding-left-text">
+                Skate 360
+            </div>
+            <img class="onboarding-left-img" [src]="bgImg" />
+        </div>
     </div>
-    <div class="onboarding-right">
-
+    <div class="onboarding-form">
+        <div class="onboarding-form-wrap">
+            <div class="onboarding-form-top">
+                <div class="onboarding-form-top-head">
+                    Login
+                </div>
+                <div class="onboarding-form-top-description">
+                    Login to acces inventory.
+                </div>
+            </div>
+            <div class="onboarding-form-mid">
+                <div class="onboarding-form-mid-input-wrap">
+                    <input type="email" class="onboarding-form-mid-input" />
+                    <input type="password" class="onboarding-form-mid-input" />
+                </div>
+                <div class="onboarding-form-mid-submit-wrap">
+                    <app-button>Verify You're Human</app-button>
+                    <app-button>Submit</app-button>
+                </div>
+            </div>
+            <div class="onboarding-form-btm">
+                <div class="onboarding-form-btm-forget">
+                    Forgot Password
+                </div>
+            </div>
+        </div>
     </div>
 </div>
