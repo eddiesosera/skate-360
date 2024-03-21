@@ -10,6 +10,14 @@
 
 .skateboards-header {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: sticky;
+    top: -140px;
+    background: #070707;
+    border: 1px solid #070707;
+    z-index: 10;
 }
 
 .skateboards-header-top {
@@ -49,4 +57,78 @@
     gap: 10px;
     position: absolute;
     right: 20px;
+}
+
+.skateboards-header-btm {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.skateboards-header-btm-filter-wrap {
+    display: flex;
+}
+
+.filter-dropdown {
+    display: flex;
+    width: fit-content;
+}
+
+.skateboards-header-btm-sort-wrap {
+    display: flex;
+}
+
+.skateboards-items {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.skateboards-paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 40px);
+    padding: 20px 0;
+    margin-left: -20px;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+    background: #070707;
+
+    font-family: IBM Plex Mono;
+}
+
+.paginate-item {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active-paginate {
+    font-weight: 800 !important;
+}
+
+.skateboards-paginate-left {
+    border-radius: 100px;
+    background: #080909;
+}
+
+.skateboards-paginate-right {
+    border-radius: 100px;
+    border: 1px solid #7f7f7f;
+}
+
+.skateboards-paginate-pages {
+    display: flex;
+    justify-content: center;
+}
+
+.skateboards-paginate-page-label {
+    display: flex;
+    align-items: center;
+    cursor: default;
 }

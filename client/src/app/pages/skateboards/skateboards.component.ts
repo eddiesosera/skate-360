@@ -3,42 +3,30 @@ import { RouterLink } from '@angular/router';
 import { SidebarComponent } from '../../components/navigation/sidebar/sidebar.component';
 import { ButtonComponent } from '../../components/inputs/button/button.component';
 import { DropdownComponent } from '../../components/inputs/dropdown/dropdown.component';
+import { SearchBarComponent } from '../../components/inputs/search-bar/search-bar.component';
+import { GridlayoutComponent } from '../../components/data-display/gridlayout/gridlayout.component';
+import { CommonModule } from '@angular/common';
+import { ProductCardComponent } from '../../components/data-display/product-card/product-card.component';
+import { dummdata } from '../home/sections/our-collection/dummy data';
 
 @Component({
   selector: 'app-skateboards',
   standalone: true,
-  imports: [RouterLink, SidebarComponent, ButtonComponent, DropdownComponent],
+  imports: [RouterLink, CommonModule, ProductCardComponent, SidebarComponent, GridlayoutComponent, ButtonComponent, DropdownComponent, SearchBarComponent,],
   templateUrl: './skateboards.component.html',
   styleUrl: './skateboards.component.css'
 })
 export class SkateboardsComponent {
-  filter = [
-    {
-      id: 'type',
-      name: 'Type',
-      options: [
-        'classic', 'long board', 'old school'
-      ]
-    },
-    {
-      id: 'popularity',
-      name: 'Popularity',
-      options: [
-        'least', 'most'
-      ]
-    },
-    {
-      id: 'craftedBy',
-      name: 'Crafted By',
-      options: [
-        // List of employees
-        'eddie', 'ungerer', 'abraham'
-      ]
-    }
-  ];
+
+  skateboardCollection = dummdata
+  pages = this.skateboardCollection.length
+
   @Input() label1: string = 'Type';
   @Input() label2: string = 'Popularity';
   @Input() label3: string = 'Created By';
+  @Input() label4: string = 'Date';
+  @Input() label5: string = 'Price';
+
   filterOptions1 = [{
     id: 0,
     label: 'Classic',
@@ -80,6 +68,32 @@ export class SkateboardsComponent {
       action: () => { alert(''); this.label1 = 'Old School' }
     },
   ]
+
+  filterOptions4 = [
+    {
+      id: 0,
+      label: 'Latest',
+      action: () => { alert(''); this.label1 = 'Classic' }
+    },
+    {
+      id: 1,
+      label: 'Oldest',
+      action: () => { alert(''); this.label1 = 'Old School' }
+    },
+  ];
+
+  filterOptions5 = [
+    {
+      id: 0,
+      label: 'High',
+      action: () => { alert(''); this.label1 = 'Classic' }
+    },
+    {
+      id: 1,
+      label: 'Low',
+      action: () => { alert(''); this.label1 = 'Old School' }
+    },
+  ];
 
 
 }

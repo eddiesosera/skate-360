@@ -22,19 +22,52 @@
 
             <!-- Header Section: Bottom Filter  -->
             <div class="skateboards-header-btm">
-                <div class="skateboards-header-btm-filterleft-wrap">
-                    <app-dropdown [label]="label1" [options]="filterOptions1"></app-dropdown>
-                    <app-dropdown [label]="label2" [options]="filterOptions2"></app-dropdown>
-                    <app-dropdown [label]="label3" [options]="filterOptions3"></app-dropdown>
+                <div class="skateboards-header-btm-filter-wrap">
+                    <app-dropdown class="filter-dropdown" [label]="label1" [options]="filterOptions1"></app-dropdown>
+                    <app-dropdown class="filter-dropdown" [label]="label2" [options]="filterOptions2"></app-dropdown>
+                    <app-dropdown class="filter-dropdown" [label]="label3" [options]="filterOptions3"></app-dropdown>
+                </div>
+                <app-search-bar style="width:-webkit-fill-available"></app-search-bar>
+                <div class="skateboards-header-btm-sort-wrap">
+                    <app-dropdown class="filter-dropdown" [label]="label4" [options]="filterOptions4"></app-dropdown>
+                    <app-dropdown class="filter-dropdown" [label]="label5" [options]="filterOptions5"></app-dropdown>
                 </div>
             </div>
 
         </div>
 
         <!-- Skateboard Items section -->
-        <div class="skateboards-items">Items</div>
+        <div class="skateboards-items">
+            <app-gridlayout [gap]="20">
+                <div class="grid-item" *ngFor="let skateboard of skateboardCollection">
+                    <app-product-card></app-product-card>
+                </div>
+            </app-gridlayout>
+        </div>
 
-        <!-- Pagination Items section -->
-        <div class="skateboards-paginate">Paginate</div>
+        <!-- Pagination Items section: display if there is more than 1 page -->
+        <div class="skateboards-paginate" *ngIf="pages>1">
+            <!-- <div class="skateboards-paginate-inner"> -->
+            <div class="skateboards-paginate-left paginate-item">
+                <i class="ri-arrow-left-line">
+                </i>
+            </div>
+            <div class="skateboards-paginate-pages">
+                <a class="skateboards-paginate-page-first paginate-item">
+                    1
+                </a>
+                <div class="skateboards-paginate-page-label">
+                    out of
+                </div>
+                <a class="skateboards-paginate-page-last paginate-item">
+                    {{pages}}
+                </a>
+            </div>
+            <div class="skateboards-paginate-right paginate-item">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+            <!-- </div> -->
+        </div>
+
     </div>
 </div>
