@@ -6,6 +6,7 @@ import { SkateboardsComponent } from "./pages/skateboards/skateboards.component"
 import { WharehouseComponent } from "./pages/wharehouse/wharehouse.component";
 import { InventoryComponent } from "./pages/inventory/inventory.component";
 import { AccountComponent } from "./pages/account/account.component";
+import { OnboardingComponent } from "./pages/onboarding/onboarding.component";
 
 
 export const routes: Routes = [
@@ -33,7 +34,7 @@ export const routes: Routes = [
     },
     {
         path: 'onboarding',
-        component: WharehouseComponent
+        component: OnboardingComponent
     },
     {
         path: 'account',
