@@ -40,8 +40,13 @@ export class QuizComponent {
       answer: 'D'
     }
   ];
+  quizOption = ['A', 'B', 'C', 'D']
   status: 'failed' | 'passed' | null = null;
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
+
+  hideQuiz() {
+    this.displayQuiz = false
+  }
 
 
 }

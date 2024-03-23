@@ -1,13 +1,23 @@
 <div class="quiz" *ngIf="displayQuiz">
-    <div class="quiz-head">
-        <div class="quiz-head-title">
-            Verification
+    <div class="quiz-inner">
+        <div class="quiz-head" (click)="hideQuiz()">
+            <div class="quiz-head-close">
+                <div class="ri-close-line"></div>
+            </div>
+            <div class="quiz-head-title">
+                Verify You Are Human
+            </div>
+            <div class="quiz-head-question">
+                {{quiz[0].question}}
+            </div>
+            <div class="quiz-head-answers">
+                <div class="quiz-head-answer" *ngFor="let option of quizOption">
+                    {{option}}
+                </div>
+            </div>
         </div>
-        <div class="quiz-head-question">
-            {{quiz[0].question}}
+        <div class="quiz-content">
+            <img [src]="skateboardImg" class="quiz-content-img" />
         </div>
-    </div>
-    <div class="quiz-content">
-        <img [src]="skateboardImg" class="quiz-content-img" />
     </div>
 </div>

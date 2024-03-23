@@ -1,0 +1,98 @@
+.quiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    background: #080909b1;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+}
+
+.quiz-inner {
+    width: 100%;
+    height: calc(100% - 80px);
+    border: 1px solid #ff420e;
+    padding: 40px 0;
+}
+
+.quiz-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quiz-head-close {
+    position: absolute;
+    top: 50px;
+    right: 48px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F92122;
+    background: #090B0B;
+    font-size: 24px;
+    color: #F92122;
+    cursor: pointer;
+}
+
+.quiz-head-title {
+    color: #FD1313;
+    text-align: center;
+    font-family: "League Gothic";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.quiz-head-question {
+    color: #FFF;
+    text-align: center;
+    font-family: "IBM Plex Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.quiz-head-answers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.quiz-head-answer {
+    padding: 10px 15px;
+    border: 0.75px solid #333;
+    cursor: pointer;
+}
+
+.quiz-select-answer {
+    border: 0.75px solid #333;
+}
+
+.quiz-content {
+    width: calc(100% - 40px);
+    height: calc(100% - 200px);
+    padding: 20px;
+    margin-top: 40px;
+    border-top: #FD1313 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quiz-content-img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
