@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ButtonComponent } from '../../../../components/inputs/button/button.component';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonComponent],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
@@ -13,28 +14,28 @@ export class QuizComponent {
   quiz = [
     {
       id: 'board',
-      question: 'Which part of the skateboard is the board',
+      question: 'Which part of the skateboard is the `board`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'A'
     },
     {
       id: 'truck',
-      question: 'Which part of the skateboard is the truck',
+      question: 'Which part of the skateboard is the `truck`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'B'
     },
     {
       id: 'wheel',
-      question: 'Which part of the skateboard is the truck',
+      question: 'Which part of the skateboard is the `wheel`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'C'
     },
     {
       id: 'bearing',
-      question: 'Which part of the skateboard is the truck',
+      question: 'Which part of the skateboard is the `bearing`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'D'
@@ -43,10 +44,16 @@ export class QuizComponent {
   quizOption = ['A', 'B', 'C', 'D']
   status: 'failed' | 'passed' | null = null;
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
+  selectedAnswer: string | null = null;
+  userResponse: object = {}
 
   hideQuiz() {
     this.displayQuiz = false
   }
 
+  submitAnswer() {
+    this.displayQuiz = false;
+    // Validation logic
 
+  }
 }

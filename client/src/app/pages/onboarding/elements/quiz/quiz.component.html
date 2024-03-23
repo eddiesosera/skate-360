@@ -1,7 +1,7 @@
 <div class="quiz" *ngIf="displayQuiz">
     <div class="quiz-inner">
-        <div class="quiz-head" (click)="hideQuiz()">
-            <div class="quiz-head-close">
+        <div class="quiz-head">
+            <div class="quiz-head-close" (click)="hideQuiz()">
                 <div class="ri-close-line"></div>
             </div>
             <div class="quiz-head-title">
@@ -11,13 +11,19 @@
                 {{quiz[0].question}}
             </div>
             <div class="quiz-head-answers">
-                <div class="quiz-head-answer" *ngFor="let option of quizOption">
+                <div [class]="selectedAnswer===option?'quiz-head-answer quiz-select-answer':'quiz-head-answer'"
+                    *ngFor="let option of quizOption" (click)="selectedAnswer=option">
                     {{option}}
                 </div>
             </div>
         </div>
         <div class="quiz-content">
             <img [src]="skateboardImg" class="quiz-content-img" />
+            <app-button class="quiz-content-btn" accent="red" variant="fill" custom="color: #030303;" [gap]="10"
+                *ngIf="selectedAnswer" (click)="submitAnswer()">
+                Continue to Login
+                <i class="ri-arrow-right-line"></i>
+            </app-button>
         </div>
     </div>
 </div>

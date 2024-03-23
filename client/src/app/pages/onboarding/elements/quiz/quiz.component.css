@@ -77,7 +77,9 @@
 }
 
 .quiz-select-answer {
-    border: 0.75px solid #333;
+    border: none;
+    background: #FD1313;
+    color: #020202;
 }
 
 .quiz-content {
@@ -95,4 +97,13 @@
     height: 100%;
     aspect-ratio: 1;
     object-fit: contain;
+}
+
+.quiz-content-btn {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
