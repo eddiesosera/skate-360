@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
 export class QuizComponent {
-  displayQuiz = false;
+  @Input() displayQuiz = false;
   quiz = [
     {
       id: 'board',
@@ -40,6 +41,7 @@ export class QuizComponent {
     }
   ];
   status: 'failed' | 'passed' | null = null;
-  skateboardImg = '../../../../../assets/img/skateboard_quiz.png'
+  skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
+
 
 }

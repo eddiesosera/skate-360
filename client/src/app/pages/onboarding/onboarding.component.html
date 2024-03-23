@@ -26,8 +26,9 @@
                     <input type="password" class="onboarding-form-mid-input" />
                 </div>
                 <div class="onboarding-form-mid-submit-wrap">
-                    <app-button width="calc(100% - 30px)" accent="red" variant="outline">Verify You're
-                        Human</app-button>
+                    <app-button (click)="displayQuiz()" width="calc(100% - 30px)" accent="red" variant="outline">Verify
+                        You're Human
+                    </app-button>
                     <app-button width="calc(100% - 30px)" custom="background: #F92122; color: #090909; border: none;">
                         Submit
                     </app-button>
@@ -41,3 +42,4 @@
         </div>
     </div>
 </div>
+<app-quiz [displayQuiz]="isQuizDisplayed"></app-quiz>
