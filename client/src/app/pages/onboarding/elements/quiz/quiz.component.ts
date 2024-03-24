@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { ButtonComponent } from '../../../../components/inputs/button/button.component';
+import { ToggleQuizService } from '../../../../services/page/onboarding/toggle-quiz.service';
 
 @Component({
   selector: 'app-quiz',
@@ -9,32 +10,33 @@ import { ButtonComponent } from '../../../../components/inputs/button/button.com
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
-export class QuizComponent {
+export class QuizComponent implements OnInit {
   @Input() displayQuiz = false;
+  display!: boolean;
   quiz = [
     {
-      id: 'board',
+      id: 0,
       question: 'Which part of the skateboard is the `board`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'A'
     },
     {
-      id: 'truck',
+      id: 1,
       question: 'Which part of the skateboard is the `truck`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'B'
     },
     {
-      id: 'wheel',
+      id: 2,
       question: 'Which part of the skateboard is the `wheel`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
       answer: 'C'
     },
     {
-      id: 'bearing',
+      id: 3,
       question: 'Which part of the skateboard is the `bearing`?',
       options: ['A', 'B', 'C', 'D'],
       content: '',
@@ -42,18 +44,35 @@ export class QuizComponent {
     }
   ];
   quizOption = ['A', 'B', 'C', 'D']
-  status: 'failed' | 'passed' | null = null;
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
   selectedAnswer: string | null = null;
-  userResponse: object = {}
+  @Input() userResult: boolean | null = null;
+
+  constructor(private toggleQuiz: ToggleQuizService) { }
+
+  ngOnInit(): void {
+    this.toggleQuiz.currentToggleState.subscribe(state => this.display = state)
+  }
 
   hideQuiz() {
     this.displayQuiz = false
+    this.toggleQuiz.changeToggleState(false)
   }
 
-  submitAnswer() {
+  randomQuizId(): number {
+    const randonNumber = Math.floor(Math.random() * 4);
+    return randonNumber
+  }
+
+  submitAnswer(response: any) {
     this.displayQuiz = false;
     // Validation logic
-
+    if (this.selectedAnswer == this.quiz[this.randomQuizId()].answer && this.selectedAnswer !== null) {
+      this.userResult = true;
+      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId()].answer)
+    } else {
+      this.userResult = false
+      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId()].answer)
+    }
   }
 }
