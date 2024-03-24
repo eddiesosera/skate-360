@@ -45,7 +45,7 @@ export class QuizComponent implements OnInit {
   quizOption = ['A', 'B', 'C', 'D']
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
   selectedAnswer: string | null = null;
-  userResult!: boolean | null;
+  userResult!: 'true' | 'false' | 'null';
   randomQuizId = Math.floor(Math.random() * 4);
 
   constructor(private quizService: ToggleQuizService) { }
@@ -64,10 +64,10 @@ export class QuizComponent implements OnInit {
 
     // Validation logic
     if (this.selectedAnswer == this.quiz[this.randomQuizId].answer && this.selectedAnswer !== null) {
-      this.quizService.assignUserResult(true)
+      this.quizService.assignUserResult('true')
       console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     } else {
-      this.quizService.assignUserResult(false)
+      this.quizService.assignUserResult('false')
       console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     }
 

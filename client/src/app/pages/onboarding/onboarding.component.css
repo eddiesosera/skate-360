@@ -120,3 +120,44 @@
     text-transform: uppercase;
     color: #ffffff;
 }
+
+#form-btn-hide {
+    display: none;
+}
+
+.onboarding-form-mid-verify-success {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(112, 202, 112, 0.05);
+    border: 1px solid rgba(50, 205, 50, 0.125);
+    color: rgb(153, 245, 153);
+    font-family: IBM Plex Mono;
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.onboarding-form-mid-verify-fail {
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: rgba(202, 133, 112, 0.05);
+    border: 1px solid rgba(202, 133, 112, 0.125);
+    color: rgb(245, 168, 145);
+    font-family: IBM Plex Mono;
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ToggleQuizService {
 
   private toggleSource = new BehaviorSubject<boolean>(false);
-  private userResultSource = new BehaviorSubject<boolean | null>(null);
+  private userResultSource = new BehaviorSubject<'true' | 'false' | 'null'>('null');
   currentToggleState = this.toggleSource.asObservable();
   userResult = this.userResultSource.asObservable();
 
@@ -15,7 +15,7 @@ export class ToggleQuizService {
     this.toggleSource.next(state)
   }
 
-  assignUserResult(result: boolean | null) {
+  assignUserResult(result: 'true' | 'false' | 'null') {
     this.userResultSource.next(result)
   }
 

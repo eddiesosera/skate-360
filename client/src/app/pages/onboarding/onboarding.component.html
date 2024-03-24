@@ -1,5 +1,5 @@
 <div class="onboarding">
-    <div class="onboarding-left">
+    <div class="onboarding-left" (click)="backPage()">
         <div class="onboarding-left-icon">
             <i class="ri-home-5-line"></i>
         </div>
@@ -22,14 +22,25 @@
             </div>
             <div class="onboarding-form-mid">
                 <div class="onboarding-form-mid-input-wrap">
-                    <input type="email" class="onboarding-form-mid-input" />
-                    <input type="password" class="onboarding-form-mid-input" />
+                    <input placeholder="Enter your email" type="email" class="onboarding-form-mid-input" />
+                    <input placeholder="Enter your password" type="password" class="onboarding-form-mid-input" />
                 </div>
                 <div class="onboarding-form-mid-submit-wrap">
-                    <app-button (click)="displayQuiz()" width="calc(100% - 30px)" accent="red" variant="outline">Verify
-                        You're Human
+                    <app-button (click)="displayQuiz()" [style]="userResult==='null'?'display: flex':'display: none'"
+                        width="calc(100% - 30px)" accent="red" variant="outline">
+                        Verify You're Human
                     </app-button>
-                    <app-button width="calc(100% - 30px)" custom="background: #F92122; color: #090909; border: none;">
+                    <div class="onboarding-form-mid-verify-success"
+                        [style]="userResult==='true'?'display: flex':'display: none'">
+                        Verification successful.
+                    </div>
+                    <div class="onboarding-form-mid-verify-fail"
+                        [style]="userResult==='false'?'display: flex':'display: none'">
+                        <div>Verification failed,</div>
+                        <div class="underline" (click)="displayQuiz()">Try again.</div>
+                    </div>
+                    <app-button [style]="userResult==='true'?'opacity: 1':'opacity: 0.5'" width="calc(100% - 30px)"
+                        custom="background: #F92122; color: #090909; border: none;">
                         Submit
                     </app-button>
                 </div>
