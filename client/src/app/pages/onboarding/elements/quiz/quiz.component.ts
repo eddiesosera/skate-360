@@ -45,28 +45,29 @@ export class QuizComponent implements OnInit {
   quizOption = ['A', 'B', 'C', 'D']
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
   selectedAnswer: string | null = null;
-  @Input() userResult: boolean | null = null;
+  userResult!: boolean | null;
   randomQuizId = Math.floor(Math.random() * 4);
 
-  constructor(private toggleQuiz: ToggleQuizService) { }
+  constructor(private quizService: ToggleQuizService) { }
 
   ngOnInit(): void {
-    this.toggleQuiz.currentToggleState.subscribe(state => this.display = state)
+    this.quizService.currentToggleState.subscribe(state => this.display = state)
+    this.quizService.userResult.subscribe(result => this.userResult = result)
   }
 
   hideQuiz() {
-    this.toggleQuiz.changeToggleState(false)
+    this.quizService.changeToggleState(false)
   }
 
   submitAnswer() {
-    this.toggleQuiz.changeToggleState(false)
+    this.quizService.changeToggleState(false)
 
     // Validation logic
     if (this.selectedAnswer == this.quiz[this.randomQuizId].answer && this.selectedAnswer !== null) {
-      this.userResult = true;
+      this.quizService.assignUserResult(true)
       console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     } else {
-      this.userResult = false
+      this.quizService.assignUserResult(false)
       console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     }
 
