@@ -1,4 +1,4 @@
-<div class="quiz" *ngIf="displayQuiz">
+<div class="quiz" *ngIf="display">
     <div class="quiz-inner">
         <div class="quiz-head">
             <div class="quiz-head-close" (click)="hideQuiz()">
@@ -8,7 +8,7 @@
                 Verify You Are Human
             </div>
             <div class="quiz-head-question">
-                {{quiz[randomQuizId()].question}}
+                {{quiz[randomQuizId].question}}
             </div>
             <div class="quiz-head-answers">
                 <div [class]="selectedAnswer===option?'quiz-head-answer quiz-select-answer':'quiz-head-answer'"
@@ -20,7 +20,7 @@
         <div class="quiz-content">
             <img [src]="skateboardImg" class="quiz-content-img" />
             <app-button class="quiz-content-btn" accent="red" variant="fill" custom="color: #030303;" [gap]="10"
-                *ngIf="selectedAnswer" (click)="submitAnswer(selectedAnswer)">
+                *ngIf="selectedAnswer" (click)="submitAnswer()">
                 Continue to Login
                 <i class="ri-arrow-right-line"></i>
             </app-button>

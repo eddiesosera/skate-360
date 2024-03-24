@@ -11,7 +11,6 @@ import { ToggleQuizService } from '../../../../services/page/onboarding/toggle-q
   styleUrl: './quiz.component.css'
 })
 export class QuizComponent implements OnInit {
-  @Input() displayQuiz = false;
   display!: boolean;
   quiz = [
     {
@@ -47,6 +46,7 @@ export class QuizComponent implements OnInit {
   skateboardImg = '../../../../../assets/img/skateboard_quiz.png';
   selectedAnswer: string | null = null;
   @Input() userResult: boolean | null = null;
+  randomQuizId = Math.floor(Math.random() * 4);
 
   constructor(private toggleQuiz: ToggleQuizService) { }
 
@@ -55,24 +55,25 @@ export class QuizComponent implements OnInit {
   }
 
   hideQuiz() {
-    this.displayQuiz = false
     this.toggleQuiz.changeToggleState(false)
   }
 
-  randomQuizId(): number {
-    const randonNumber = Math.floor(Math.random() * 4);
-    return randonNumber
-  }
+  submitAnswer() {
+    this.toggleQuiz.changeToggleState(false)
 
-  submitAnswer(response: any) {
-    this.displayQuiz = false;
     // Validation logic
-    if (this.selectedAnswer == this.quiz[this.randomQuizId()].answer && this.selectedAnswer !== null) {
+    if (this.selectedAnswer == this.quiz[this.randomQuizId].answer && this.selectedAnswer !== null) {
       this.userResult = true;
-      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId()].answer)
+      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     } else {
       this.userResult = false
-      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId()].answer)
+      console.log("Result: ", this.userResult + " as selected answer = " + this.selectedAnswer, ' while answer is: ', this.quiz[this.randomQuizId].answer)
     }
+
+    // Reset selected answer &Reload quiz number
+    setTimeout(() => {
+      this.selectedAnswer = null;
+      this.randomQuizId = Math.floor(Math.random() * 4);
+    }, 500)
   }
 }

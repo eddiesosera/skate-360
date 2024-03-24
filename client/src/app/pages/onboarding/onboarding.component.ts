@@ -23,7 +23,6 @@ export class OnboardingComponent {
   }
 
   displayQuiz() {
-    this.isQuizDisplayed = true
     this.toggleQuiz.changeToggleState(true)
   };
 
