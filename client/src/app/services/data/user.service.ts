@@ -38,4 +38,7 @@ export class UserService {
   login(userForm: object): Observable<any> {
     return this.http.post<any>(this.authUrl, userForm)
   }
+  logOut() {
+    sessionStorage.removeItem('loggedInUser')
+  }
 }
