@@ -11,7 +11,9 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   private baseUrl = "http://localhost:3000/users";
+  private authUrl = "http://localhost:3000/auth/login"
 
+  // USER CRUD Functionality
   getAllUsers(): Observable<User[]> {
     return this.http.get<any>(this.baseUrl)
   }
@@ -32,5 +34,8 @@ export class UserService {
     return this.http.delete<User>(`${this.baseUrl}/${id}`)
   }
 
-
+  // USER ONBOARDING Functionality
+  login(userForm: object): Observable<any> {
+    return this.http.post<any>(this.authUrl, userForm)
+  }
 }
