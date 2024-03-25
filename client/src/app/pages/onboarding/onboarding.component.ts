@@ -20,21 +20,25 @@ export class OnboardingComponent implements OnInit {
   isQuizDisplayed!: boolean;
   userResult: 'true' | 'false' | 'null' = 'null';
   resultFeedback!: string;
+  init = 0
 
   // DATA variables
   userForm = {
     email: '',
     password: ''
-  }
+  };
+  loginMessage: any = '';
 
-  constructor(private toggleQuiz: ToggleQuizService, private userService: UserService) { }
+  constructor(private toggleQuiz: ToggleQuizService, private userService: UserService) {
+
+  }
 
   ngOnInit(): void {
 
     // UI Logic
     this.toggleQuiz.currentToggleState.subscribe(state => this.isQuizDisplayed = state)
     this.toggleQuiz.userResult.subscribe(result => this.userResult = result)
-    console.log(this.userResult, ' user result');
+    // console.log(this.userResult, ' user result');
 
     if (this.userResult === "true") {
       this.resultFeedback = "Verification Successful!"
@@ -63,11 +67,19 @@ export class OnboardingComponent implements OnInit {
     // console.log(this.userForm)
   }
   loginUser() {
-    console.log(this.userForm)
-    this.userService.login(this.userForm).subscribe(user => {
-      sessionStorage.setItem('loggedInUser', JSON.stringify(user))
-      console.log(user)
-    })
+    this.init = this.init + 1
+    if (this.userResult === 'true') {
+      // console.log(this.userForm)
+      this.userService.login(this.userForm).subscribe(user => {
+        sessionStorage.setItem('loggedInUser', JSON.stringify(user));
+        this.loginMessage = user.message
+        // console.log(user)
+      })
+    } else if (this.userResult === 'false') {
+      alert('Yo bro, Try the verification test again.')
+    } else if (this.userResult === 'null' && this.init > 1) {
+      alert('Get skate360 verified to be able to login.')
+    }
   }
 
 }

@@ -22,10 +22,17 @@
             </div>
             <form class="onboarding-form-mid">
                 <div class="onboarding-form-mid-input-wrap">
-                    <input (input)="updateInput($event,'email')" placeholder="Enter your email" type="email"
+                    <!-- Feedback -->
+                    <div class="onboarding-form-mid-verify-fail"
+                        [style]="loginMessage!==''&&loginMessage!=='Success'?'display: flex':'display: none'">
+                        {{loginMessage}}
+                    </div>
+
+                    <!-- Input -->
+                    <input required (input)="updateInput($event,'email')" placeholder="Enter your email" type="email"
                         class="onboarding-form-mid-input" />
-                    <input (input)="updateInput($event,'password')" placeholder="Enter your password" type="password"
-                        class="onboarding-form-mid-input" />
+                    <input required (input)="updateInput($event,'password')" placeholder="Enter your password"
+                        type="password" class="onboarding-form-mid-input" />
                 </div>
                 <div class="onboarding-form-mid-submit-wrap">
                     <app-button (click)="displayQuiz()" [style]="userResult==='null'?'display: flex':'display: none'"
