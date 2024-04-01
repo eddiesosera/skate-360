@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DropdownComponent } from '../../../components/inputs/dropdown/dropdown.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../../components/inputs/button/button.component';
+import { NewStockService } from '../../../services/page/wharehouse/new-stock.service';
 
 @Component({
   selector: 'app-new-stock',
@@ -10,7 +11,8 @@ import { ButtonComponent } from '../../../components/inputs/button/button.compon
   templateUrl: './new-stock.component.html',
   styleUrl: './new-stock.component.css'
 })
-export class NewStockComponent {
+export class NewStockComponent implements OnInit {
+  @Input() isVisisble = false;
   @Input() resourceLabel: string = 'Resource Type';
   resourceTypes = [
     {
@@ -39,4 +41,14 @@ export class NewStockComponent {
       action: () => { alert(''); this.resourceLabel = 'Bearings' }
     }
   ];
+
+  constructor(private newStockService: NewStockService) { }
+
+  ngOnInit(): void {
+    this.newStockService.isVisible.subscribe((state) => this.isVisisble = state)
+  }
+
+  toggleClose() {
+    this.newStockService.toggleVisibility(false)
+  }
 }

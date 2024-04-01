@@ -9,31 +9,74 @@
     align-items: center;
 }
 
+.new-stock-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #292E2F;
+    background: #080a0ad1;
+    z-index: 2;
+    cursor: pointer;
+}
+
 .new-stock-wrap {
     position: absolute;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 280px;
+    padding: 40px;
+    background: #080a0ad1;
+    border: 1px solid #292E2F;
 }
 
-.new-stock-wrap-top {}
+.new-stock-wrap-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-.new-stock-wrap-top-head {}
+.new-stock-wrap-top-head {
+    display: flex;
+    font-family: "League Gothic";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 40px;
+    align-items: center;
+}
 
-.new-stock-wrap-top-info {}
+.new-stock-wrap-top-info {
+    font-family: "IBM Plex Mono";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
-.new-stock-wrap-mid {}
+.new-stock-wrap-mid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
 
 .new-stock-mid-amount {
     padding: 12px 15px;
-    width: 280px;
+    width: calc(100% - 30px);
     outline: none;
     background: #0A0D0D;
     border: 1px solid #353738;
     color: #fff;
     font-family: IBM Plex Mono;
 }
-
-
-.new-stock-mid-amount {}
 
 .new-stock-wrap-btm {}
 

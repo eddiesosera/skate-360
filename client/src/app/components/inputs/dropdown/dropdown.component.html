@@ -1,5 +1,5 @@
-<div class="dropdown" (clickOutside)="closeDropdown()">
-    <button class="dropdown-toggle" (click)="toggleDropdown()">
+<div class="dropdown" [id]="'dropdown'+idPos" (clickOutside)="closeDropdown()">
+    <button class="dropdown-toggle" [style.width]="width" (click)="toggleDropdown()">
         {{label}}
         <i class="ri-arrow-down-s-line"></i>
     </button>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { WarehouseData } from '../../../models/warehouse-data.model';
+import { NewStockService } from '../../../services/page/wharehouse/new-stock.service';
 @Component({
   selector: 'app-warehouse-card',
   standalone: true,
@@ -10,7 +11,7 @@ import { WarehouseData } from '../../../models/warehouse-data.model';
 })
 export class WarehouseCardComponent {
 
-
+  constructor(private newStockService: NewStockService) { }
 
   // dummy data 
   warehousecardData: WarehouseData[] = [
@@ -36,4 +37,8 @@ export class WarehouseCardComponent {
       trucks: 6
     },
   ]
+
+  openStockForm() {
+    this.newStockService.toggleVisibility(true)
+  }
 }

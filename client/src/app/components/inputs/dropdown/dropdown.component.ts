@@ -9,6 +9,8 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
+  @Input() idPos: string | number = 0;
+  @Input() width = 'max-content';
   @Input() label = 'Option';
   @Input() options = [
     {
@@ -25,7 +27,11 @@ export class DropdownComponent {
   isOpen = false;
 
   toggleDropdown(): void {
-    this.isOpen = true;
+    if (this.isOpen === false) {
+      this.isOpen = true;
+    } else if (this.isOpen === true) {
+      this.isOpen = false;
+    }
   }
 
   closeDropdown(): void {
@@ -36,7 +42,7 @@ export class DropdownComponent {
   onDocumentClick(event: MouseEvent): void {
     if (!event.target) return;
     const target = event.target as HTMLElement;
-    if (!target.closest('.dropdown')) {
+    if (!target.closest(`#dropdown${this.idPos}`)) {
       this.closeDropdown();
     }
   }
