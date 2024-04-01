@@ -3,10 +3,11 @@
         Our Locations
     </div>
     <div class="home-locations-content">
-        <app-gridlayout>
-            <div>Location #1</div>
+        <app-gridlayout [gap]="20">
+            <!-- <div>Location #1</div>
             <div>Location #2</div>
-            <div>Location #2</div>
+            <div>Location #2</div> -->
+            <app-warehouse-card *ngFor="let location of locations"></app-warehouse-card>
         </app-gridlayout>
     </div>
 </div>

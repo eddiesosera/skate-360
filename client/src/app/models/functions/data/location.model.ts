@@ -7,6 +7,7 @@ export interface LocationModel {
     city: string
     description: string
     stockAmount: number
+    avatar: string
     users: User[]
     skateboards: []
 }
