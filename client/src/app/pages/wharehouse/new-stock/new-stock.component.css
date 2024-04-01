@@ -1,0 +1,47 @@
+.new-stock {
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-stock-wrap {
+    position: absolute;
+    z-index: 2;
+}
+
+.new-stock-wrap-top {}
+
+.new-stock-wrap-top-head {}
+
+.new-stock-wrap-top-info {}
+
+.new-stock-wrap-mid {}
+
+.new-stock-mid-amount {
+    padding: 12px 15px;
+    width: 280px;
+    outline: none;
+    background: #0A0D0D;
+    border: 1px solid #353738;
+    color: #fff;
+    font-family: IBM Plex Mono;
+}
+
+
+.new-stock-mid-amount {}
+
+.new-stock-wrap-btm {}
+
+.new-stock-overlay-bg {
+    width: 100vw;
+    height: 100vh;
+    background: #00000085;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}

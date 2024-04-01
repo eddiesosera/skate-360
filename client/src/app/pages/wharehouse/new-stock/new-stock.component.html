@@ -1,0 +1,16 @@
+<div class="new-stock">
+    <div class="new-stock-wrap">
+        <div class="new-stock-wrap-top">
+            <div class="new-stock-wrap-top-head">New Stock</div>
+            <div class="new-stock-wrap-top-info">You can new stock filling in the form below.</div>
+        </div>
+        <div class="new-stock-wrap-mid">
+            <app-dropdown [label]="resourceLabel" [options]="resourceTypes"></app-dropdown>
+            <input class="new-stock-mid-amount" type="number" placeholder="Enter amount" />
+        </div>
+        <div class="new-stock-wrap-btm">
+            <app-button accent="red" variant="fill">Add Stock</app-button>
+        </div>
+    </div>
+    <div class="new-stock-overlay-bg"></div>
+</div>
