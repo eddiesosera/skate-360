@@ -29,7 +29,4 @@ export class OurCollectionComponent implements OnInit {
     )
   }
 
-  // this.dataService.setData({ key: 'value' });
-
-
 }

@@ -8,6 +8,7 @@ import { GridlayoutComponent } from '../../components/data-display/gridlayout/gr
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../components/data-display/product-card/product-card.component';
 import { dummdata } from '../home/sections/our-collection/dummy data';
+import { SkateboardService } from '../../services/data/skateboard.service';
 
 @Component({
   selector: 'app-skateboards',
@@ -18,7 +19,7 @@ import { dummdata } from '../home/sections/our-collection/dummy data';
 })
 export class SkateboardsComponent {
 
-  skateboardCollection = dummdata
+  skateboardCollection: any = []
   pages = this.skateboardCollection.length
 
   @Input() label1: string = 'Type';
@@ -42,7 +43,6 @@ export class SkateboardsComponent {
     label: 'Long Board',
     action: () => { alert(''); this.label1 = 'Long Board' }
   }];
-
   filterOptions2 = [
     {
       id: 0,
@@ -55,7 +55,6 @@ export class SkateboardsComponent {
       action: () => { alert(''); this.label1 = 'Old School' }
     },
   ];
-
   filterOptions3 = [
     {
       id: 0,
@@ -68,7 +67,6 @@ export class SkateboardsComponent {
       action: () => { alert(''); this.label1 = 'Old School' }
     },
   ]
-
   filterOptions4 = [
     {
       id: 0,
@@ -81,7 +79,6 @@ export class SkateboardsComponent {
       action: () => { alert(''); this.label1 = 'Old School' }
     },
   ];
-
   filterOptions5 = [
     {
       id: 0,
@@ -94,6 +91,16 @@ export class SkateboardsComponent {
       action: () => { alert(''); this.label1 = 'Old School' }
     },
   ];
+
+  constructor(private skateboardData: SkateboardService) { }
+
+  ngOnInit(): void {
+    this.skateboardData.getAllSkateboards().subscribe((skateboards) => {
+      this.skateboardCollection = skateboards;
+      console.log(skateboards)
+    }
+    )
+  }
 
 
 }

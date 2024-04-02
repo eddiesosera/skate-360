@@ -1,10 +1,16 @@
 <div class="product-card" id="product-card">
+
     <div class="product-card-content-wrap">
-        <app-card-options></app-card-options>
-        <!--Where we wil render the 3D object: -->
-        <!-- <div id="product-canvas"></div> -->
+        <div class="product-card-content-options-wrap" [style.width]="cardWidth+'px'">
+            <app-card-options class="product-card-content-options"></app-card-options>
+        </div>
+        <div class="product-card-content-img-wrap" [style.width]="cardWidth+'px'">
+            <img [src]="imageDeck" class="product-card-content-img" alt="Skateboard Image"
+                [style.width]="'calc('+cardWidth+'px - 100px)'" />
+        </div>
         <div class="product-placeholder"></div>
     </div>
+
     <div class="product-card-details-wrap">
         <div class="product-card-details-type">
             {{type}} Board
@@ -16,4 +22,5 @@
             {{price | currency:'R '}} <!-- | currencyPipe -->
         </div>
     </div>
+
 </div>

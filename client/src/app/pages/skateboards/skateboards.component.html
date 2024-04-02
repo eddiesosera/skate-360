@@ -16,7 +16,7 @@
                 </div>
                 <div class="skateboards-header-top-actions">
                     <a href="craft"><app-button accent="red" type="round">Add New</app-button></a>
-                    <a href="craft"><app-button type="round" custom="border: none;">Edit</app-button></a>
+                    <!-- <a href="craft"><app-button type="round" custom="border: none;">Edit</app-button></a> -->
                 </div>
             </div>
 
@@ -44,8 +44,12 @@
         <!-- Skateboard Items section -->
         <div class="skateboards-items">
             <app-gridlayout [gap]="20">
-                <div class="grid-item" *ngFor="let skateboard of skateboardCollection">
-                    <app-product-card></app-product-card>
+                <div class="grid-item" *ngFor="let skateboardItem of skateboardCollection">
+                    <app-product-card [type]="skateboardItem?.configuration?.board_type?.name"
+                        [craftedBy]="skateboardItem?.craftedBy"
+                        [avatar]="skateboardItem?.configuration?.board_type?.avatar"
+                        [location]="skateboardItem?.location" [price]="skateboardItem?.price"
+                        [id]="skateboardItem?.id"></app-product-card>
                 </div>
             </app-gridlayout>
         </div>
