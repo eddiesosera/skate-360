@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ProductData } from '../../models/components/data-display/product-data.model';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Skateboard } from '../../models/functions/data/skateboard.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,12 @@ export class ProductDataService {
   constructor() { }
 
   private data: ProductData = {
-    // Temporary dummy data. Final version will be 0 or  ''
     id: 0,
-    type: 'Classic',
-    craftedBy: 'Eddie',
+    type: '',
+    craftedBy: '',
+    avatar: '',
     price: 0,
-    location: 'Johanessburg'
+    location: ''
   };
 
   setData(data: ProductData): void {

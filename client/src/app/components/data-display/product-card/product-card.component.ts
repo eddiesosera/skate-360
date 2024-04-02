@@ -15,11 +15,17 @@ export class ProductCardComponent implements OnInit {
 
   // The following link is a reference to state management:
   // https://hackernoon.com/angular-state-management-a-comparison-of-the-different-options-available
-
-  skateboard?: ProductData = {
+  @Input() id: any
+  @Input() type: any
+  @Input() craftedBy: any
+  @Input() avatar: any
+  @Input() price: any
+  @Input() location: any
+  @Input() skateboard?: ProductData = {
     id: 0,
-    type: 'Classic',
+    type: '',
     craftedBy: '',
+    avatar: '',
     price: 0,
     location: ''
   }
@@ -27,7 +33,7 @@ export class ProductCardComponent implements OnInit {
   constructor(private data: ProductDataService) { };
 
   ngOnInit(): void {
-    this.skateboard = this.data.getData()
+    // this.skateboard = this.data.getData()
   }
 
 }

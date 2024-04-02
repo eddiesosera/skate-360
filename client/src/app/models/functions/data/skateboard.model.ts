@@ -1,4 +1,5 @@
 import { LocationModel } from "./location.model"
+import { StockNeeded } from "./stockNeeded"
 import { User } from "./user.model"
 
 export interface Skateboard {
@@ -9,4 +10,5 @@ export interface Skateboard {
     craftedBy: User
     configuration: number
     location: LocationModel
+    stockNeeded: StockNeeded
 }

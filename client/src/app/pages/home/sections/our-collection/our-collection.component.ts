@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../../../components/inputs/button/button.component';
 import { dummdata } from './dummy data';
 import Masonry from 'masonry-layout';
@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../../../components/data-display/product-card/product-card.component';
 import { ProductDataService } from '../../../../services/component/product-data.service';
 import { GridlayoutComponent } from '../../../../components/data-display/gridlayout/gridlayout.component';
+import { SkateboardService } from '../../../../services/data/skateboard.service';
+import { Skateboard } from '../../../../models/functions/data/skateboard.model';
 
 @Component({
   selector: 'app-our-collection',
@@ -14,26 +16,17 @@ import { GridlayoutComponent } from '../../../../components/data-display/gridlay
   templateUrl: './our-collection.component.html',
   styleUrl: './our-collection.component.css'
 })
-export class OurCollectionComponent implements AfterViewInit {
-  skateboardCollection = dummdata
+export class OurCollectionComponent implements OnInit {
+  skateboardCollection: any = []
 
-  constructor(private dataService: ProductDataService) { }
+  constructor(private skateboardData: SkateboardService) { }
 
-  ngAfterViewInit(): void {
-    var grid = document.querySelector('.grid');
-    var masonry = new Masonry(grid!, {
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      // gutter: 20,
-    });
-
-    this.dataService.setData({
-      id: 0,
-      type: 'Classic LLL',
-      craftedBy: '',
-      price: 0,
-      location: ''
-    })
+  ngOnInit(): void {
+    this.skateboardData.getAllSkateboards().subscribe((skateboards) => {
+      this.skateboardCollection = skateboards;
+      console.log(skateboards)
+    }
+    )
   }
 
   // this.dataService.setData({ key: 'value' });
