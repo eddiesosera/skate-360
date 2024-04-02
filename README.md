@@ -14,12 +14,12 @@
 <!-- HEADER SECTION -->
 <h5 align="center" style="padding:0;margin:0;">Your Eddie Sosera</h5>
 <h5 align="center" style="padding:0;margin:0;">21100419</h5>
-<h6 align="center">Subject Name & Year</h6>
+<h6 align="center">DV300 2024</h6>
 </br>
 
 <h5 align="center" style="padding:0;margin:0;">Your Ungerer Hattingh</h5>
 <h5 align="center" style="padding:0;margin:0;">221302</h5>
-<h6 align="center">DV300 2023</h6>
+<h6 align="center">DV300 2024</h6>
 </br>
 
 <p align="center">
