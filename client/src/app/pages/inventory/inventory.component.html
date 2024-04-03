@@ -1,1 +1,167 @@
-<p>inventory works!</p>
+<div class="inventoryList-main-container">
+
+    <!-- side navbar -->
+    <div class="winventoryList-sidebar-container">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="inventory-mainspace-con">
+        <!-- top row -->
+        <div class="inv-mainspace-toprow-con">
+            <!-- the text container -->
+            <div class="inv-mainspace-text-con">
+                <h1>inventory list</h1>
+                <p>A inventory view for all items listed in inventory</p>
+            </div>
+            <!-- the location box -->
+            <div class="inv-locationInfo-box">
+                <div class="locationInfoBox-type">
+                    <p>wharehouse</p>
+                </div>
+                <div class="locationInfoBox-location">
+                    <p>location</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- divider line -->
+        <div class="main-divider-line"></div>
+
+        <div class="inv-content-main-container">
+            <!-- filters container -->
+            <div class="inv-content-filters-con">
+                <!-- the filter buttons -->
+                <div class="content-filter-buttons">
+                    <button>All</button>
+                    <button>boards</button>
+                    <button>wheels</button>
+                    <button>bearings</button>
+                    <button>trucks</button>
+                </div>
+                <!-- the search field -->
+                <div>
+                    <app-search-bar></app-search-bar>
+                </div>
+                <!-- the sorting buttons -->
+                <div class="contnet-sorting-buttons">
+                    <div class="dropdown">
+                        <!-- date dropdown button -->
+                        <button class="dropbtn">Date</button>
+                        <div class="dropdown-options">
+                            <a>option1</a>
+                            <a>option2</a>
+                            <a>option3</a>
+                        </div>
+                        <!-- Price dropdown button -->
+                        <button class="dropbtn">Price</button>
+                        <div class="dropdown-options">
+                            <a>option1</a>
+                            <a>option2</a>
+                            <a>option3</a>
+                        </div>
+                        <!-- popularity button -->
+                        <button class="dropbtn">Popularity</button>
+                        <div class="dropdown-options">
+                            <a>low</a>
+                            <a>medium</a>
+                            <a>high</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- where we will display the content -->
+            <div class="inv-boards-display-section">
+                <div class="display-title-row">
+                    <div class="display-title-row-title">
+                        <h2>boards</h2>
+                        <!-- divider line -->
+                        <div class="display-divider-line"></div>
+                    </div>
+                    <div class="display-title-row-buttons">
+                        <button class="display-add-button">add new</button>
+                        <button class="display-edit-button">edit</button>
+                    </div>
+                </div>
+                <!-- import the cards here -->
+                <div class="boards-display-cards-con">
+
+                </div>
+            </div>
+            <!-- wheel display section -->
+            <div class="inv-wheels-display-section">
+                <div class="display-title-row">
+                    <div class="display-title-row-title">
+                        <h2>wheels</h2>
+                        <!-- divider line -->
+                        <div class="display-divider-line"></div>
+                    </div>
+                    <div class="display-title-row-buttons">
+                        <button class="display-add-button">add new</button>
+                        <button class="display-edit-button">edit</button>
+                    </div>
+                </div>
+                <!-- import the cards here -->
+                <div class="wheels-display-cards-con">
+
+                </div>
+            </div>
+            <!-- trucks display section -->
+            <div class="inv-trucks-display-section">
+                <div class="display-title-row">
+                    <div class="display-title-row-title">
+                        <h2>trucks</h2>
+                        <!-- divider line -->
+                        <div class="display-divider-line"></div>
+                    </div>
+                    <div class="display-title-row-buttons">
+                        <button class="display-add-button">add new</button>
+                        <button class="display-edit-button">edit</button>
+                    </div>
+                </div>
+                <!-- import the cards here -->
+                <div class="trucks-display-cards-con">
+
+                </div>
+            </div>
+            <!-- bearings -->
+            <div class="inv-bearings-display-section">
+                <div class="display-title-row">
+                    <div class="display-title-row-title">
+                        <h2>bearings</h2>
+                        <!-- divider line -->
+                        <div class="display-divider-line"></div>
+                    </div>
+                    <div class="display-title-row-buttons">
+                        <button class="display-add-button">add new</button>
+                        <button class="display-edit-button">edit</button>
+                    </div>
+                </div>
+                <!-- import the cards here -->
+                <div class="bearings-display-cards-con">
+
+                </div>
+            </div>
+
+            <div class="inv-skins-display-section">
+                <div class="display-title-row">
+                    <div class="display-title-row-title">
+                        <h2>skins</h2>
+                        <!-- divider line -->
+                        <div class="display-divider-line"></div>
+                    </div>
+                    <div class="display-title-row-buttons">
+                        <button class="display-add-button">add new</button>
+                        <button class="display-edit-button">edit</button>
+                    </div>
+                </div>
+                <!-- import the cards here -->
+                <div class="skins-display-cards-con">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
