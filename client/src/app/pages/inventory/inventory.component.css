@@ -111,20 +111,23 @@
     outline: none;
 }
 
-.contnet-sorting-buttons {
+.content-sorting-buttons {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
 }
 
 /* dropdown stuff */
 .dropbtn {
-    background-color: brown;
-    color: wheat;
+    /* display: flex;
+    flex-direction: row;
+    gap: 10px; */
+    background-color: #0f1010;
+    color: #a19c94;
+    padding: 15px;
     border: none;
     outline: none;
     cursor: pointer;
-    margin-left: 40px;
 }
 
 .dropdown {
