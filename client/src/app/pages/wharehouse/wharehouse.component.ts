@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SearchBarComponent } from '../../components/inputs/search-bar/search-bar.component';
 import { SidebarComponent } from '../../components/navigation/sidebar/sidebar.component';
@@ -17,6 +17,8 @@ import { CommonModule } from '@angular/common';
 })
 export class WharehouseComponent {
 
+  // @Input() location: string = 'location'
+
   constructor(private service: LocationService) { }
 
   locationList: LocationModel[] = [
@@ -29,6 +31,17 @@ export class WharehouseComponent {
       console.log(data);
       this.locationList = data
     })
+  }
+
+  // create function to get all the types of skateboards
+  // classic skatedboard function 
+  // 1. get the boardtype date 
+  // 2. filter through the names for all names with classic
+  boardtype() {
+    // 3. for loop to get the board type 
+    for (let i=0; i <this.boardtype.length; i++){
+      
+    }
   }
 
 }
