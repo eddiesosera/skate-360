@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { WarehouseData } from '../../../models/warehouse-data.model';
 import { NewStockService } from '../../../services/page/wharehouse/new-stock.service';
+import { LocationModel } from '../../../models/functions/data/location.model';
+import { LocationService } from '../../../services/data/location.service';
+
 @Component({
   selector: 'app-warehouse-card',
   standalone: true,
@@ -37,6 +40,21 @@ export class WarehouseCardComponent {
       trucks: 6
     },
   ]
+
+  ngOnInit() { }
+
+  // @Input() item: LocationModel = {
+  //   id: 1,
+  //   name: "item.name",
+  //   street: "example",
+  //   city: "example",
+  //   description: "example",
+  //   stockAmount: 2,
+  //   avatar: "example",
+  //   users: [],
+  //   skateboards: [],
+  // }
+
 
   openStockForm() {
     this.newStockService.toggleVisibility(true)

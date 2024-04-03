@@ -27,7 +27,13 @@
         <!-- warehouse card container -->
         <div class="warehouse-card-container">
             <!-- todo // insert card components here -->
-            <app-warehouse-card></app-warehouse-card>
+            <app-warehouse-card *ngFor="let item of locationList"></app-warehouse-card>
+
+            <div *ngFor="let item of locationList">
+                <p>{{item.name}}</p>
+            </div>
+
+            
 
         </div>
     </div>
