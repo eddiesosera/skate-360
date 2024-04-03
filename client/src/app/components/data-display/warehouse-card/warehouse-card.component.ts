@@ -14,12 +14,16 @@ import { LocationService } from '../../../services/data/location.service';
 })
 export class WarehouseCardComponent {
 
-  // inputting data like a usestate
+  // inputting data like a usestate (calling from wharehouse HTML)
   @Input() id: any
   @Input() location: any
   @Input() boards: any
   @Input() wheels: any
   @Input() trucks: any
+  @Input() numberOfClassicBoards: any
+  @Input() numberOfLongBoards: any
+  @Input() numberOfOldschoolBoards: any
+
 
   constructor(private newStockService: NewStockService) { }
   // constructor(private data: WarehouseData, private elementRef: ElementRef) { }
