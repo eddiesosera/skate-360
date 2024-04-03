@@ -8,7 +8,7 @@
                 </div>
             </div>
         </div>
-        <div style="width: 600px; height: 513px; background: rgba(255, 0, 0, 0.146); position: absolute;top: 0;">
+        <div style="width: 600px; height: 513px; position: absolute;top: 0;">
             <app-three-object></app-three-object>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <i class="ri-user-3-line"></i>
             </div>
             <div class="dashboard-editor-bottomleft-username">
-                Employee
+                {{loggedInUser?.name}}
             </div>
         </div>
         <div class="dashboard-editor-bottomleft-item dashboard-editor-bottomleft-location">
@@ -30,7 +30,7 @@
                 <i class="ri-building-2-line"></i>
             </div>
             <div class="dashboard-editor-bottomleft-locationsite">
-                Location
+                {{loggedInUser?.location?.name}}
             </div>
         </div>
     </div>

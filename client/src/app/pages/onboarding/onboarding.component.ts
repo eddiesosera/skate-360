@@ -71,7 +71,8 @@ export class OnboardingComponent implements OnInit {
     if (this.userResult === 'true') {
       // console.log(this.userForm)
       this.userService.login(this.userForm).subscribe(user => {
-        sessionStorage.setItem('loggedInUser', JSON.stringify(user));
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        localStorage.setItem('isLoggedIn', 'true')
         this.loginMessage = user.message
         // console.log(user)
       })

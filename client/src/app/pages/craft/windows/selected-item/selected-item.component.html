@@ -1,20 +1,21 @@
-<div class="dashboard-editor-selected-item">
+<div [class]="isSelectorActive?'dashboard-editor-selected-item':'dashboard-editor-selected-item inactiveSelector-gap'">
     <div class="dashboard-editor-selected-item-head">
         <div class="dashboard-editor-selected-item-head-title"> Selected Item</div>
         <div class="dashboard-editor-selected-item-head-actions">
             <div class="dashboard-editor-selected-item-head-button">
                 <i class="ri-close-line"></i>
             </div>
-            <div class="dashboard-editor-selected-item-head-button">
-                <i class="ri-arrow-down-wide-line"></i>
+            <div class="dashboard-editor-selected-item-head-button" (click)="activateSelector()">
+                <i *ngIf="isSelectorActive" class="ri-arrow-down-wide-line"></i>
+                <i *ngIf="!isSelectorActive" class="ri-arrow-up-wide-line"></i>
             </div>
         </div>
     </div>
-    <div class="dashboard-editor-selected-item-content">
+    <div [class]="isSelectorActive?'dashboard-editor-selected-item-content activeSelector':'inactiveSelector'">
         <img src="" alt="Selected Part" class="dashboard-editor-selected-item-content-img"
             src="../../../../../assets/img/inventory/wheels/fuego.png" />
     </div>
-    <div class="dashboard-editor-selected-item-details">
+    <div [class]="isSelectorActive?'dashboard-editor-selected-item-details':'inactiveSelector'">
         <div class="selected-item-detail dashboard-editor-selected-item-details-itemname">
             Item Name
         </div>

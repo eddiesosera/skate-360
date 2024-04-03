@@ -1,3 +1,4 @@
+import { LocationModel } from "./location.model";
 import { Skateboard } from "./skateboard.model";
 
 export interface User {
@@ -11,6 +12,6 @@ export interface User {
     dateJoined: string;
     isUserGlobalAdmin: boolean;
     isUserLocalAdmin: boolean;
-    location: Location
+    location: LocationModel
     skateboard: Skateboard[]
 }

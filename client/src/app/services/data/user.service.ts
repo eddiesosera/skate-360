@@ -39,6 +39,7 @@ export class UserService {
     return this.http.post<any>(this.authUrl, userForm)
   }
   logOut() {
-    sessionStorage.removeItem('loggedInUser')
+    localStorage.removeItem('loggedInUser');
+    localStorage.setItem('isLoggedIn', 'false')
   }
 }
