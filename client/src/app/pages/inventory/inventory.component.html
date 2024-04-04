@@ -205,9 +205,12 @@
 
                     <app-gridlayout [gap]="20">
                         <div class="grid-item" *ngFor="let item of currentlocation.skins">
-                            <app-product-card [id]="item.id" [avatar]="item.avatar"
-                                [price]="item.price"></app-product-card>
-
+                            <!-- <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card> -->
+                                <app-inventory-card
+                                    [name]="item.name"
+                                    [price]="item.price"
+                                ></app-inventory-card>
                         </div>
                     </app-gridlayout>
 

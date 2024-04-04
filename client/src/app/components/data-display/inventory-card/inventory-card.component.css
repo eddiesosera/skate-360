@@ -1,0 +1,32 @@
+.inventory-card-container {
+    border: 1px solid #272a2a;
+    background-color: #040404;
+}
+
+.product-card-content-img-wrap-02 {
+    width: 319px;
+    height: 310px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-card-content-img-wrap-02 img {
+    /* width: 319px; */
+    height: 180px;
+}
+
+.inventory-card-text-conatainer {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.inventory-card-text-conatainer h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.inventory-card-text-conatainer p {
+    font-size: 14px;
+}
