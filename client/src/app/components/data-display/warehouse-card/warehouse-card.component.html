@@ -4,7 +4,7 @@
     <!-- hero section -->
     <div class="warehouseCard-hero">
         <div class="warehouse-hero-title">
-            <h1>location</h1>
+            <h1>{{location.name}}</h1>
         </div>
 
         <!-- the about button -->
@@ -33,22 +33,23 @@
                 <!-- boards in totel -->
                 <div class="warehouse-data-row-primary">
                     <p>boards</p>
-                    <p>#</p>
+                    <p>#{{location.skateboards.length}}</p>
                 </div>
                 <!-- classic -->
                 <div class="warehouse-data-row">
                     <p>classic</p>
-                    <p>#</p>
+                    <p>#{{numberOfClassicBoards}}</p> 
+                    <!-- above we are calling from the ts file -->
                 </div>
                 <!-- old school -->
                 <div class="warehouse-data-row">
                     <p>Old school</p>
-                    <p>#</p>
+                    <p>#{{numberOfOldschoolBoards}}</p>
                 </div>
                 <!-- long boards -->
                 <div class="warehouse-data-row">
                     <p>long boards</p>
-                    <p>#</p>
+                    <p>#{{numberOfLongBoards}}</p>
                 </div>
             </div>
             <!-- boards data end -->

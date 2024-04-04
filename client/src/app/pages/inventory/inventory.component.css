@@ -1,0 +1,215 @@
+.inventoryList-main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inventory-mainspace-con {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inv-mainspace-toprow-con {
+    margin-left: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inv-mainspace-text-con {}
+
+.inv-mainspace-text-con h1 {
+    color: #fd1313;
+    font-size: 64px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "League Gothic", sans-serif;
+}
+
+.inv-mainspace-text-con p {
+    font-family: "IBM Plex Mono", monospace;
+    color: #fd1313;
+    font-size: 16px;
+    margin: 0;
+}
+
+.inv-locationInfo-box {
+    width: 206px;
+    height: 72px;
+    border: 1px solid #fff;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.locationInfoBox-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.locationInfoBox-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* divider lines */
+.main-divider-line {
+    border: 0.5px solid #ffffff20;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.display-divider-line {
+    background: linear-gradient(270deg, rgba(161, 156, 148, 0) 0%, rgba(161, 156, 148, 1) 50%);
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.inv-content-main-container {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* content filters & sorting */
+/* filter section */
+.inv-content-filters-con {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+/* filter button */
+.content-filter-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.content-filter-buttons button {
+    background-color: #0f1010;
+    color: #a19c94;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.content-sorting-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* dropdown stuff */
+.dropbtn {
+    /* display: flex;
+    flex-direction: row;
+    gap: 10px; */
+    background-color: #0f1010;
+    color: #a19c94;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    background-color: blue;
+    min-width: 160px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dropdown-options a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-options {
+    display: block;
+}
+
+
+.display-title-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.display-title-row-title {
+    text-transform: uppercase;
+    color: #a19c94;
+    font-size: 40px;
+    font-family: "League Gothic", sans-serif;
+    width: 100%;
+}
+
+.display-title-row-title h2 {
+    margin: 0;
+}
+
+.display-title-row-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.display-add-button {
+    width: 88px;
+    height: 46px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-family: "League Gothic", sans-serif;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.display-edit-button {
+    width: 88px;
+    height: 46px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "League Gothic", sans-serif;
+    background-color: transparent;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.display-edit-button:hover {
+    background-color: #a19c94;
+    color: #000;
+    transition: all ease-in-out .2s;
+}
+
+/* the display section */
+.inv-boards-display-section {}
