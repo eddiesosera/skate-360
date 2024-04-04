@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SidebarComponent } from '../../components/navigation/sidebar/sidebar.component';
 import { ButtonComponent } from '../../components/inputs/button/button.component';
@@ -17,7 +17,7 @@ import { SkateboardService } from '../../services/data/skateboard.service';
   templateUrl: './skateboards.component.html',
   styleUrl: './skateboards.component.css'
 })
-export class SkateboardsComponent {
+export class SkateboardsComponent implements OnInit {
 
   skateboardCollection: any = []
   pages = this.skateboardCollection.length

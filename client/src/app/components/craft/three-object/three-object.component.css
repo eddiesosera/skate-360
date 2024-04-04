@@ -2,3 +2,7 @@
     height: 513px;
     width: 600px;
 }
+
+.draggable {
+    cursor: default;
+}
