@@ -27,7 +27,7 @@ export const routes: Routes = [
         component: WharehouseComponent
     },
     {
-        path: 'inventory/:location',
+        path: 'inventory/:id',
         component: InventoryComponent
         /*So the index page of the Inventory page is the warehouse and uppon choosing the warehouse 
         it will redirect you inventory based on locationof the warehouse. E.g inventory/location*/

@@ -24,6 +24,7 @@ export class WarehouseCardComponent {
   @Input() numberOfLongBoards: any
   @Input() numberOfOldschoolBoards: any
 
+  @Input() loactionId: any
 
   constructor(private newStockService: NewStockService) { }
   // constructor(private data: WarehouseData, private elementRef: ElementRef) { }

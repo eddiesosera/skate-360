@@ -19,7 +19,11 @@
                     <p>wharehouse</p>
                 </div>
                 <div class="locationInfoBox-location">
-                    <p>location</p>
+                    <!-- we will call the location that we are currently in -->
+                    <!-- 1. it will call the lacation from the warehouse card you have clicked -->
+                    <!-- get id from Url -->
+                    <!-- match the id with the existing locations in the database -->
+                    <p>{{currentlocation.name}}</p>
                 </div>
             </div>
         </div>
@@ -85,7 +89,24 @@
                 </div>
                 <!-- import the cards here -->
                 <div class="boards-display-cards-con">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci cum laboriosam praesentium
+                        provident voluptas porro maxime dolor! Rerum sit harum eaque distinctio facilis. Cum aut
+                        voluptates beatae architecto, voluptatum consectetur.</p>
 
+                    <app-gridlayout [gap]="20">
+                        <div class="grid-item" *ngFor="let item of currentlocation.skateboards">
+                            <app-product-card [id]="item.id" [avatar]="item.configuration?.board_type?.avatar"
+                                [craftedBy]="item.craftedBy" [location]="item.location" [price]="item.price"
+                                [type]="item.configuration?.board_type?.name">
+                            </app-product-card>
+                        </div>
+                    </app-gridlayout>
+                    <!-- import the skateboards here -->
+                    <!-- <app-product-card [type]="skateboardItem?.configuration?.board_type?.name"
+                        [craftedBy]="skateboardItem?.craftedBy"
+                        [avatar]="skateboardItem?.configuration?.board_type?.avatar"
+                        [location]="skateboardItem?.location" [price]="skateboardItem?.price"
+                        [id]="skateboardItem?.id"></app-product-card> -->
                 </div>
             </div>
             <!-- wheel display section -->

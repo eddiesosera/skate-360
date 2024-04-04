@@ -29,6 +29,7 @@
             <!-- todo // insert card components here -->
             <app-warehouse-card *ngFor="let item of locationList"
             [location]="item"
+            [id]="item.id"
             [numberOfClassicBoards]="classicboardsLength"
             [numberOfLongBoards]="longboardsLength"
             [numberOfOldschoolBoards]="oldschoolboardsLength"
