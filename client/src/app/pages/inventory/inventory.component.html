@@ -125,6 +125,14 @@
                 <!-- import the cards here -->
                 <div class="wheels-display-cards-con">
 
+                    <app-gridlayout [gap]="20">
+                        <div class="grid-item" *ngFor="let item of currentlocation.wheels">
+                            <app-product-card [id]="item.id" [avatar]="item.avatar" [price]="item.price"
+                                [name]="item.name"></app-product-card>
+
+                        </div>
+                    </app-gridlayout>
+
                 </div>
             </div>
             <!-- trucks display section -->
@@ -142,6 +150,14 @@
                 </div>
                 <!-- import the cards here -->
                 <div class="trucks-display-cards-con">
+
+                    <app-gridlayout [gap]="20">
+                        <div class="grid-item" *ngFor="let item of currentlocation.trucks">
+                            <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card>
+
+                        </div>
+                    </app-gridlayout>
 
                 </div>
             </div>
@@ -161,6 +177,14 @@
                 <!-- import the cards here -->
                 <div class="bearings-display-cards-con">
 
+                    <app-gridlayout [gap]="20">
+                        <div class="grid-item" *ngFor="let item of currentlocation.bearings">
+                            <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card>
+
+                        </div>
+                    </app-gridlayout>
+
                 </div>
             </div>
 
@@ -178,6 +202,14 @@
                 </div>
                 <!-- import the cards here -->
                 <div class="skins-display-cards-con">
+
+                    <app-gridlayout [gap]="20">
+                        <div class="grid-item" *ngFor="let item of currentlocation.skins">
+                            <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card>
+
+                        </div>
+                    </app-gridlayout>
 
                 </div>
             </div>
