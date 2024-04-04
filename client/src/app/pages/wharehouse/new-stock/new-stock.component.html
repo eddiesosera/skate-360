@@ -8,7 +8,9 @@
             <div class="new-stock-wrap-top-info">You can new stock filling in the form below.</div>
         </div>
         <div class="new-stock-wrap-mid">
-            <app-dropdown [label]="resourceLabel" [options]="resourceTypes" [width]="'100%'"></app-dropdown>
+            <app-dropdown idPos="0" [label]="resourceLabel" [options]="resourceTypes" [width]="'100%'"></app-dropdown>
+            <app-dropdown idPos="1" [label]="resourceVariant" [options]="resourceTypeVariant"
+                [width]="'100%'"></app-dropdown>
             <input class="new-stock-mid-amount" type="number" placeholder="Enter amount" />
         </div>
         <div class="new-stock-wrap-btm">

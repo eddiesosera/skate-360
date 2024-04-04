@@ -14,6 +14,7 @@ import { NewStockService } from '../../../services/page/wharehouse/new-stock.ser
 export class NewStockComponent implements OnInit {
   @Input() isVisisble = false;
   @Input() resourceLabel: string = 'Resource Type';
+  @Input() resourceVariant: string = 'Variant';
   resourceTypes = [
     {
       id: 0,
@@ -39,6 +40,28 @@ export class NewStockComponent implements OnInit {
       id: 4,
       label: 'Bearings',
       action: () => { alert(''); this.resourceLabel = 'Bearings' }
+    }
+  ];
+  resourceTypeVariant = [
+    {
+      id: 0,
+      label: 'White',
+      action: () => { alert(''); this.resourceLabel = 'Board Type' }
+    },
+    {
+      id: 1,
+      label: 'Yellow',
+      action: () => { alert(''); this.resourceLabel = 'Board Skin' }
+    },
+    {
+      id: 2,
+      label: 'Red',
+      action: () => { alert(''); this.resourceLabel = 'Truck' }
+    },
+    {
+      id: 3,
+      label: 'Black',
+      action: () => { alert(''); this.resourceLabel = 'Wheels' }
     }
   ];
 
