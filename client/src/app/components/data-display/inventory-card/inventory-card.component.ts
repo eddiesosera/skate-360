@@ -15,6 +15,8 @@ export class InventoryCardComponent {
 
   @Input() id: any
   @Input() name: any
+  @Input() color: any
+  @Input() brand: any
   @Input() price: any
   imageDeck = '../../../../assets/img/decks/classic.png'
   cardWidth: any

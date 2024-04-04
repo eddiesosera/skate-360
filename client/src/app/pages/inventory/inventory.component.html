@@ -127,9 +127,9 @@
 
                     <app-gridlayout [gap]="20">
                         <div class="grid-item" *ngFor="let item of currentlocation.wheels">
-                            <app-product-card [id]="item.id" [avatar]="item.avatar" [price]="item.price"
-                                [name]="item.name"></app-product-card>
-
+                            <!-- <app-product-card [id]="item.id" [avatar]="item.avatar" [price]="item.price"
+                                [name]="item.name"></app-product-card> -->
+                            <app-inventory-card [name]="item.name" [price]="item.price"></app-inventory-card>
                         </div>
                     </app-gridlayout>
 
@@ -153,8 +153,9 @@
 
                     <app-gridlayout [gap]="20">
                         <div class="grid-item" *ngFor="let item of currentlocation.trucks">
-                            <app-product-card [id]="item.id" [avatar]="item.avatar"
-                                [price]="item.price"></app-product-card>
+                            <!-- <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card> -->
+                            <app-inventory-card [color]="item.color" [price]="item.price"></app-inventory-card>
 
                         </div>
                     </app-gridlayout>
@@ -179,8 +180,9 @@
 
                     <app-gridlayout [gap]="20">
                         <div class="grid-item" *ngFor="let item of currentlocation.bearings">
-                            <app-product-card [id]="item.id" [avatar]="item.avatar"
-                                [price]="item.price"></app-product-card>
+                            <!-- <app-product-card [id]="item.id" [avatar]="item.avatar"
+                                [price]="item.price"></app-product-card> -->
+                            <app-inventory-card [brand]="item.brand" [price]="item.price"></app-inventory-card>
 
                         </div>
                     </app-gridlayout>
@@ -207,10 +209,7 @@
                         <div class="grid-item" *ngFor="let item of currentlocation.skins">
                             <!-- <app-product-card [id]="item.id" [avatar]="item.avatar"
                                 [price]="item.price"></app-product-card> -->
-                                <app-inventory-card
-                                    [name]="item.name"
-                                    [price]="item.price"
-                                ></app-inventory-card>
+                            <app-inventory-card [name]="item.name" [price]="item.price"></app-inventory-card>
                         </div>
                     </app-gridlayout>
 
