@@ -91,8 +91,8 @@ Designed to fit every skater the site comes styled in only the best choice of th
 ### Built With
 <!-- angular -->
 - [Angular CLI](https://angular.io/cli)
-<!-- 3d JS -->
-- [Technology Name](path/to/technology/website)
+<!-- 3JS -->
+- [Three.js](https://threejs.org/)
 <!-- other -->
 - [Technology Name](path/to/technology/website)
 
@@ -482,6 +482,24 @@ Setting Up the ```CRUD``` Functionality.
 
 ### Front-End
 
+Warehouse Page 
+This is a function that loops through the location array to find the information that has been joined to the array and allow for it to be fetched.
+
+```
+  filterSkateboardsByBoardType(boardTypeName: string, locations: any): any[] {
+    const filteredSkateboards: any[] = [];
+
+    for (const location of locations) {
+      for (const skateboard of location.skateboards) {
+        if (skateboard.configuration.board_type.name === boardTypeName) {
+          filteredSkateboards.push(skateboard);
+        }
+      }
+    }
+
+    return filteredSkateboards;
+  }
+```
 
 ### Implementation Process
 
