@@ -53,7 +53,4 @@ export class AccountComponent {
     console.log(this.username.name) // ! this wont even consol log 
   }
 
-  // users: any
-
-
 }
