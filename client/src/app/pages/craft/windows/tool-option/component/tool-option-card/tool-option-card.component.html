@@ -1,13 +1,13 @@
-<div class="craft-tool-option-card">
+<div class="craft-tool-option-card" [style.margin-top.px]="position>0&&position*78">
     <div class="craft-tool-option-card-details">
         <div class="craft-tool-option-card-details-name">
-            Default
+            {{option.name}}
         </div>
         <div class="craft-tool-option-card-details-type">
-            Standard
+            {{option.quantity}}
         </div>
     </div>
     <div class="craft-tool-option-card-img-wrap">
-        <img class="craft-tool-option-card-img" src="../../../../../../../assets/img/inventory/wheels/fuego.png" />
+        <img class="craft-tool-option-card-img" [src]="url" />
     </div>
 </div>

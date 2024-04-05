@@ -17,6 +17,6 @@ export class SelectedItemService {
       this.selectedItemSource.next(component)
     }
 
-    console.log("Item Selected: " + component)
+    console.log("Item Selected: " + JSON.stringify(component))
   }
 }

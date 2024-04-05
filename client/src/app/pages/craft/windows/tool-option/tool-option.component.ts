@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ToolOptionCardComponent } from './component/tool-option-card/tool-option-card.component';
 import { CommonModule } from '@angular/common';
+import { SelectedItemService } from '../../../../services/page/craft/selected-item.service';
 
 @Component({
   selector: 'app-tool-option',
@@ -9,8 +10,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './tool-option.component.html',
   styleUrl: './tool-option.component.css'
 })
-export class ToolOptionComponent implements OnInit {
-  componentType: string = 'Wheel';
+export class ToolOptionComponent implements AfterViewInit, OnInit {
+  componentType: string = 'Item ';
   selectedComponent = 'none';
   selectedIndex = 0;
   inventoryList = [
@@ -19,59 +20,86 @@ export class ToolOptionComponent implements OnInit {
       inventory: [
         {
           id: 0,
-          title: 'Default',
-          type: 'Standard',
-          image: '../../../../../assets/img/inventory/wheels/default.webp',
-          quantity: 20
+          name: 'White Flamigo Wheel',
+          avatar: 'white',
+          quantity: 200
         },
         {
           id: 1,
-          title: 'Fuego',
-          type: 'Deluxe',
-          image: '../../../../../assets/img/inventory/wheels/fuego.png',
-          quantity: 20
+          name: 'Yellow Fuego Wheel',
+          avatar: 'yellow',
+          quantity: 200
         },
         {
           id: 2,
-          title: 'Red Charger',
-          type: 'Deluxe',
-          image: '../../../../../assets/img/inventory/wheels/red_charger.png',
-          quantity: 20
+          name: 'Red Charger Wheel',
+          avatar: 'red',
+          quantity: 200
+        },
+        {
+          id: 3,
+          name: 'Black Cat Wheel',
+          avatar: 'black',
+          quantity: 200
         }
       ]
     },
     {
-      type: 'boards',
+      type: 'board',
       inventory: [
         {
           id: 0,
-          type: 'Classic',
-          image: '../../../../../assets/img/inventory/boards/classic_boards.jpeg',
-          quantity: 20
+          name: 'White Flamigo Board',
+          avatar: 'white',
+          quantity: 200
         },
         {
           id: 1,
-          type: 'Old School',
-          image: '../../../../../assets/img/inventory/boards/oldschool_board.webp',
-          quantity: 20
+          name: 'Yellow Fuego Board',
+          avatar: 'yellow',
+          quantity: 200
         },
         {
           id: 2,
-          type: 'Longboard',
-          image: '../../../../../assets/img/inventory/boards/longboard.jpg',
-          quantity: 20
+          name: 'Red Charger Board',
+          image: 'red',
+          avatar: 200
+        },
+        {
+          id: 3,
+          name: 'Black Cat Board',
+          avatar: 'black',
+          quantity: 200
         }
       ]
     },
     {
-      type: 'trucks',
+      type: 'truck',
       inventory: [
         {
           id: 0,
-          type: 'Classic',
-          image: '../../../../../assets/img/inventory/truck.png',
-          quantity: 20
+          name: 'White Truck',
+          avatar: 'white',
+          quantity: 200
         },
+        {
+          id: 1,
+          name: 'Yellow Truck',
+          avatar: 'yellow',
+          quantity: 200
+        },
+        {
+          id: 2,
+          name: 'Red Truck',
+          image: 'red',
+          avatar: 200
+        },
+        {
+          id: 3,
+          name: 'Black Truck',
+          avatar: 'black',
+          quantity: 200
+        }
       ]
     },
     {
@@ -79,20 +107,46 @@ export class ToolOptionComponent implements OnInit {
       inventory: [
         {
           id: 0,
-          type: 'Classic',
-          image: '../../../../../assets/img/inventory/bearing.webp',
-          quantity: 20
+          name: 'White Bearing',
+          avatar: 'white',
+          quantity: 200
         },
+        {
+          id: 1,
+          name: 'Yellow Bearing',
+          avatar: 'yellow',
+          quantity: 200
+        },
+        {
+          id: 2,
+          name: 'Red Bearing',
+          image: 'red',
+          avatar: 200
+        },
+        {
+          id: 3,
+          name: 'Black Bearing',
+          avatar: 'black',
+          quantity: 200
+        }
       ]
     }
   ];
+  selectedList = this.inventoryList[this.selectedIndex].inventory;
 
-  selectedList = this.inventoryList[this.selectedIndex].inventory
+  constructor(private selectedItem: SelectedItemService) {
+    this.selectedItem.selectedItem.subscribe(item => {
+      this.componentType = item.name
+    })
+  }
 
   ngOnInit(): void {
     this.selectedList = this.inventoryList[this.selectedIndex].inventory;
-
     console.log(this.selectedList)
+  }
+
+  ngAfterViewInit(): void {
+    this.selectedList = this.inventoryList[this.selectedIndex].inventory;
   }
 
   setMargin(index: any): string {

@@ -2,7 +2,7 @@
 
     <div class="product-card-content-wrap">
         <div class="product-card-content-options-wrap" [style.width]="cardWidth+'px'">
-            <app-card-options class="product-card-content-options"></app-card-options>
+            <app-card-options [itemId]="id" class="product-card-content-options"></app-card-options>
         </div>
         <div class="product-card-content-img-wrap" [style.width]="cardWidth+'px'">
             <img [src]="imageDeck" class="product-card-content-img" alt="Skateboard Image"

@@ -28,7 +28,8 @@ export class SkateboardService {
     return this.http.put<Skateboard>(`${this.baseUrl}/${id}`, body)
   }
 
-  deleteSkateboard(id: number): Observable<Skateboard> {
-    return this.http.delete<Skateboard>(`${this.baseUrl}/${id}`)
+  deleteSkateboard(id: number): void {
+    this.http.delete<Skateboard>(`${this.baseUrl}/${id}`).subscribe(itemDeleted => console.log("deleted: " + itemDeleted))
+
   }
 }

@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { ButtonComponent } from '../../../inputs/button/button.component';
+import { SkateboardService } from '../../../../services/data/skateboard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-options',
@@ -10,9 +12,10 @@ import { ButtonComponent } from '../../../inputs/button/button.component';
   styleUrl: './card-options.component.css'
 })
 export class CardOptionsComponent implements AfterViewInit {
-  isOptionVisible: boolean = false
+  @Input() itemId: any;
+  isOptionVisible: boolean = false;
 
-  constructor() {
+  constructor(private skateboardService: SkateboardService, private router: Router) {
 
   }
 
@@ -22,6 +25,14 @@ export class CardOptionsComponent implements AfterViewInit {
 
   viewOptions() {
     this.isOptionVisible = !this.isOptionVisible
+  }
+
+  edit() {
+    this.router.navigate(['/craft/edit', this.itemId]);
+  }
+
+  delete() {
+    this.skateboardService.deleteSkateboard(this.itemId)
   }
 
 }

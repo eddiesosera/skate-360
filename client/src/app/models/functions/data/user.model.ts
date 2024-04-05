@@ -2,7 +2,7 @@ import { LocationModel } from "./location.model";
 import { Skateboard } from "./skateboard.model";
 
 export interface User {
-
+    id: number,
     name: string;
     surname: string;
     email: string;

@@ -15,7 +15,11 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'craft',
+        path: 'craft/new',
+        component: CraftComponent
+    },
+    {
+        path: 'craft/edit/:id',
         component: CraftComponent
     },
     {

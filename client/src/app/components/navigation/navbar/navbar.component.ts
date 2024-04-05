@@ -23,7 +23,7 @@ export class NavbarComponent implements AfterViewChecked, OnInit {
   isTooltipVisible: boolean = false;
   navItems: NavItem[] = [
     {
-      link: 'craft',
+      link: 'craft/new',
       icon: 'ri-tools-fill',
       title: 'Craft',
     },

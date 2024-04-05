@@ -3,21 +3,10 @@
         Choose {{componentType}}
     </div>
     <div class="dashboard-window-content">
-        <div class="dashboard-window-content-item">
-            <app-tool-option-card class="dashboard-window-content-item-content">
+        <div class="dashboard-window-content-item" *ngFor="let optionCard of selectedList">
+            <app-tool-option-card [option]="optionCard" [position]="optionCard.id"
+                class="dashboard-window-content-item-content">
             </app-tool-option-card>
-            <!-- <div class="dashboard-window-content-item-content">
-                Tool Option 1L {{optionItem.type}}
-                *ngFor="let optionItem of selectedList" [style.margin-top]=""
-            </div> -->
-        </div>
-        <div class="dashboard-window-content-item">
-            <app-tool-option-card class="dashboard-window-content-item-content">
-            </app-tool-option-card>
-            <!-- <div class="dashboard-window-content-item-content">
-                Tool Option 1L {{optionItem.type}}
-                *ngFor="let optionItem of selectedList" [style.margin-top]=""
-            </div> -->
         </div>
     </div>
 </div>

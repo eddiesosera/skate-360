@@ -31,9 +31,8 @@ export class CraftComponent implements OnInit {
   boardGrid: any;
 
   ngOnInit() {
-    this.dragContainer = document.querySelector('.drag-container');
-
-    this.itemContainers = Array.from(document.querySelectorAll('.dashboard-window-content'));
+    this.dragContainer = document.querySelector('.dashboard-window-content');
+    this.itemContainers = Array.from(document.querySelectorAll('.dashboard-window-content-item'));
 
     this.itemContainers.forEach((container: any) => {
       const grid = new Muuri(container, {

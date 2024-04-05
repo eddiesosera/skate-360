@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
   @Input() currentPage: string = '';
   navItems: NavItem[] = [
     {
-      link: 'craft',
+      link: 'craft/new',
       icon: 'ri-tools-fill',
       title: 'Craft',
     },
