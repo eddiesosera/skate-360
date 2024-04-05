@@ -242,11 +242,12 @@ The database diagram we used to map out relational data
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
 
-### Backend
+### Back-End
 
 Setting Up the ```CRUD``` Functionality.
   >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
-  - Get all Items
+
+  Get all Items
 
     > [!NOTE]
     > The GET ALL Function in the route.ts file used to get all items in the specific array
@@ -272,10 +273,11 @@ Setting Up the ```CRUD``` Functionality.
         }
     });
   ```
-  - Get Singal Item
+  
+  Get Singal Item
 
-    > [!NOTE]
-    > The GET SINGLE Function to get a single item by calling the item ID
+  > [!NOTE]
+  > The GET SINGLE Function to get a single item by calling the item ID
 
   ```
     // Get Single Skateboards
@@ -303,10 +305,11 @@ Setting Up the ```CRUD``` Functionality.
         }
     });
   ```
-  - Add an Item
 
-    > [!NOTE]
-    > The Function to add new items to your database
+  Add an Item
+
+  > [!NOTE]
+  > The Function to add new items to your database
 
   ```
     // Insert Single Skateboard
@@ -362,10 +365,11 @@ Setting Up the ```CRUD``` Functionality.
         }
     })
   ```
-  - Update Item
 
-    > [!NOTE]
-    > The UPDATE Function in the route.ts file
+  Update Item
+
+  > [!NOTE]
+  > The UPDATE Function in the route.ts file
 
   ```
     // Update Single Skateboard
@@ -427,10 +431,11 @@ Setting Up the ```CRUD``` Functionality.
         }
     })
   ```
-  - Delete Item
 
-    > [!NOTE]
-    > The DELETE Function in the route.ts file
+  Delete Item
+
+  > [!NOTE]
+  > The DELETE Function in the route.ts file
 
   ```
     // Delete Single Skateboard
@@ -475,9 +480,7 @@ Setting Up the ```CRUD``` Functionality.
 
 <br>
 
-Configurations
-
-
+### Front-End
 
 
 ### Implementation Process
