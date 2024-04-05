@@ -25,7 +25,7 @@
 <p align="center">
 
   <a href="https://github.com/username/projectname">
-    <img src="path/to/logo" alt="Logo" width="140" height="140">
+    <img src="readmeAssets\LogoPlaceholder.png" alt="Logo" width="140" height="140">
   </a>
   
   <h3 align="center">Skate 360</h3>
@@ -90,7 +90,7 @@ Designed to fit every skater the site comes styled in only the best choice of th
 
 ### Built With
 <!-- angular -->
-- [Technology Name](path/to/technology/website)
+- [Angular CLI](https://angular.io/cli)
 <!-- 3d JS -->
 - [Technology Name](path/to/technology/website)
 <!-- other -->
@@ -109,9 +109,9 @@ Ensure that you have the latest version of [Software](path/to/where/they/can/dow
 
 ### How to install
 
-1. download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
-2. Download Postgres and set up a database
-3. clone the github repository using the URL
+1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
+2. Download Postgres and set up a database.
+3. Clone the github repository using the URL.
 4. Clone the backend of For the site using the URL.
 5. Launch the repo through [Visual Studio](https://code.visualstudio.com/).
 
@@ -148,18 +148,18 @@ Here are a couple of ways to clone this repo:
 
 1. fist link your backend to your database by filling in the required data in the "***" fields in both your config file and the datasource file
 
-```
-{
-  "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
-  "username": "postgres",
-  "password": "***",
-  "synchronize": true,
-  "entities":["src/models/**/*"],
-  "database":"****"
-}
-```
+  ```
+  {
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "***",
+    "synchronize": true,
+    "entities":["src/models/**/*"],
+    "database":"****"
+  }
+  ```
 
 2. Run your database ```npm run dev``` 
 
@@ -170,17 +170,19 @@ Here are a couple of ways to clone this repo:
 
 ## Features and Functionality
 
-![image2][image2]
+<!-- ![image2][image2] -->
+<img src="readmeAssets\Craft Page.png">
 
-### Feature 1
+### Feature 1 : Crafting In 3D
 
-Description of Feature
+In this site you are able to view the skateboard you are crafting in a 3D space where you can change each part as you wish.
 
-![image3][image3]
+<!-- ![image3][image3] -->
+<img src="readmeAssets\Craft Page drag and drop.png">
 
-### Feature 2
+### Feature 2 : Drag'n Drop
 
-Description of Feature
+You the user when crafting a skateboard will be able to drag and drop the parts you want into the craft view to apply them to the skateboard.
 
 ![image4][image4]
 
@@ -230,7 +232,7 @@ The `Development Process` is the technical implementations and functionality don
 
 <!-- stipulated the highlight you experienced with the project -->
 
-- Sunshine.
+- Getting the 3D Js models to work and function properly.
 - Rainbows.
 
 #### Challenges
@@ -305,7 +307,8 @@ Contributions are what makes the open-source community such an amazing place to 
 
 ## Authors
 
-- **Your Name & Surname** - [username](https://github.com/username)
+- [eddiesosera](https://github.com/eddiesosera)
+- [Ungerer221](https://github.com/Ungerer221)
 
 <!-- LICENSE -->
 
@@ -318,7 +321,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 - **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
-- **Project Link** - https://github.com/username/projectname
+- **Project Link** - https://github.com/eddiesosera/dv300-term1
 
 <!-- ACKNOWLEDGEMENTS -->
 
