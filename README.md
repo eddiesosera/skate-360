@@ -580,9 +580,17 @@ This is a function that loops through the location array to find the information
 
 ### Mockups
 
-![image9][image9]
+<!-- ![image9][image9] -->
+Mockup 1
+<img src="readmeAssets\Mockup01.jpeg">
+
 <br>
-![image10][image10]
+
+Mockup 2
+<img src="readmeAssets\MockUp02.png">
+
+Mockup 3
+<img src="readmeAssets\Mockup03.jpeg">
 
 <!-- VIDEO DEMONSTRATION -->
 
@@ -628,6 +636,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 - **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
+- **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -636,8 +645,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 <!-- all resources that you used and Acknowledgements here -->
 
-- [Resource Name](path/to/resource)
-- [Resource Name](path/to/resource)
+- [Angular](https://angular.io/tutorial/first-app)
+- [Tutorial Video](path/to/resource)
 - [Resource Name](path/to/resource)
 - [Resource Name](path/to/resource)
 - [Resource Name](path/to/resource)
