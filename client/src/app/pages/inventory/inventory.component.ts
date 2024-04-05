@@ -7,11 +7,12 @@ import { LocationService } from '../../services/data/location.service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GridlayoutComponent } from '../../components/data-display/gridlayout/gridlayout.component';
+import { InventoryCardComponent } from '../../components/data-display/inventory-card/inventory-card.component';
 
 @Component({
   selector: 'app-inventory',
   standalone: true,
-  imports: [SidebarComponent, SearchBarComponent, ProductCardComponent, CommonModule, GridlayoutComponent],
+  imports: [SidebarComponent, SearchBarComponent, ProductCardComponent, CommonModule, GridlayoutComponent, InventoryCardComponent],
   templateUrl: './inventory.component.html',
   styleUrl: './inventory.component.css'
 })

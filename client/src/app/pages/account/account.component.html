@@ -34,17 +34,18 @@
                 <!-- uesrname field -->
                 <div class="account-infoField-con">
                     <p class="account-userInfo-lable">username</p>
-                    <h3>username</h3>
+                    <div></div>
+                    <h3>{{loggedInUser?.name}}</h3>
                 </div>
                 <!-- email field -->
                 <div class="account-infoField-con">
                     <p class="account-userInfo-lable">email</p>
-                    <h3>usenamegmail.com</h3>
+                    <h3>{{loggedInUser?.email}}</h3>
                 </div>
                 <!-- base field -->
                 <div class="account-infoField-con">
                     <p class="account-userInfo-lable">base</p>
-                    <h3>Durban</h3>
+                    <h3>{{loggedInUser?.location?.name}}</h3>
                 </div>
             </div>
 
@@ -63,7 +64,10 @@
 
     <!-- SKATE BOARDS CREATED SECTION START -->
     <h1 class="account-boardCreated-title">skateboards created</h1>
-    <div></div>
+    <!-- we want the skateboards specific to the user -->
+    <div>
+        <app-account-collection></app-account-collection>
+    </div>
     <!-- SKATE BOARDS CREATED SECTION END -->
 
 </div>

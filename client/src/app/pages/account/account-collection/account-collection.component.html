@@ -1,0 +1,12 @@
+<div class="account-collection-main-container">
+    <div class="account-collection-grid">
+        <app-gridlayout [gap]="20">
+            <div class="grid-item" *ngFor="let skateboardItem of skateboardCollection">
+                <app-product-card [type]="skateboardItem?.configuration?.board_type?.name"
+                    [craftedBy]="skateboardItem?.craftedBy" [avatar]="skateboardItem?.configuration?.board_type?.avatar"
+                    [location]="skateboardItem?.location" [price]="skateboardItem?.price" [id]="skateboardItem?.id">
+                </app-product-card>
+            </div>
+        </app-gridlayout>
+    </div>
+</div>

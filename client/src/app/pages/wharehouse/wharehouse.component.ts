@@ -26,6 +26,8 @@ export class WharehouseComponent {
   classicboardsLength: any
   longboardsLength: any
   oldschoolboardsLength: any
+  wheelsLength: any
+  trucksLength: any
 
   // to get all the location data
   ngOnInit() {
@@ -37,9 +39,11 @@ export class WharehouseComponent {
       console.log(this.filterSkateboardsByBoardType("Long", data).length)
       this.longboardsLength = this.filterSkateboardsByBoardType("Long", data).length // fot the long board length
       console.log(this.filterSkateboardsByBoardType("Oldschool", data).length)
-      this.oldschoolboardsLength = this.filterSkateboardsByBoardType("Oldschool",data).length // for the oldschool length
+      this.oldschoolboardsLength = this.filterSkateboardsByBoardType("Oldschool", data).length // for the oldschool length
       this.locationList = data
       // this.findItemByType(data[0].skateboards[0].boardtype)
+      this.wheelsLength = this.filterLocationForWheels.length
+      this.trucksLength = this.filterLocationForTrucks.length
     })
   }
 
@@ -71,7 +75,32 @@ export class WharehouseComponent {
 
     return filteredSkateboards;
   }
+  // END OF ABOVE FUNCTION
 
+  // new function to find the number of wheels using the same logic from above 
+  filterLocationForWheels(WheelsId: number, location: any) {
+    const filterWheels: any[] = [];
+    for (const wheel of location.wheels) {
+      for (const wheel of location.wheels) {
+        if (location.wheels === WheelsId) {
+          filterWheels.push(wheel);
+        }
+      }
+      console.log(wheel)
+    }
+  }
+  // END OF ABOVE FUNCTION
+
+  // new function to find and loop through the trucks
+  filterLocationForTrucks(TrucksId: number, location: any) {
+    const filtertrucks: any[] = [];
+    for (const truck of location.trucks) {
+      if (location.trucks === TrucksId) {
+        filtertrucks.push(truck);
+      }
+      console.log(truck)
+    }
+  }
 
 
 }

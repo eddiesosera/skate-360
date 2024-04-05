@@ -109,6 +109,14 @@
     padding: 15px;
     border: none;
     outline: none;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.content-filter-buttons button:hover {
+    background-color: #fd1313;
+    /* font-weight: bold; */
+    transition: all ease-in-out .2s;
 }
 
 .content-sorting-buttons {
@@ -188,7 +196,13 @@
     font-family: "League Gothic", sans-serif;
     background-color: transparent;
     text-transform: uppercase;
+    transition: all ease-in-out .1s;
     cursor: pointer;
+}
+.display-add-button:hover{
+    background-color: #fff;
+    color: #0f1010;
+    transition: all ease-in-out .2s;
 }
 
 .display-edit-button {

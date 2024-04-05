@@ -16,6 +16,7 @@ export class ProductCardComponent implements AfterViewInit, OnInit {
   // The following link is a reference to state management:
   // https://hackernoon.com/angular-state-management-a-comparison-of-the-different-options-available
   @Input() id: any
+  @Input() name: any
   @Input() type: any
   @Input() craftedBy: any
   @Input() avatar: any
