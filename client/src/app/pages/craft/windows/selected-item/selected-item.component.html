@@ -12,21 +12,20 @@
         </div>
     </div>
     <div [class]="isSelectorActive?'dashboard-editor-selected-item-content activeSelector':'inactiveSelector'">
-        <img src="" alt="Selected Part" class="dashboard-editor-selected-item-content-img"
-            src="../../../../../assets/img/inventory/wheels/fuego.png" />
+        <img src="" alt="Selected Part" class="dashboard-editor-selected-item-content-img" [src]="imgUrl" />
     </div>
     <div [class]="isSelectorActive?'dashboard-editor-selected-item-details':'inactiveSelector'">
         <div class="selected-item-detail dashboard-editor-selected-item-details-itemname">
-            Item Name
+            {{selected?.name}}
         </div>
-        <div class="selected-item-detail dashboard-editor-selected-item-details-parent">
+        <!-- <div class="selected-item-detail dashboard-editor-selected-item-details-parent">
             Wheels
         </div>
         <div class="selected-item-detail dashboard-editor-selected-item-details-position">
             Left Back
-        </div>
+        </div> -->
         <div class="selected-item-detail dashboard-editor-selected-item-details-indexes">
-            0,0,0
+            {{selected?.pos}}
         </div>
     </div>
 </div>
