@@ -42,6 +42,7 @@
     <a href="https://github.com/username/projectname/issues">Request Feature</a>
 </p>
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 
@@ -553,10 +554,10 @@ This is a function that loops through the location array to find the information
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
 
 - Bugs.
-- Looping through the skateboard array within the location database to get the number of each differnet board type and the total number of boards (Ungerer).
-- Injecting Other information from one table into another and then calling that infomation (Ungerer).
-- Getting the warehouse cards to show for the home page (Ungerer).
-- Populating the account page with the logged in users information and Calling in the skateboards that the user has made (Ungerer).
+- Looping through the skateboard array within the location database to get the number of each differnet board type and the total number of boards **(Ungerer)**.
+- Injecting Other information from one table into another and then calling that infomation **(Ungerer)**.
+- Getting the warehouse cards to show for the home page **(Ungerer)**.
+- Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
 
 ### Reviews & Testing
 
