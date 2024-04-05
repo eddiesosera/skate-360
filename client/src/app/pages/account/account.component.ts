@@ -5,11 +5,12 @@ import { UserService } from '../../services/data/user.service';
 import { finalize, tap } from 'rxjs';
 import { User } from '../../models/functions/data/user.model';
 import { CommonModule } from '@angular/common';
+import { AccountCollectionComponent } from './account-collection/account-collection.component';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [RouterLink, SidebarComponent, CommonModule],
+  imports: [RouterLink, SidebarComponent, CommonModule, AccountCollectionComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
