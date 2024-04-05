@@ -15,13 +15,19 @@ import { CommonModule } from '@angular/common';
 })
 export class AccountComponent {
 
-  username: any
+  loggedInUser?: User;
 
   constructor(private userData: UserService, router: Router) {
     this.userData.getAllUsers().subscribe((success: User[]) => {
       console.log(success)
     })
   };
+
+  ngOnInit(): void {
+    let userParsed = JSON.parse(localStorage.getItem('loggedInUser')!)
+    this.loggedInUser = JSON.parse(userParsed.user)
+    console.log(this.loggedInUser)
+  }
 
   // ! tried this
   // ngOnInit() {
@@ -30,27 +36,27 @@ export class AccountComponent {
   // }
 
   // ! other method
-  ngOnInit(): void {
-    this.userData.getAllUsers().subscribe((success: User[]) => {
+  // ngOnInit(): void {
+  //   this.userData.getAllUsers().subscribe((success: User[]) => {
 
-      this.username = this.userData.getAllUsers.name;
-      console.log(success)
-      // if (this.username.name > 0) {
-      //   this.userData = this.username[0].name; // to extract the name parameter
-      // }
-    })
-    console.log(this.username)
-  }
+  //     this.username = this.userData.getAllUsers.name;
+  //     console.log(success)
+  //     // if (this.username.name > 0) {
+  //     //   this.userData = this.username[0].name; // to extract the name parameter
+  //     // }
+  //   })
+  //   console.log(this.username)
+  // }
 
   // filter for the name of the user
-  filterSuccessForName(successId: number, userData: any) {
-    const filterNames: any[] = [];
-    for (const name of userData.name) {
-      if (userData.name === successId) {
-        filterNames.push(name);
-      }
-    }
-    console.log(this.username.name) // ! this wont even consol log 
-  }
+  // filterSuccessForName(successId: number, userData: any) {
+  //   const filterNames: any[] = [];
+  //   for (const name of userData.name) {
+  //     if (userData.name === successId) {
+  //       filterNames.push(name);
+  //     }
+  //   }
+  //   console.log(this.username.name) // ! this wont even consol log 
+  // }
 
 }
