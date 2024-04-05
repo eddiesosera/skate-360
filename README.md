@@ -201,23 +201,40 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-![image5][image5]
+
+
+
+
 <br>
-![image6][image6]
+
 
 ### Wireframes
 
-![image7][image7]
+Home Page Wireframe
+<img src="readmeAssets\homeideation.png">
+
+<br>
+
+The Inventory Page Wireframe
+<img src="readmeAssets\Inventory List Page wire frame.png">
+
+<br>
+
+The warehouse page wireframe
+<img src="readmeAssets\Warehouse page Wire frame (no Rounded Corners).png">
+
+<br>
 
 ### User-flow
 
-![image8][image8]
-
+<img src="readmeAssets\userJourney.png">
 <!-- DEVELOPMENT PROCESS -->
 
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
+
+
 
 ### Implementation Process
 

@@ -14,3 +14,8 @@
     display: flex;
     align-items: center;
 }
+.warehouse-card-display-grid{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
