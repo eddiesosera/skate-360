@@ -80,7 +80,7 @@
 
 <!-- header image of project -->
 
-![image1][readmeAssets\Cover.png]
+<img src="readmeAssets\Cover.png">
 
 ### Project Description
 
