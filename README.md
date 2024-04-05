@@ -170,27 +170,26 @@ Here are a couple of ways to clone this repo:
 
 ## Features and Functionality
 
-<!-- ![image2][image2] -->
-<img src="readmeAssets\Craft Page.png">
 
 ### Feature 1 : Crafting In 3D
 
 In this site you are able to view the skateboard you are crafting in a 3D space where you can change each part as you wish.
 
-<!-- ![image3][image3] -->
-<img src="readmeAssets\Craft Page drag and drop.png">
+<img src="readmeAssets\Craft Page.png">
+
 
 ### Feature 2 : Drag'n Drop
 
 You the user when crafting a skateboard will be able to drag and drop the parts you want into the craft view to apply them to the skateboard.
 
-![image4][image4]
+<img src="readmeAssets\Craft Page drag and drop.png">
 
-### Feature 3
 
-Description of Feature
+### Feature 3 : Create New Inventory Items
 
-![image5][image5]
+When creating a new item to add to the inventory the user will have to fill out this form with the valid information to add the new item.
+
+<img src="readmeAssets\addnew item function.png">
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -230,6 +229,32 @@ The warehouse page wireframe
 
 The userflow diagram
 <img src="readmeAssets\userJourney.png">
+
+### Page Designs
+
+Onboarding Page
+
+<img src="readmeAssets\Onboarding.png">
+
+Home Page
+
+<img src="readmeAssets\Homefinaldesign.png">
+
+Inventory Page
+
+<img src="readmeAssets\Inventory List Page.png">
+
+Skateboard Page
+
+<img src="readmeAssets\Skateboard List.png">
+
+Craft Page
+
+<img src="readmeAssets\Craft Page.png">
+
+Account Page
+
+<img src="readmeAssets\Account.png">
 
 ### Database Architecture
 
