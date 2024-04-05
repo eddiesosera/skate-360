@@ -80,16 +80,20 @@
 
 <!-- header image of project -->
 
-![image1][image1]
+![image1][readmeAssets\Cover.png]
 
 ### Project Description
 
-A nice introduction to this amazing project of mine.
+We presnt to you an amazing inventory managment website for skateboards that allows the user to store stock and create to create unique and custom skateboard configurations.
+The site features a fully functional inventory for each individual warehouse within the database as well as the ability to add, update, and delete items from the inventory.
+Designed to fit every skater the site comes styled in only the best choice of theme for every skateboarder, that good'ol Grungy Punk theme to take you back into every skate park and make you feel right at home.
 
 ### Built With
-
+<!-- angular -->
 - [Technology Name](path/to/technology/website)
+<!-- 3d JS -->
 - [Technology Name](path/to/technology/website)
+<!-- other -->
 - [Technology Name](path/to/technology/website)
 
 <!-- GETTING STARTED -->
@@ -104,6 +108,12 @@ The following instructions will get you a copy of the project up and running on 
 Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
 ### How to install
+
+1. download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
+2. Download Postgres and set up a database
+3. clone the github repository using the URL
+4. Clone the backend of For the site using the URL.
+5. Launch the repo through [Visual Studio](https://code.visualstudio.com/).
 
 ### Installation
 
@@ -133,6 +143,27 @@ Here are a couple of ways to clone this repo:
     ```js
     const API_KEY = "ENTER YOUR API";
     ```
+
+### How to Run the App
+
+1. fist link your backend to your database by filling in the required data in the "***" fields in both your config file and the datasource file
+
+```
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "***",
+  "synchronize": true,
+  "entities":["src/models/**/*"],
+  "database":"****"
+}
+```
+
+2. Run your database ```npm run dev``` 
+
+3. Open and run your front end project ``` ng serve --open``` 
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
