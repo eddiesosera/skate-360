@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { SelectedItemService } from '../../../services/page/craft/selected-item.service';
 
 @Component({
   selector: 'app-three-object',
@@ -21,7 +22,7 @@ export class ThreeObjectComponent implements AfterViewInit, OnInit {
   initialX = 0;
   initialY = 0;
 
-  constructor(private cdr: ChangeDetectorRef) {
+  constructor(private cdr: ChangeDetectorRef, private selectedItemService: SelectedItemService) {
     this.raycaster = new THREE.Raycaster();
     this.mouse = new THREE.Vector2();
   }
@@ -36,9 +37,15 @@ export class ThreeObjectComponent implements AfterViewInit, OnInit {
       const clickedObject = intersects[0].object as THREE.Mesh; // Cast to Mesh
       // Highlight the selected object
       this.highlightSelectedObject(clickedObject);
-      console.log('Structure: ', clickedObject.name)
+      // console.log('Structure: ', clickedObject.name)
+      this.selectedItemService.changeSelectedItem(
+        {
+          name: clickedObject.name,
+          pos: `${clickedObject.position.x},${clickedObject.position.y},${clickedObject.position.z}`
+        })
     } else {
       this.highlightSelectedObject(null);
+      // this.selectedItemService.changeSelectedItem(null)
     }
   }
 
