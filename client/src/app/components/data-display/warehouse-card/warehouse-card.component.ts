@@ -24,6 +24,7 @@ export class WarehouseCardComponent {
   @Input() numberOfLongBoards: any
   @Input() numberOfOldschoolBoards: any
   @Input() numberOfWheels: any
+  @Input() numberOfTrucks: any
 
   @Input() loactionId: any
 
