@@ -28,7 +28,17 @@ export class LocationsComponent implements OnInit {
     }
   ];
 
+  // locationList?: any // added this
+
   constructor(private locationsData: LocationService) { }
+  // constructor(private service: LocationService) { }
+
+
+  // ngOnInit() {
+  //   this.service.getAllLocations().subscribe((data: any)=>{
+  //     console.log(data);
+  //   })
+  // }
 
   ngOnInit(): void {
     this.locationsData.getAllLocations().subscribe((newLocations: LocationModel[]) => {

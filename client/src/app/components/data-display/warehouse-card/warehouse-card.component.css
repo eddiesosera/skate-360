@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 
-.warehouse-card-worker-data{
+.warehouse-card-worker-data {
     position: relative;
     left: 350px;
     bottom: 10px;
@@ -76,7 +76,7 @@
     font-family: "IBM Plex Mono", monospace;
 }
 
-.warehouse-card-data-display-con{
+.warehouse-card-data-display-con {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -87,7 +87,8 @@
     flex-direction: column;
     gap: 10px;
 }
-.warehouse-data-wheels-con{
+
+.warehouse-data-wheels-con {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -99,13 +100,14 @@
     justify-content: space-between;
     /* align-items: center; */
     margin: 0;
-    
+
 }
 
 .warehouse-data-row-primary p {
     text-transform: uppercase;
     color: #fd1313;
-    margin: 0;font-weight: bold;
+    margin: 0;
+    font-weight: bold;
     font-size: 16px;
 }
 
@@ -124,13 +126,14 @@
 
 /* data section end  */
 /* buttons */
-.warehouse-btn-con{
+.warehouse-btn-con {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-top: 20px;
 }
-#warehouse-addItem-btn{
+
+#warehouse-addItem-btn {
     width: 259px;
     height: 48px;
     display: flex;
@@ -146,7 +149,8 @@
     font-weight: 700;
     cursor: pointer;
 }
-#warehouse-view-btn{
+
+#warehouse-view-btn {
     width: 126px;
     height: 48px;
     border: 2px solid #fd1313;
@@ -160,4 +164,10 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
+}
+
+.warehouse-view-btn-text{
+    text-decoration: none;
+    color: #fd1313;
 }
