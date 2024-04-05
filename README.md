@@ -246,9 +246,11 @@ The `Development Process` is the technical implementations and functionality don
 
 Setting Up the ```CRUD``` Functionality.
   >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
-  - Get all Items 
-    >[!NOTE]
+  - Get all Items
+
+    > [!NOTE]
     > The GET ALL Function in the route.ts file used to get all items in the specific array
+
   ```
     // Get All Skateboards
     skateboardRouter.get('/', async (req, res) => {
@@ -271,8 +273,10 @@ Setting Up the ```CRUD``` Functionality.
     });
   ```
   - Get Singal Item
-    >[!NOTE]
+
+    > [!NOTE]
     > The GET SINGLE Function to get a single item by calling the item ID
+
   ```
     // Get Single Skateboards
     skateboardRouter.get('/:id', async (req, res) => {
@@ -300,8 +304,10 @@ Setting Up the ```CRUD``` Functionality.
     });
   ```
   - Add an Item
-    >[!NOTE]
+
+    > [!NOTE]
     > The Function to add new items to your database
+
   ```
     // Insert Single Skateboard
     skateboardRouter.post('/', async (req, res) => {
@@ -357,8 +363,10 @@ Setting Up the ```CRUD``` Functionality.
     })
   ```
   - Update Item
-    >[!NOTE]
+
+    > [!NOTE]
     > The UPDATE Function in the route.ts file
+
   ```
     // Update Single Skateboard
     skateboardRouter.put('/:id', async (req, res) => {
@@ -420,8 +428,10 @@ Setting Up the ```CRUD``` Functionality.
     })
   ```
   - Delete Item
-    >[!NOTE]
+
+    > [!NOTE]
     > The DELETE Function in the route.ts file
+
   ```
     // Delete Single Skateboard
     skateboardRouter.delete('/:id', async (req, res) => {
