@@ -18,7 +18,7 @@
     justify-content: space-between;
 }
 
-.inv-mainspace-text-con {}
+/* .inv-mainspace-text-con {} */
 
 .inv-mainspace-text-con h1 {
     color: #fd1313;
@@ -187,6 +187,7 @@
     gap: 5px;
 }
 
+
 .display-add-button {
     width: 88px;
     height: 46px;
@@ -199,6 +200,7 @@
     transition: all ease-in-out .1s;
     cursor: pointer;
 }
+
 .display-add-button:hover{
     background-color: #fff;
     color: #0f1010;
@@ -226,4 +228,4 @@
 }
 
 /* the display section */
-.inv-boards-display-section {}
+/* .inv-boards-display-section {} */

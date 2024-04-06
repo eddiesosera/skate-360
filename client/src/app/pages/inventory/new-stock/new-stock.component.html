@@ -1,0 +1,21 @@
+<div class="new-stock" [style.display]="isVisisble?'flex':'none'">
+    <div class="new-stock-close" (click)="toggleClose()">
+        <i class="ri-close-line"></i>
+    </div>
+    <div class="new-stock-wrap">
+        <div class="new-stock-wrap-top">
+            <div class="new-stock-wrap-top-head">New Stock</div>
+            <div class="new-stock-wrap-top-info">You can new stock filling in the form below.</div>
+        </div>
+        <div class="new-stock-wrap-mid">
+            <app-dropdown idPos="0" [label]="resourceLabel" [options]="resourceTypes" [width]="'100%'"></app-dropdown>
+            <app-dropdown idPos="1" [label]="resourceVariant" [options]="resourceTypeVariant"
+                [width]="'100%'"></app-dropdown>
+            <input class="new-stock-mid-amount" type="number" placeholder="Enter amount" />
+        </div>
+        <div class="new-stock-wrap-btm">
+            <app-button accent="red" variant="fill" width="calc(100% - 30px)">Add Stock</app-button>
+        </div>
+    </div>
+    <div class="new-stock-overlay-bg"></div>
+</div>

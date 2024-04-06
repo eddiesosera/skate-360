@@ -8,11 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GridlayoutComponent } from '../../components/data-display/gridlayout/gridlayout.component';
 import { InventoryCardComponent } from '../../components/data-display/inventory-card/inventory-card.component';
+import { NewStockService } from '../../services/page/wharehouse/new-stock.service';
+import { NewStockComponent } from '../wharehouse/new-stock/new-stock.component';
+// import { NewStockComponent } from './new-stock/new-stock.component';
 
 @Component({
   selector: 'app-inventory',
   standalone: true,
-  imports: [SidebarComponent, SearchBarComponent, ProductCardComponent, CommonModule, GridlayoutComponent, InventoryCardComponent],
+  imports: [SidebarComponent, SearchBarComponent, ProductCardComponent, CommonModule, GridlayoutComponent, InventoryCardComponent, NewStockComponent],
   templateUrl: './inventory.component.html',
   styleUrl: './inventory.component.css'
 })
@@ -30,7 +33,7 @@ export class InventoryComponent {
 
   // constructor(private skateboardData: SkateboardService) { }
   // location service 
-  constructor(private locationData: LocationService, private route: ActivatedRoute) { }
+  constructor(private locationData: LocationService, private route: ActivatedRoute, private newStockService: NewStockService) { }
 
   // ngOnInit(): void {
   //   this.skateboardData.getAllSkateboards().subscribe((skateboards) => {
@@ -65,5 +68,9 @@ export class InventoryComponent {
   }
   // need a function that loopr throught the array of the locations and matches the id parameter with locations
 
+
+  openStockForm() {
+    this.newStockService.toggleVisibility(true)
+  }
 
 }

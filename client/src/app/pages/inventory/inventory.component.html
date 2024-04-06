@@ -89,9 +89,9 @@
                 </div>
                 <!-- import the cards here -->
                 <div class="boards-display-cards-con">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci cum laboriosam praesentium
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci cum laboriosam praesentium
                         provident voluptas porro maxime dolor! Rerum sit harum eaque distinctio facilis. Cum aut
-                        voluptates beatae architecto, voluptatum consectetur.</p>
+                        voluptates beatae architecto, voluptatum consectetur.</p> -->
 
                     <app-gridlayout [gap]="20">
                         <div class="grid-item" *ngFor="let item of currentlocation.skateboards">
@@ -198,7 +198,7 @@
                         <div class="display-divider-line"></div>
                     </div>
                     <div class="display-title-row-buttons">
-                        <button class="display-add-button">add new</button>
+                        <button class="display-add-button" (click)="openStockForm()">add new</button>
                         <button class="display-edit-button">edit</button>
                     </div>
                 </div>

@@ -710,7 +710,6 @@ Ungerer :
   - accounting page 
   - Home page warehouse section 
   - Side-Navbar component
-  - redirecting a un-loggedIn User to the login page when navigating to the account page
 
   **Backend**
   - Wheel Route and model
@@ -724,6 +723,7 @@ Shared :
   - Genreal Desing 
   - Site Layout
   - Populating the Site 
+  - redirecting a un-loggedIn User to the login page when navigating to the account page
 
 ### Reviews & Testing
 
