@@ -113,7 +113,8 @@ Ensure that you have the latest version of [Software](path/to/where/they/can/dow
 
 ### How to install
 
-1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
+1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie. 
+  - use this command in your terminal. ```npm install -g @angular/cli```
 2. Download Postgres and set up a database.
 3. Clone the github repository using the URL.
 4. Clone the backend of For the site using the URL.
@@ -168,6 +169,8 @@ Here are a couple of ways to clone this repo:
 2. Run your database ```npm run dev``` 
 
 3. Open and run your front end project ``` ng serve --open``` 
+
+4. See The site Open in your Defulat browser and enjoy.
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
@@ -511,13 +514,15 @@ Setting Up the ```CRUD``` Functionality.
 
 ### Front-End
 
-CRUD Functionality
+**CRUD Functionality**
+
 Using the Openstock-Form To add a new item to the designated warehouse
 ```
   constructor(private newStockService: NewStockService) { }
 ```
 
-Warehouse Page 
+**Warehouse Page**
+
 This is a function that loops through the location array to find the information that has been joined to the array and allow for it to be fetched.
 
 ```
@@ -535,6 +540,91 @@ This is a function that loops through the location array to find the information
     return filteredSkateboards;
   }
 ```
+
+After the Looping function we have an ```ngOnInit`` so that in site init we call all the relevant data that will be displayed in the warehouse card.
+
+```
+    // to get all the location data
+    ngOnInit() {
+      // the "any" was LocationModel but it is acting weird
+      this.service.getAllLocations().subscribe((data: any) => {
+        console.log(data);
+        console.log(this.filterSkateboardsByBoardType("ramsy", data).length)
+        this.classicboardsLength = this.filterSkateboardsByBoardType("ramsy", data).length // for the classic board length
+        console.log(this.filterSkateboardsByBoardType("Long", data).length)
+        this.longboardsLength = this.filterSkateboardsByBoardType("Long", data).length // fot the long board length
+        console.log(this.filterSkateboardsByBoardType("Oldschool", data).length)
+        this.oldschoolboardsLength = this.filterSkateboardsByBoardType("Oldschool", data).length // for the oldschool length
+        this.locationList = data
+        // this.findItemByType(data[0].skateboards[0].boardtype)
+        this.wheelsLength = this.filterLocationForWheels.length
+        this.trucksLength = this.filterLocationForTrucks.length
+      })
+    }
+```
+
+To display the data on the ```warehouse-card-component``` we call the variable listed in the ```.ts``` file
+
+```
+  <div class="warehouse-card-container">
+    <app-warehouse-card *ngFor="let item of locationList"
+      [location]="item"
+      [id]="item.id"
+      [numberOfClassicBoards]="classicboardsLength"
+      [numberOfLongBoards]="longboardsLength"
+      [numberOfOldschoolBoards]="oldschoolboardsLength"
+      [numberOfWheels]="wheelsLength"
+      [numberOfTrucks]="trucksLength"
+      ></app-warehouse-card>
+  </div>
+```
+
+**Skateboard Service Code**
+
+this is an example of the code used in the skateboard service file for the ```CRUD``` Functionality
+
+```
+  getAllSkateboards(): Observable<Skateboard[]> {
+      return this.http.get<any>(this.baseUrl)
+  }
+```
+> To get all the skateboards
+
+<br>
+
+```
+  getSingleSkateboard(id: number): Observable<Skateboard> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`)
+  }
+```
+> To get a single skate board
+
+<br>
+
+```
+  createSkateboard(body: Skateboard): Observable<Skateboard> {
+    return this.http.post<Skateboard>(this.baseUrl, body)
+  }
+```
+> To Create a new skateboard
+
+<br>
+
+```
+  updateSkateboard(id: number, body: Skateboard): Observable<Skateboard> {
+    return this.http.put<Skateboard>(`${this.baseUrl}/${id}`, body)
+  }
+```
+> To Update a specific skateboard
+
+<br>
+
+```
+  deleteSkateboard(id: number): void {
+    this.http.delete<Skateboard>(`${this.baseUrl}/${id}`).subscribe(itemDeleted => console.log("deleted: " + itemDeleted))
+  }
+```
+> To Delete a specific Skateboard
 
 ### Implementation Process
 
@@ -627,26 +717,28 @@ Shared :
 >[!Note]
 >Post man and insomnia where both used to test all backend CRUD functionality.
 
-Test 1 of Create User functionality :
+**Test 1** of Create User functionality :
   - We tested the back of the user create function using Postman to test the CRUD 
 
-Test 2 of Login Authentication Quiz functionality :
+**Test 2** of Login Authentication Quiz functionality :
   - To test the Authentication quiz we purposely got the answer wrong to test if it was working properly then selected the right answer to test.
   - we also tried loggin in without completing the quiz to test if you could bypass the quiz.
 
-Test 3 of Warehouse inventory route 
+**Test 3** of Warehouse inventory route 
   - when clicking on the warehouse inventory it takes you to the inventory that is linked to that specific warehouse. Showing all items that match that specific loaction.
 
 ### Future Implementation
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-- Future 1.
-- Future 2.
+- Refining The crafting process.
+- Improving the resposivness of the website.
 
-<!-- MOCKUPS -->
+<br>
 
 ## Final Outcome
+
+<!-- MOCKUPS -->
 
 ### Mockups
 
