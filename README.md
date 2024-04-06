@@ -108,7 +108,7 @@ The following instructions will get you a copy of the project up and running on 
 
 Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
-**The Backend for the Website**
+**The ```Backend``` for the Website**
 [BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
 
 ### How to install
