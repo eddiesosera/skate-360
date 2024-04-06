@@ -809,7 +809,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 ## Contact
 
-- **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
+- **Eddie Sosera** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
 - **Backend Link** - https://github.com/eddiesosera/dv300-term1-backend
