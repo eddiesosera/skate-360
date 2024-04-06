@@ -12,6 +12,7 @@ export class DropdownComponent {
   @Input() idPos: string | number = 0;
   @Input() width = 'max-content';
   @Input() label = 'Option';
+  @Input() optionAction: any;
   @Input() options = [
     {
       id: 0,

@@ -1,0 +1,90 @@
+.craft-setup {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #080a0ad1;
+    border: 1px solid #292E2F;
+    backdrop-filter: blur(5px);
+}
+
+.craft-setup-wrap {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.craft-setup-close {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #292E2F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.craft-setup-close:hover {
+    border: 1.5px solid #ffffff;
+}
+
+.craft-setup-info {
+    font-size: 48px;
+    font-family: League Gothic;
+    text-transform: uppercase;
+}
+
+.craft-setup-types {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.craft-setup-type-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.craft-setup-type {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #2D2F2F;
+    cursor: pointer;
+}
+
+.craft-setup-img {
+    height: 250px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.craft-setup-type-name {
+    font-family: IBM Plex Mono;
+    text-transform: uppercase;
+}
+
+.type-selected {
+    border: none;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.type-text-selected {
+    color: #0c0c0c;
+    font-weight: 600;
+}

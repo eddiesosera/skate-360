@@ -7,6 +7,7 @@ import { ToolOptionComponent } from './windows/tool-option/tool-option.component
 import { ConfigureToolOptionComponent } from './windows/configure-tool-option/configure-tool-option.component';
 import { SelectedItemComponent } from './windows/selected-item/selected-item.component';
 import { CraftSkateboardComponent } from './windows/craft-skateboard/craft-skateboard.component';
+import { CraftSetupComponent } from './component/craft-setup/craft-setup.component';
 
 @Component({
   selector: 'app-craft',
@@ -18,6 +19,7 @@ import { CraftSkateboardComponent } from './windows/craft-skateboard/craft-skate
     CraftSkateboardComponent,
     ToolOptionComponent,
     ConfigureToolOptionComponent,
+    CraftSetupComponent,
     ButtonComponent
   ],
   templateUrl: './craft.component.html',

@@ -35,4 +35,6 @@ export class CardOptionsComponent implements AfterViewInit {
     this.skateboardService.deleteSkateboard(this.itemId)
   }
 
+  view() { }
+
 }

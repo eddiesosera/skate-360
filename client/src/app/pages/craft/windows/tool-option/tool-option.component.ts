@@ -136,7 +136,7 @@ export class ToolOptionComponent implements AfterViewInit, OnInit {
 
   constructor(private selectedItem: SelectedItemService) {
     this.selectedItem.selectedItem.subscribe(item => {
-      this.componentType = item.name
+      this.componentType = item?.name
     })
   }
 

@@ -22,16 +22,16 @@ export class SelectedItemComponent {
       this.selected = item
       // if (this.selected===ComponentType[0].name)
       for (let componentType of ComponentType) {
-        if (this.selected.name == componentType.name || this.selected.name == componentType.id) {
-          if (this.selected.name === "wheels") {
+        if (this.selected?.name == componentType?.name || this.selected?.name == componentType?.id) {
+          if (this.selected?.name === "wheels") {
             this.imgUrl = '../../../../../assets/img/inventory/selected/wheel.png'
-          } else if (this.selected.name === "truck") {
+          } else if (this.selected?.name === "truck") {
             this.imgUrl = '../../../../../assets/img/inventory/selected/truck.png'
           }
-        } else if (this.selected.name == componentType.name || this.skateboardType == 'oldschool') {
-          if (this.selected.name === "board") {
+        } else if (this.selected?.name == componentType?.name || this.skateboardType == 'oldschool') {
+          if (this.selected?.name === "board") {
             this.imgUrl = '../../../../../assets/img/inventory/selected/oldschool_board_board.png'
-          } else if (this.selected.name === "gripTape") {
+          } else if (this.selected?.name === "gripTape") {
             this.imgUrl = '../../../../../assets/img/inventory/selected/oldschool_board_gripTape.png'
           }
 

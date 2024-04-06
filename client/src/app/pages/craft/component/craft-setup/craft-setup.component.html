@@ -1,0 +1,24 @@
+<div class="craft-setup" [style]="isVisible?'display: flex;':'display: none;'">
+    <div class="craft-setup-wrap">
+        <div (click)="backPage()" class="craft-setup-close"><i class="ri-close-line"></i></div>
+        <div class="craft-setup-info">
+            Choose Skateboard type
+        </div>
+        <div class="craft-setup-types">
+            <div class="craft-setup-type-wrap" *ngFor="let type of skateboardTypes">
+                <div (click)="setSkateForm(type)"
+                    [class]="selectedSkateboardType?.id===type.id?'type-selected':'craft-setup-type'">
+                    <img class="craft-setup-img" [src]="type?.avatar" />
+                    <div
+                        [class]="selectedSkateboardType?.id===type?.id?'craft-setup-type-name type-text-selected':'craft-setup-type-name'">
+                        {{type?.name}}</div>
+                </div>
+                <app-dropdown [label]="skateboardVariantLabel" [options]="skateboardVariant" [width]="'100%'"
+                    optionAction=""
+                    [style]="selectedSkateboardType?.id===type.id?'display: flex; width: 100%;':'display: none;'"></app-dropdown>
+            </div>
+        </div>
+        <app-button (click)="submitSetup()" variant="fill" accent="red"
+            [style]="isButtonVisible?'display: block;':'display: none;'">Create Board</app-button>
+    </div>
+</div>
