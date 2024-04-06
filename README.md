@@ -108,9 +108,13 @@ The following instructions will get you a copy of the project up and running on 
 
 Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
+**The ```Backend``` for the Website**
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+
 ### How to install
 
-1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
+1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie. 
+  - use this command in your terminal. ```npm install -g @angular/cli```
 2. Download Postgres and set up a database.
 3. Clone the github repository using the URL.
 4. Clone the backend of For the site using the URL.
@@ -165,6 +169,8 @@ Here are a couple of ways to clone this repo:
 2. Run your database ```npm run dev``` 
 
 3. Open and run your front end project ``` ng serve --open``` 
+
+4. See The site Open in your Defulat browser and enjoy.
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
@@ -508,13 +514,15 @@ Setting Up the ```CRUD``` Functionality.
 
 ### Front-End
 
-CRUD Functionality
+**CRUD Functionality**
+
 Using the Openstock-Form To add a new item to the designated warehouse
 ```
   constructor(private newStockService: NewStockService) { }
 ```
 
-Warehouse Page 
+**Warehouse Page**
+
 This is a function that loops through the location array to find the information that has been joined to the array and allow for it to be fetched.
 
 ```
@@ -532,6 +540,116 @@ This is a function that loops through the location array to find the information
     return filteredSkateboards;
   }
 ```
+
+After the Looping function we have an ```ngOnInit`` so that in site init we call all the relevant data that will be displayed in the warehouse card.
+
+```
+    // to get all the location data
+    ngOnInit() {
+      // the "any" was LocationModel but it is acting weird
+      this.service.getAllLocations().subscribe((data: any) => {
+        console.log(data);
+        console.log(this.filterSkateboardsByBoardType("ramsy", data).length)
+        this.classicboardsLength = this.filterSkateboardsByBoardType("ramsy", data).length // for the classic board length
+        console.log(this.filterSkateboardsByBoardType("Long", data).length)
+        this.longboardsLength = this.filterSkateboardsByBoardType("Long", data).length // fot the long board length
+        console.log(this.filterSkateboardsByBoardType("Oldschool", data).length)
+        this.oldschoolboardsLength = this.filterSkateboardsByBoardType("Oldschool", data).length // for the oldschool length
+        this.locationList = data
+        // this.findItemByType(data[0].skateboards[0].boardtype)
+        this.wheelsLength = this.filterLocationForWheels.length
+        this.trucksLength = this.filterLocationForTrucks.length
+      })
+    }
+```
+
+To display the data on the ```warehouse-card-component``` we call the variable listed in the ```.ts``` file
+
+```
+  <div class="warehouse-card-container">
+    <app-warehouse-card *ngFor="let item of locationList"
+      [location]="item"
+      [id]="item.id"
+      [numberOfClassicBoards]="classicboardsLength"
+      [numberOfLongBoards]="longboardsLength"
+      [numberOfOldschoolBoards]="oldschoolboardsLength"
+      [numberOfWheels]="wheelsLength"
+      [numberOfTrucks]="trucksLength"
+      ></app-warehouse-card>
+  </div>
+```
+
+**Skateboard Service Code**
+
+this is an example of the code used in the skateboard service file for the ```CRUD``` Functionality
+
+```
+  getAllSkateboards(): Observable<Skateboard[]> {
+      return this.http.get<any>(this.baseUrl)
+  }
+```
+> To get all the skateboards
+
+<br>
+
+```
+  getSingleSkateboard(id: number): Observable<Skateboard> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`)
+  }
+```
+> To get a single skate board
+
+<br>
+
+```
+  createSkateboard(body: Skateboard): Observable<Skateboard> {
+    return this.http.post<Skateboard>(this.baseUrl, body)
+  }
+```
+> To Create a new skateboard
+
+<br>
+
+```
+  updateSkateboard(id: number, body: Skateboard): Observable<Skateboard> {
+    return this.http.put<Skateboard>(`${this.baseUrl}/${id}`, body)
+  }
+```
+> To Update a specific skateboard
+
+<br>
+
+```
+  deleteSkateboard(id: number): void {
+    this.http.delete<Skateboard>(`${this.baseUrl}/${id}`).subscribe(itemDeleted => console.log("deleted: " + itemDeleted))
+  }
+```
+> To Delete a specific Skateboard
+
+<br>
+
+**Account Page**
+
+```
+    {
+        path: 'account',
+        component: AccountComponent,
+        canActivate: [(state: RouterStateSnapshot) => {
+            // to check for data existing in the local storage
+            if (localStorage.getItem('userData')) {
+                return true; // to allow acces to the route
+            } else {
+                // redirects user to the onboarding page if data doesnt exist
+                // return state.router.createUser(['/onboarding']);
+                return state.url !== '/onboarding' ? state.url : '/onboarding'; // to avoid redirect looping
+            }
+        }]
+    },
+    {
+        path: '', redirectTo: '/account', pathMatch: 'full'
+    }, // defualt route
+```
+> To redirect the user to the login page if they havent been logged in 
 
 ### Implementation Process
 
@@ -559,6 +677,54 @@ This is a function that loops through the location array to find the information
 - Getting the warehouse cards to show for the home page **(Ungerer)**.
 - Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
 
+### Responsibilities
+
+Eddie :
+
+  **Frontend**
+  - three.js and the 3D Interface 
+  - Craft Page 
+  - User Authentication 
+  - Inventory page filters and sorting 
+  - Adding Item Form and Function 
+  - Home page 
+  - Home page animated background
+  - home page skateboard section 
+  - Navbar component
+  - Login form and authentication quiz
+
+  **Backend**
+  - skateboard Route and Model
+  - Configuration Route and Model
+  - Location Route and Model
+  - User Model Route
+  - ormConfig
+  - Backend Authentication Route
+
+Ungerer :
+
+  **Frontend**
+  - Warehouse Page
+  - warehouse card component
+  - inventory Page 
+  - accounting page 
+  - Home page warehouse section 
+  - Side-Navbar component
+  - redirecting a un-loggedIn User to the login page when navigating to the account page
+
+  **Backend**
+  - Wheel Route and model
+  - Truck Route and model
+  - Bearing Route and model
+  - Board-Skin Route and model
+  - Board-Type Route and model
+
+Shared :
+
+  - Genreal Desing 
+  - Site Layout
+  - Populating the Site 
+
 ### Reviews & Testing
 
 <!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
@@ -574,33 +740,57 @@ This is a function that loops through the location array to find the information
 
 `Unit Tests` were conducted to establish working functionality. Here are all the tests that were ran:
 
-- Test 1 of this functionality
-- Test 2 of this functionality
+>[!Note]
+>Post man and insomnia where both used to test all backend CRUD functionality.
+
+**Test 1** of Create User functionality :
+  - We tested the back of the user create function using Postman to test the CRUD 
+
+**Test 2** of Login Authentication Quiz functionality :
+  - To test the Authentication quiz we purposely got the answer wrong to test if it was working properly then selected the right answer to test.
+  - we also tried loggin in without completing the quiz to test if you could bypass the quiz.
+
+**Test 3** of Warehouse inventory route 
+  - when clicking on the warehouse inventory it takes you to the inventory that is linked to that specific warehouse. Showing all items that match that specific loaction.
 
 ### Future Implementation
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-- Future 1.
-- Future 2.
-
-<!-- MOCKUPS -->
-
-## Final Outcome
-
-### Mockups
-
-<!-- ![image9][image9] -->
-Mockup 1
-<img src="readmeAssets\Mockup01.jpeg">
+- Refining The crafting process.
+- Improving the resposivness of the website.
 
 <br>
 
-Mockup 2
+## Final Outcome
+
+<!-- MOCKUPS -->
+
+### Mockups
+
+<h5>Mockup 1</h5>
+<!-- <img src="readmeAssets\Mockup01.jpeg"> -->
+<img src="readmeAssets\NewMockup01.png">
+
+<br>
+
+<h5>Mockup 2</h5>
 <img src="readmeAssets\MockUp02.png">
 
-Mockup 3
+<br>
+
+<h5>Mockup 3</h5>
 <img src="readmeAssets\Mockup03.jpeg">
+
+<br>
+
+<h5>Mockup 4</h5>
+<img src="readmeAssets\Mockup 4.png">
+
+<br>
+
+<h5>Mocup 5</h5>
+<img src="readmeAssets\Mockup 5.png">
 
 <!-- VIDEO DEMONSTRATION -->
 
@@ -645,9 +835,10 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 ## Contact
 
-- **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
+- **Eddie Sosera** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
+- **Backend Link** - https://github.com/eddiesosera/dv300-term1-backend
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -657,13 +848,14 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 - [Angular](https://angular.io/tutorial/first-app)
 - [Tutorial Video](path/to/resource)
-- [Resource Name](path/to/resource)
-- [Resource Name](path/to/resource)
-- [Resource Name](path/to/resource)
+- [Mockup image 1](https://www.pexels.com/photo/a-person-using-a-laptop-6372918/)
+- [Mockup Image 4](https://www.pexels.com/photo/computer-monitor-with-on-table-4499765/)
+- [Mockup Backgroung Image 5](https://www.pexels.com/photo/turned-on-grey-table-lamp-1643280/) Photo by Dorran
+- [Death Icon](https://www.flaticon.com/free-icons/skull) Flaticon
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[image1]: /path/to/image.png
+<!-- [image1]: /path/to/image.png
 [image2]: /path/to/image.png
 [image3]: /path/to/image.png
 [image4]: /path/to/image.png
@@ -672,7 +864,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image7]: /path/to/image.png
 [image8]: /path/to/image.png
 [image9]: /path/to/image.png
-[image10]: /path/to/image.png
+[image10]: /path/to/image.png -->
 
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 
