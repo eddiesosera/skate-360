@@ -108,6 +108,9 @@ The following instructions will get you a copy of the project up and running on 
 
 Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
+**The Backend for the Website**
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+
 ### How to install
 
 1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
@@ -649,7 +652,8 @@ Test 3 of Warehouse inventory route
 
 <!-- ![image9][image9] -->
 Mockup 1
-<img src="readmeAssets\Mockup01.jpeg">
+<!-- <img src="readmeAssets\Mockup01.jpeg"> -->
+<img src="readmeAssets\NewMockup01.png">
 
 <br>
 
@@ -658,6 +662,12 @@ Mockup 2
 
 Mockup 3
 <img src="readmeAssets\Mockup03.jpeg">
+
+<h5>Mockup 4</h5>
+<img src="">
+
+<h5>Mocup 5</h5>
+<img src="readmeAssets\Mockup 5.png">
 
 <!-- VIDEO DEMONSTRATION -->
 
@@ -705,6 +715,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
+- **Backend Link** - https://github.com/eddiesosera/dv300-term1-backend
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -714,13 +725,13 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 - [Angular](https://angular.io/tutorial/first-app)
 - [Tutorial Video](path/to/resource)
-- [Resource Name](path/to/resource)
-- [Resource Name](path/to/resource)
+- [Mockup image 1](https://www.pexels.com/photo/a-person-using-a-laptop-6372918/)
+- [Mockup Image 4](https://www.pexels.com/photo/computer-monitor-with-on-table-4499765/)
 - [Resource Name](path/to/resource)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[image1]: /path/to/image.png
+<!-- [image1]: /path/to/image.png
 [image2]: /path/to/image.png
 [image3]: /path/to/image.png
 [image4]: /path/to/image.png
@@ -729,7 +740,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 [image7]: /path/to/image.png
 [image8]: /path/to/image.png
 [image9]: /path/to/image.png
-[image10]: /path/to/image.png
+[image10]: /path/to/image.png -->
 
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 
