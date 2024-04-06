@@ -559,6 +559,53 @@ This is a function that loops through the location array to find the information
 - Getting the warehouse cards to show for the home page **(Ungerer)**.
 - Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
 
+### Responsibilities
+
+Eddie :
+
+  **Frontend**
+  - three.js and the 3D Interface 
+  - Craft Page 
+  - User Authentication 
+  - Inventory page filters and sorting 
+  - Adding Item Form and Function 
+  - Home page 
+  - Home page animated background
+  - home page skateboard section 
+  - Navbar component
+  - Login form and authentication quiz
+
+  **Backend**
+  - skateboard Route and Model
+  - Configuration Route and Model
+  - Location Route and Model
+  - User Model Route
+  - ormConfig
+  - Backend Authentication Route
+
+Ungerer :
+
+  **Frontend**
+  - Warehouse Page
+  - warehouse card component
+  - inventory Page 
+  - accounting page 
+  - Home page warehouse section 
+  - Side-Navbar component
+
+  **Backend**
+  - Wheel Route and model
+  - Truck Route and model
+  - Bearing Route and model
+  - Board-Skin Route and model
+  - Board-Type Route and model
+
+Shared :
+
+  - Genreal Desing 
+  - Site Layout
+  - Populating the Site 
+
 ### Reviews & Testing
 
 <!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
@@ -574,8 +621,18 @@ This is a function that loops through the location array to find the information
 
 `Unit Tests` were conducted to establish working functionality. Here are all the tests that were ran:
 
-- Test 1 of this functionality
-- Test 2 of this functionality
+>[!Note]
+>Post man and insomnia where both used to test all backend CRUD functionality.
+
+Test 1 of Create User functionality :
+  - We tested the back of the user create function using Postman to test the CRUD 
+
+Test 2 of Login Authentication Quiz functionality :
+  - To test the Authentication quiz we purposely got the answer wrong to test if it was working properly then selected the right answer to test.
+  - we also tried loggin in without completing the quiz to test if you could bypass the quiz.
+
+Test 3 of Warehouse inventory route 
+  - when clicking on the warehouse inventory it takes you to the inventory that is linked to that specific warehouse. Showing all items that match that specific loaction.
 
 ### Future Implementation
 
