@@ -650,21 +650,26 @@ Test 3 of Warehouse inventory route
 
 ### Mockups
 
-<!-- ![image9][image9] -->
-Mockup 1
+<h5>Mockup 1</h5>
 <!-- <img src="readmeAssets\Mockup01.jpeg"> -->
 <img src="readmeAssets\NewMockup01.png">
 
 <br>
 
-Mockup 2
+<h5>Mockup 2</h5>
 <img src="readmeAssets\MockUp02.png">
 
-Mockup 3
+<br>
+
+<h5>Mockup 3</h5>
 <img src="readmeAssets\Mockup03.jpeg">
 
+<br>
+
 <h5>Mockup 4</h5>
-<img src="">
+<img src="readmeAssets\Mockup 4.png">
+
+<br>
 
 <h5>Mocup 5</h5>
 <img src="readmeAssets\Mockup 5.png">
@@ -727,7 +732,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [Tutorial Video](path/to/resource)
 - [Mockup image 1](https://www.pexels.com/photo/a-person-using-a-laptop-6372918/)
 - [Mockup Image 4](https://www.pexels.com/photo/computer-monitor-with-on-table-4499765/)
-- [Resource Name](path/to/resource)
+- [Mockup Backgroung Image 5](https://www.pexels.com/photo/turned-on-grey-table-lamp-1643280/) Photo by Dorran
+- [Death Icon](https://www.flaticon.com/free-icons/skull) Flaticon
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
