@@ -626,6 +626,31 @@ this is an example of the code used in the skateboard service file for the ```CR
 ```
 > To Delete a specific Skateboard
 
+<br>
+
+**Account Page**
+
+```
+    {
+        path: 'account',
+        component: AccountComponent,
+        canActivate: [(state: RouterStateSnapshot) => {
+            // to check for data existing in the local storage
+            if (localStorage.getItem('userData')) {
+                return true; // to allow acces to the route
+            } else {
+                // redirects user to the onboarding page if data doesnt exist
+                // return state.router.createUser(['/onboarding']);
+                return state.url !== '/onboarding' ? state.url : '/onboarding'; // to avoid redirect looping
+            }
+        }]
+    },
+    {
+        path: '', redirectTo: '/account', pathMatch: 'full'
+    }, // defualt route
+```
+> To redirect the user to the login page if they havent been logged in 
+
 ### Implementation Process
 
 <!-- stipulate all of the functionality you included in the project -->
@@ -685,6 +710,7 @@ Ungerer :
   - accounting page 
   - Home page warehouse section 
   - Side-Navbar component
+  - redirecting a un-loggedIn User to the login page when navigating to the account page
 
   **Backend**
   - Wheel Route and model

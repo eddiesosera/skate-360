@@ -8,10 +8,11 @@ import { InventoryComponent } from "./pages/inventory/inventory.component";
 import { AccountComponent } from "./pages/account/account.component";
 import { OnboardingComponent } from "./pages/onboarding/onboarding.component";
 import { state } from "@angular/animations";
-import { NgModel } from "@angular/forms";
+
 
 
 export const routes: Routes = [
+    
     {
         path: '',
         component: HomeComponent
@@ -52,15 +53,15 @@ export const routes: Routes = [
             } else {
                 // redirects user to the onboarding page if data doesnt exist
                 // return state.router.createUser(['/onboarding']);
-                return state.url !== '/onboarding' ? state.url : '/onboarding'; // to avoid redirect looping
+                return state.url !== 'onboarding' ? state.url : 'onboarding'; // to avoid redirect looping
             }
         }]
     },
-    {
-        path: '', redirectTo: '/account', pathMatch: 'full'
-    }, // defualt route
+    { path: '', redirectTo: 'onboarding', pathMatch: 'full'}, // defualt route
     {
         path: '**',
         component: PageNotFoundComponent
     }
 ];
+
+
