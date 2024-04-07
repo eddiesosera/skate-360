@@ -4,6 +4,8 @@ import { EditSkateboardConfigService } from '../../../../services/page/craft/edi
 import { CommonModule } from '@angular/common';
 import { DropdownComponent } from '../../../../components/inputs/dropdown/dropdown.component';
 import { ButtonComponent } from '../../../../components/inputs/button/button.component';
+import { User } from '../../../../models/functions/data/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-craft-setup',
@@ -14,6 +16,7 @@ import { ButtonComponent } from '../../../../components/inputs/button/button.com
 })
 export class CraftSetupComponent implements OnInit {
   @Input() isVisible = true;
+  loggedInUser?: User;
   isDropdownVisible = false;
   isButtonVisible = false;
   skateboardForm: any;
@@ -50,7 +53,7 @@ export class CraftSetupComponent implements OnInit {
   ];
   skateboardVariantLabel = this.skateboardVariant[0].label + ' board'
 
-  constructor(private editSkateboard: EditSkateboardConfigService) { }
+  constructor(private editSkateboard: EditSkateboardConfigService, private router: Router) { }
 
   ngOnInit(): void {
     this.editSkateboard.skateboardForm.subscribe(form => this.skateboardForm = form)

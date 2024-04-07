@@ -30,6 +30,11 @@ export class AccountComponent {
     console.log(this.loggedInUser)
   }
 
+  signOut() {
+    localStorage.setItem('loggedInUser', '');
+    localStorage.setItem('isLoggedIn', 'false')
+  }
+
   // ! tried this
   // ngOnInit() {
   //   // console.log(this.)
