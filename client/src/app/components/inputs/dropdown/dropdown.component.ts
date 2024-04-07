@@ -39,6 +39,13 @@ export class DropdownComponent {
     this.isOpen = false;
   }
 
+  optionSelected: any
+
+  executeAction(option: any) {
+    option.action(); // Execute the action function associated with the clicked option
+    this.optionSelected.emit(option); // Emit an event if needed
+  }
+
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent): void {
     if (!event.target) return;

@@ -44,24 +44,24 @@ export class NewStockComponent implements OnInit {
   ];
   resourceTypeVariant = [
     {
-      id: 0,
+      id: 5,
       label: 'White',
-      action: () => { alert(''); this.resourceLabel = 'Board Type' }
+      action: () => { alert(''); this.resourceVariant = 'White' }
     },
     {
-      id: 1,
+      id: 6,
       label: 'Yellow',
-      action: () => { alert(''); this.resourceLabel = 'Board Skin' }
+      action: () => { alert(''); this.resourceVariant = 'Yellow' }
     },
     {
-      id: 2,
+      id: 7,
       label: 'Red',
-      action: () => { alert(''); this.resourceLabel = 'Truck' }
+      action: () => { alert(''); this.resourceVariant = 'Red' }
     },
     {
-      id: 3,
+      id: 8,
       label: 'Black',
-      action: () => { alert(''); this.resourceLabel = 'Wheels' }
+      action: () => { alert(''); this.resourceVariant = 'Black' }
     }
   ];
 
