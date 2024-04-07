@@ -277,7 +277,9 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Back-End
 
-Setting Up the ```CRUD``` Functionality.
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+
+<!-- Setting Up the ```CRUD``` Functionality.
   >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
 
   Get all Items
@@ -509,7 +511,7 @@ Setting Up the ```CRUD``` Functionality.
             res.status(500).json({ error: 'Internal server error' })
         }
     });
-  ```
+  ``` -->
 
 <br>
 
@@ -711,6 +713,8 @@ Ungerer :
   - accounting page 
   - Home page warehouse section 
   - Side-Navbar component
+  - Frontend Readme file
+  - Mockup Photos
 
   **Backend**
   - Wheel Route and model
@@ -718,6 +722,7 @@ Ungerer :
   - Bearing Route and model
   - Board-Skin Route and model
   - Board-Type Route and model
+  - backend Readme file
 
 Shared :
 
@@ -725,6 +730,7 @@ Shared :
   - Site Layout
   - Populating the Site 
   - redirecting a un-loggedIn User to the login page when navigating to the account page
+  - inventory New Stock item Form 
 
 ### Reviews & Testing
 
