@@ -8,7 +8,7 @@ import { InventoryComponent } from "./pages/inventory/inventory.component";
 import { AccountComponent } from "./pages/account/account.component";
 import { OnboardingComponent } from "./pages/onboarding/onboarding.component";
 import { state } from "@angular/animations";
-// import { NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 // import { AuthGuard } from './auth.guard';
 
 
@@ -61,8 +61,8 @@ export const routes: Routes = [
 ];
 
 
-// @NgModule({
-//     imports: [RouterModule.forRoot(routes)],
-//     exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }

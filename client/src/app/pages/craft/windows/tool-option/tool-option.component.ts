@@ -2,11 +2,19 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ToolOptionCardComponent } from './component/tool-option-card/tool-option-card.component';
 import { CommonModule } from '@angular/common';
 import { SelectedItemService } from '../../../../services/page/craft/selected-item.service';
+import {
+  CdkDragDrop,
+  CdkDrag,
+  CdkDropList,
+  CdkDropListGroup,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-tool-option',
   standalone: true,
-  imports: [CommonModule, ToolOptionCardComponent],
+  imports: [CommonModule, ToolOptionCardComponent, CdkDropListGroup, CdkDropList, CdkDrag],
   templateUrl: './tool-option.component.html',
   styleUrl: './tool-option.component.css'
 })
@@ -151,6 +159,19 @@ export class ToolOptionComponent implements AfterViewInit, OnInit {
 
   setMargin(index: any): string {
     return `${index} * 20 px`
+  }
+
+  drop(event: CdkDragDrop<string[]> | any) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 
 }

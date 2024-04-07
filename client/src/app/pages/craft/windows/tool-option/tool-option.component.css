@@ -19,20 +19,20 @@
 }
 
 .dashboard-window-content {
-    position: relative;
+    /* position: relative; */
     overflow-y: scroll;
     height: 64% !important;
     /* min-height: 100%; */
 }
 
 .dashboard-window-content-item {
-    position: absolute;
+    /* position: absolute; */
     width: calc(100% - 16px);
     margin: 5px;
 }
 
 .dashboard-window-content-item-content {
-    position: relative;
+    /* position: relative; */
     /* padding: 20px; */
     background: #282828;
     border-radius: 4px;

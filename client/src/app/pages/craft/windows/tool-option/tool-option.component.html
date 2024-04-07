@@ -3,10 +3,21 @@
         Choose {{componentType}}
     </div>
     <div class="dashboard-window-content">
-        <div class="dashboard-window-content-item" *ngFor="let optionCard of selectedList">
+        <div cdkDropList [cdkDropListData]="selectedList" class="example-list" (cdkDropListDropped)="drop($event)">
+            @for (item of selectedList; track item) {
+            <div class="example-box dashboard-window-content-item" cdkDrag>
+                <app-tool-option-card [option]="item" class="dashboard-window-content-item-content">
+                </app-tool-option-card>
+            </div>
+            <!-- <div class="example-box" cdkDrag>{{item}}</div> -->
+            }
+        </div>
+        <!-- 
+            <div class="dashboard-window-content-item" *ngFor="let optionCard of selectedList">
             <app-tool-option-card [option]="optionCard" [position]="optionCard.id"
                 class="dashboard-window-content-item-content">
             </app-tool-option-card>
-        </div>
+        </div> 
+    -->
     </div>
 </div>

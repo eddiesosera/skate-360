@@ -1,10 +1,11 @@
-import { Component, AfterViewInit, ChangeDetectorRef, ElementRef, ViewChild, HostListener, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectorRef, ElementRef, ViewChild, HostListener, OnInit, SimpleChanges } from '@angular/core';
 import { ThreeObjectService } from '../../../services/component/three-object.service';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { SelectedItemService } from '../../../services/page/craft/selected-item.service';
+import { EditSkateboardConfigService } from '../../../services/page/craft/edit-skateboard-config.service';
 
 @Component({
   selector: 'app-three-object',
@@ -14,15 +15,24 @@ import { SelectedItemService } from '../../../services/page/craft/selected-item.
   styleUrls: ['./three-object.component.css']
 })
 export class ThreeObjectComponent implements AfterViewInit, OnInit {
+  scene?: THREE.Scene;
+  camera?: THREE.PerspectiveCamera;
+  renderer?: THREE.WebGLRenderer;
   private raycaster: THREE.Raycaster;
   private mouse: THREE.Vector2;
   private selectedObject: THREE.Object3D | null = null;
+  private skateboardForm: any;
+
+  // 3D CONFIG VARIABLES
+  skateboardType: any;
+  skateboardTypeId = 0;
+
   // Dragging events
   isDragging = false;
   initialX = 0;
   initialY = 0;
 
-  constructor(private cdr: ChangeDetectorRef, private selectedItemService: SelectedItemService) {
+  constructor(private cdr: ChangeDetectorRef, private selectedItemService: SelectedItemService, private form: EditSkateboardConfigService) {
     this.raycaster = new THREE.Raycaster();
     this.mouse = new THREE.Vector2();
   }
@@ -103,166 +113,198 @@ export class ThreeObjectComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
+    this.form.skateboardForm.subscribe(form => {
+      this.skateboardForm = form;
+      console.log(this.skateboardForm);
+      this.skateboardTypeId = this.skateboardForm.configuration.board_type;
 
+      console.log(this.skateboardType);
+      if (this.skateboardTypeId == 1) {
+        this.skateboardType = '../../../../assets/3d_objects/board/classic/skateboard.gltf';
+      } else if (this.skateboardTypeId == 2) {
+        this.skateboardType = '../../../../assets/3d_objects/board/long/oldschool_skateboard.glb'
+      };
+      this.cleanupThreeJS();
+      this.initThreeJS()
+    });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.skateboardTypeId in changes) {
+      this.initThreeJS();
+    };
+    this.initThreeJS();
   }
 
   ngAfterViewInit(): void {
-    // 3D CONFIGURATION
+    this.initThreeJS()
+  }
+
+  initThreeJS() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 80000);
 
-    // SCENE: BACKGROUND COLOR
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    if (renderer) {
-      renderer.setPixelRatio(window.devicePixelRatio);
-      // SCENE: SIZE
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x000000, 0);
-      // SCENE: INJECT INTO HTML
-      let canvas: HTMLElement | null = document.getElementById("three-canvas");
-      if (canvas !== null && renderer.domElement) {
-        canvas.appendChild(renderer.domElement);
-      } else {
-        console.error("Canvas element with id 'three-canvas' not found or renderer not initialized.");
+    this.cleanupThreeJS()
+    if (this.skateboardTypeId == 1 || this.skateboardTypeId == 2) {
+      // 3D CONFIGURATION
+
+      // SCENE: BACKGROUND COLOR
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      if (renderer) {
+        renderer.setPixelRatio(window.devicePixelRatio);
+        // SCENE: SIZE
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
+        // SCENE: INJECT INTO HTML
+        let canvas: HTMLElement | null = document.getElementById("three-canvas");
+        if (canvas !== null && renderer.domElement) {
+          canvas.appendChild(renderer.domElement);
+        } else {
+          console.error("Canvas element with id 'three-canvas' not found or renderer not initialized.");
+        }
       }
-    }
 
-    // LIGHT: TOP
-    var directionalLight = new THREE.HemisphereLight(0xffffff, 6);
-    directionalLight.position.set(1, 3, 3); // Adjust the position as needed
-    scene.add(directionalLight);
-    // LIGHT: BOTTOM
-    var hemisphereLight = new THREE.HemisphereLight(0x090909, 0x000000, 1);
-    hemisphereLight.position.set(-1, -3, -3); // Adjust the position as needed
-    scene.add(hemisphereLight);
+      // LIGHT: TOP
+      var directionalLight = new THREE.HemisphereLight(0xffffff, 6);
+      directionalLight.position.set(1, 3, 3); // Adjust the position as needed
+      scene.add(directionalLight);
+      // LIGHT: BOTTOM
+      var hemisphereLight = new THREE.HemisphereLight(0x090909, 0x000000, 1);
+      hemisphereLight.position.set(-1, -3, -3); // Adjust the position as needed
+      scene.add(hemisphereLight);
 
-    // HELPERS
-    const gridHelper = new THREE.GridHelper(400, 40, 0xffc800, 0x808080);
-    // gridHelper.position.y = 0;
-    // gridHelper.position.x = 0;
-    const gridGroup = new THREE.Group();
-    gridGroup.add(gridHelper);
-    gridHelper.position.set(0, 0, 0);
-    gridGroup.userData = { clickable: false };
-    gridHelper.raycast = () => [];
-    scene.add(gridGroup);
+      // HELPERS
+      const gridHelper = new THREE.GridHelper(400, 40, 0xffc800, 0x808080);
+      // gridHelper.position.y = 0;
+      // gridHelper.position.x = 0;
+      const gridGroup = new THREE.Group();
+      gridGroup.add(gridHelper);
+      gridHelper.position.set(0, 0, 0);
+      gridGroup.userData = { clickable: false };
+      gridHelper.raycast = () => [];
+      scene.add(gridGroup);
 
-    //GLTF MODEL
-    const gltfLoader = new GLTFLoader();
-    const modelPath = '../../../../assets/3d_objects/board/long/oldschool_skateboard.glb';
-    // GLTF MODEL: TEXTURE & COLOR
-    gltfLoader.load(modelPath, (gltf) => {
-      const model = gltf.scene;
-      model.traverse((child) => {
-        // GLTF FILE STYLE: GRIPTAPE OBJECT
-        if (child.name === 'gripTape') {
-          // Check if the object has a material
-          if (child instanceof THREE.Mesh && child.material) {
-            var material = child.material;
-            // Check if the material is a MeshBasicMaterial (for color)
-            if (material instanceof THREE.MeshBasicMaterial) {
-              material.color.setHex(0xff0000);
-            }
-            // Check if the material is a MeshPhongMaterial or MeshStandardMaterial (for texture)
-            else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
-              var textureLoader = new THREE.TextureLoader();
-              // Load texture
-              textureLoader.load('../../../../assets/3d_objects/board/long/textures/black.png', function (texture) {
-                material.map = texture;
-                material.needsUpdate = true;
-              });
-            }
-          }
-        }
-        // GLTF FILE STYLE: BOARD OBJECT
-        else if (child.name === 'board') {
-          if (child instanceof THREE.Mesh && child.material) {
-            var material = child.material;
-            if (material instanceof THREE.MeshBasicMaterial) {
-              material.color.setHex(0xff0000);
-            }
-            else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
-              var textureLoader = new THREE.TextureLoader();
-              textureLoader.load('../../../../assets/3d_objects/board/long/textures/skin1.jpeg', function (texture) {
-                material.map = texture;
-                material.needsUpdate = true;
-              });
+      //GLTF MODEL
+      const gltfLoader = new GLTFLoader();
+      const modelPath = '../../../../assets/3d_objects/board/long/oldschool_skateboard.glb';
+      // GLTF MODEL: TEXTURE & COLOR
+      gltfLoader.load(this.skateboardType, (gltf) => {
+        const model = gltf.scene;
+        model.traverse((child) => {
+          // GLTF FILE STYLE: GRIPTAPE OBJECT
+          if (child.name === 'gripTape') {
+            // Check if the object has a material
+            if (child instanceof THREE.Mesh && child.material) {
+              var material = child.material;
+              // Check if the material is a MeshBasicMaterial (for color)
+              if (material instanceof THREE.MeshBasicMaterial) {
+                material.color.setHex(0xff0000);
+              }
+              // Check if the material is a MeshPhongMaterial or MeshStandardMaterial (for texture)
+              else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
+                var textureLoader = new THREE.TextureLoader();
+                // Load texture
+                textureLoader.load('../../../../assets/3d_objects/board/long/textures/black.png', function (texture) {
+                  material.map = texture;
+                  material.needsUpdate = true;
+                });
+              }
             }
           }
-        }
-        // GLTF FILE STYLE: WHEELS OBJECT
-        else if (child.name === 'wheels') {
-          if (child instanceof THREE.Mesh && child.material) {
-            var material = child.material;
-            if (material instanceof THREE.MeshBasicMaterial) {
-              material.color.setColorName('red');
-            }
-            else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
-              var textureLoader = new THREE.TextureLoader();
-              textureLoader.load('../../../../assets/3d_objects/board/long/textures/red.png', function (texture) {
-                material.map = texture;
-                material.needsUpdate = true;
-              });
-            }
-          }
-        }
-        // GLTF FILE STYLE: TRUCK OBJECT
-        else if (child.name === 'trucks' || child.name === 'truck' || child.name === 'truck_1') {
-          if (child instanceof THREE.Mesh && child.material) {
-            var material = child.material;
-            if (material instanceof THREE.MeshBasicMaterial) {
-              material.color.setHex(0xff0000);
-            }
-            else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
-              var textureLoader = new THREE.TextureLoader();
-              textureLoader.load('../../../../assets/3d_objects/board/long/textures/darkgray.png', function (texture) {
-                material.map = texture;
-                material.needsUpdate = true;
-              });
+          // GLTF FILE STYLE: BOARD OBJECT
+          else if (child.name === 'board') {
+            if (child instanceof THREE.Mesh && child.material) {
+              var material = child.material;
+              if (material instanceof THREE.MeshBasicMaterial) {
+                material.color.setHex(0xff0000);
+              }
+              else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
+                var textureLoader = new THREE.TextureLoader();
+                textureLoader.load('../../../../assets/3d_objects/board/long/textures/skin1.jpeg', function (texture) {
+                  material.map = texture;
+                  material.needsUpdate = true;
+                });
+              }
             }
           }
-        }
+          // GLTF FILE STYLE: WHEELS OBJECT
+          else if (child.name === 'wheels') {
+            if (child instanceof THREE.Mesh && child.material) {
+              var material = child.material;
+              if (material instanceof THREE.MeshBasicMaterial) {
+                material.color.setColorName('red');
+              }
+              else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
+                var textureLoader = new THREE.TextureLoader();
+                textureLoader.load('../../../../assets/3d_objects/board/long/textures/red.png', function (texture) {
+                  material.map = texture;
+                  material.needsUpdate = true;
+                });
+              }
+            }
+          }
+          // GLTF FILE STYLE: TRUCK OBJECT
+          else if (child.name === 'trucks' || child.name === 'truck' || child.name === 'truck_1') {
+            if (child instanceof THREE.Mesh && child.material) {
+              var material = child.material;
+              if (material instanceof THREE.MeshBasicMaterial) {
+                material.color.setHex(0xffffff);
+              }
+              else if (material instanceof THREE.MeshPhongMaterial || material instanceof THREE.MeshStandardMaterial) {
+                var textureLoader = new THREE.TextureLoader();
+                textureLoader.load('../../../../assets/img/inventory/options/color/white.png', function (texture) {
+                  material.map = texture;
+                  material.needsUpdate = true;
+                });
+              }
+            }
+          }
+        });
+
+        // SCALE
+        model.scale.set(1, 1, 1);
+        scene.add(model);
+
+        console.log(model)
       });
 
-      // SCALE
-      model.scale.set(1, 1, 1);
-      scene.add(model);
+      // CAMERA
+      camera.position.set(150, 50, 150);
+      // camera.lookAt(0, 0, 0);
+      // CAMERA: OrbitControls ()
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+      controls.dampingFactor = 0.25;
+      controls.screenSpacePanning = false;
+      controls.maxPolarAngle = Math.PI;
+      controls.enableZoom = true;  // Enable or disable zooming
+      controls.enablePan = true;   // Enable or disable panning
+      controls.enableRotate = true; // Enable or disable rotation
 
-      console.log(model)
-    });
+      // EVENT LISTENERS
+      window.addEventListener('click', (event) => {
+        // Calculate mouse position in normalized device coordinates
+        this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        // Raycasting from camera to scene objects
+        this.rayCaster(camera, scene);
+      }, false);
 
-    // CAMERA
-    camera.position.set(150, 50, 150);
-    // camera.lookAt(0, 0, 0);
-    // CAMERA: OrbitControls ()
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
-    controls.dampingFactor = 0.25;
-    controls.screenSpacePanning = false;
-    controls.maxPolarAngle = Math.PI;
-    controls.enableZoom = true;  // Enable or disable zooming
-    controls.enablePan = true;   // Enable or disable panning
-    controls.enableRotate = true; // Enable or disable rotation
+      // ANIMATE
 
-    // EVENT LISTENERS
-    window.addEventListener('click', (event) => {
-      // Calculate mouse position in normalized device coordinates
-      this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-      // Raycasting from camera to scene objects
-      this.rayCaster(camera, scene);
-    }, false);
+      const animate = (): void => {
+        requestAnimationFrame(animate);
+        this.rayCaster(camera, scene)
+        controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
+        renderer.render(scene, camera);
+        this.cdr.detectChanges();
+      };
+      animate();
+      this.render(renderer, camera, scene)
+    }
 
-    // ANIMATE
-    const animate = (): void => {
-      requestAnimationFrame(animate);
-      this.rayCaster(camera, scene)
-      controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
-      renderer.render(scene, camera);
-      this.cdr.detectChanges();
-    };
-    animate();
-    this.render(renderer, camera, scene)
+    console.log('Initializing Three.js with skateboardType:', this.skateboardType);
+
   }
 
   render(rendererr: any, cam: any, scn: any) {
@@ -271,6 +313,58 @@ export class ThreeObjectComponent implements AfterViewInit, OnInit {
       this.rayCaster(cam, scn);
       rendererr.render(scn, cam);
     }
+  }
+
+  private cleanupThreeJS(): void {
+    if (this.scene) {
+      // Traverse through each object in the scene
+      this.scene.traverse((object) => {
+        if (object instanceof THREE.Mesh) {
+          // Dispose of the geometry to release memory
+          object.geometry.dispose();
+          // Dispose of each material to release memory
+          if (object.material instanceof THREE.Material) {
+            this.disposeMaterial(object.material);
+          } else if (Array.isArray(object.material)) {
+            object.material.forEach((material) => {
+              if (material instanceof THREE.Material) {
+                this.disposeMaterial(material);
+              }
+            });
+          }
+        }
+      });
+    }
+    // Dispose of renderer to release memory
+    if (this.renderer) {
+      this.renderer.dispose();
+      const canvas = this.renderer.domElement;
+      if (canvas && canvas.parentNode) {
+        canvas.parentNode.removeChild(canvas);
+      }
+    }
+  }
+
+  private disposeMaterial(material: THREE.Material): void {
+    // Check if the material has a map property and dispose of the texture if it exists
+    if ('map' in material && material.map instanceof THREE.Texture) {
+      this.disposeTexture(material.map);
+    }
+    // If the material has a dispose method, call it
+    if (material.dispose) {
+      material.dispose();
+    }
+  }
+
+  private disposeTexture(texture: THREE.Texture | null | undefined): void {
+    // Dispose of the texture to release memory
+    if (texture) {
+      texture.dispose();
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.cleanupThreeJS(); // Clean up Three.js environment when component is destroyed
   }
 
   @HostListener('document:mousedown', ['$event'])

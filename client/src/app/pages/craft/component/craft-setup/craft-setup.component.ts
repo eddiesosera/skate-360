@@ -57,7 +57,7 @@ export class CraftSetupComponent implements OnInit {
   }
 
   setSkateForm(type: any) {
-    this.skateboardForm.board_type = type.id;
+    this.skateboardForm.configuration.board_type = type.id;
     this.editSkateboard.setSkateboardForm(this.skateboardForm);
     this.selectedSkateboardType = type;
     this.isButtonVisible = true;

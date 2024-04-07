@@ -21,7 +21,7 @@ export class EditSkateboardConfigService implements OnInit {
       stockNeeded: 1,
       avatar: '',
       configuration: {
-        board_type: 1,
+        board_type: 0,
         board_skin: 1,
         trucks: 1,
         wheels: 1,

@@ -13,9 +13,10 @@
                         [class]="selectedSkateboardType?.id===type?.id?'craft-setup-type-name type-text-selected':'craft-setup-type-name'">
                         {{type?.name}}</div>
                 </div>
-                <app-dropdown [label]="skateboardVariantLabel" [options]="skateboardVariant" [width]="'100%'"
+                <!-- <app-dropdown [label]="skateboardVariantLabel" [options]="skateboardVariant" [width]="'100%'"
                     optionAction=""
-                    [style]="selectedSkateboardType?.id===type.id?'display: flex; width: 100%;':'display: none;'"></app-dropdown>
+                    [style]="selectedSkateboardType?.id===type.id?'display: flex; width: 100%;':'display: none;'">
+                </app-dropdown> -->
             </div>
         </div>
         <app-button (click)="submitSetup()" variant="fill" accent="red"
