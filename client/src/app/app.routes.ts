@@ -8,11 +8,15 @@ import { InventoryComponent } from "./pages/inventory/inventory.component";
 import { AccountComponent } from "./pages/account/account.component";
 import { OnboardingComponent } from "./pages/onboarding/onboarding.component";
 import { state } from "@angular/animations";
+import { NgModule } from "@angular/core";
+import { AuthGuard } from './auth.guard';
+
+
 
 
 
 export const routes: Routes = [
-    
+
     {
         path: '',
         component: HomeComponent
@@ -43,21 +47,11 @@ export const routes: Routes = [
         path: 'onboarding',
         component: OnboardingComponent
     },
-    {
-        path: 'account',
-        component: AccountComponent,
-        canActivate: [(state: RouterStateSnapshot) => {
-            // to check for data existing in the local storage
-            if (localStorage.getItem('userData')) {
-                return true; // to allow acces to the route
-            } else {
-                // redirects user to the onboarding page if data doesnt exist
-                // return state.router.createUser(['/onboarding']);
-                return state.url !== 'onboarding' ? state.url : 'onboarding'; // to avoid redirect looping
-            }
-        }]
-    },
-    { path: '', redirectTo: 'onboarding', pathMatch: 'full'}, // defualt route
+
+    { path: 'account', component: AccountComponent, canActivate: [(AuthGuard)] },
+    { path: 'onboarding', component: OnboardingComponent },
+    // { path: '', redirectTo: 'onboarding', pathMatch: 'full'}, // defualt route
+
     {
         path: '**',
         component: PageNotFoundComponent
@@ -65,3 +59,8 @@ export const routes: Routes = [
 ];
 
 
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
