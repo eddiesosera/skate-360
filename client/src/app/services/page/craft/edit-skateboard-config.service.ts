@@ -19,6 +19,7 @@ export class EditSkateboardConfigService implements OnInit {
       userId: this.loggedInUser?.id,
       locationId: this.loggedInUser?.location?.id,
       stockNeeded: 1,
+      avatar: '',
       configuration: {
         board_type: 1,
         board_skin: 1,
@@ -29,6 +30,8 @@ export class EditSkateboardConfigService implements OnInit {
     }
   );
   skateboardForm = this.skateboardFormSource.asObservable();
+  private skateboardQuantitySource = new BehaviorSubject<number>(1);
+  skateboardQuantity = this.skateboardQuantitySource.asObservable();
 
   ngOnInit(): void {
 
@@ -40,12 +43,16 @@ export class EditSkateboardConfigService implements OnInit {
     this.loggedInUser = JSON.parse(userParsed);
 
     // Assigning user to form
-    prop.userId = this.loggedInUser.id;
-    prop.locationId = this.loggedInUser.location.id;
+    prop.userId = this.loggedInUser?.id;
+    prop.locationId = this.loggedInUser?.location?.id;
 
     // Updating form
     this.skateboardFormSource.next(prop);
     console.log(prop)
+  }
+
+  setSkateboardQuantity(qty: number) {
+    this.skateboardQuantitySource.next(qty)
   }
 
 }

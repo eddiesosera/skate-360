@@ -21,7 +21,7 @@ export class CraftSetupComponent implements OnInit {
   skateboardTypes = [
     {
       id: 1,
-      name: 'Classic boardz',
+      name: 'Classic board',
       avatar: '../../../../../assets/img/inventory/selected/classic_board_board.png'
     },
     {
