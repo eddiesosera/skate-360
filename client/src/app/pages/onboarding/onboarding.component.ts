@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Route, Router, RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../components/inputs/button/button.component';
 import { QuizComponent } from './elements/quiz/quiz.component';
 import { ToggleQuizService } from '../../services/page/onboarding/toggle-quiz.service';
@@ -29,7 +29,7 @@ export class OnboardingComponent implements OnInit {
   };
   loginMessage: any = '';
 
-  constructor(private toggleQuiz: ToggleQuizService, private userService: UserService) {
+  constructor(private toggleQuiz: ToggleQuizService, private userService: UserService, private router: Router) {
 
   }
 
@@ -75,6 +75,7 @@ export class OnboardingComponent implements OnInit {
         localStorage.setItem('isLoggedIn', 'true')
         this.loginMessage = user.message
         // console.log(user)
+        this.router.navigate(['/']);
       })
     } else if (this.userResult === 'false') {
       alert('Yo bro, Try the verification test again.')
