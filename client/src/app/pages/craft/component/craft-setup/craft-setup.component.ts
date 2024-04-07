@@ -29,12 +29,12 @@ export class CraftSetupComponent implements OnInit {
     },
     {
       id: 2,
-      name: 'Old School board ',
+      name: 'Long board ',
       avatar: '../../../../../assets/img/inventory/selected/long_skateboard_board.png'
     },
     {
       id: 3,
-      name: 'Long board',
+      name: 'Old School board',
       avatar: '../../../../../assets/img/inventory/selected/oldschool_board_board.png'
     }
   ];

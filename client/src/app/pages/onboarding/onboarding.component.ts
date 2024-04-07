@@ -75,7 +75,11 @@ export class OnboardingComponent implements OnInit {
         localStorage.setItem('isLoggedIn', 'true')
         this.loginMessage = user.message
         // console.log(user)
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
+        if (user.message === "Success") {
+          this.router.navigate(['/']);
+        }
+        console.log(user.message)
       })
     } else if (this.userResult === 'false') {
       alert('Yo bro, Try the verification test again.')
