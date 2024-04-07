@@ -3,6 +3,7 @@ import { DropdownComponent } from '../../../components/inputs/dropdown/dropdown.
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../../components/inputs/button/button.component';
 import { NewStockService } from '../../../services/page/wharehouse/new-stock.service';
+import { WheelsService } from '../../../services/data/wheels.service';
 
 @Component({
   selector: 'app-new-stock',
@@ -65,13 +66,25 @@ export class NewStockComponent implements OnInit {
     }
   ];
 
-  constructor(private newStockService: NewStockService) { }
+  constructor(private newStockService: NewStockService, private wheelsService: WheelsService) { }
 
   ngOnInit(): void {
-    this.newStockService.isVisible.subscribe((state) => this.isVisisble = state)
+    this.newStockService.isVisible.subscribe((state) => this.isVisisble = state);
+    this.wheelsService.getAllWheels().subscribe((wheels) => {
+      console.log(wheels)
+    })
+
   }
 
   toggleClose() {
     this.newStockService.toggleVisibility(false)
+  }
+
+  addStock() {
+    this.wheelsService.getAllWheels().subscribe((wheels) => {
+      console.log(wheels)
+
+    })
+    this.toggleClose()
   }
 }
