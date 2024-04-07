@@ -1,0 +1,11 @@
+Model Information:
+* title:	D Street Lost at Sea cruiser skateboard
+* source:	https://sketchfab.com/3d-models/d-street-lost-at-sea-cruiser-skateboard-3fb68260423d4a31bfecbbfb718d504f
+* author:	alban (https://sketchfab.com/alban)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "D Street Lost at Sea cruiser skateboard" (https://sketchfab.com/3d-models/d-street-lost-at-sea-cruiser-skateboard-3fb68260423d4a31bfecbbfb718d504f) by alban (https://sketchfab.com/alban) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

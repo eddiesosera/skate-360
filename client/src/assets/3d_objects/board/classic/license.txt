@@ -1,0 +1,11 @@
+Model Information:
+* title:	Classic street skateboard (Free to use)
+* source:	https://sketchfab.com/3d-models/classic-street-skateboard-free-to-use-9f59277f51d249fbb72ba7a3ed6d3985
+* author:	Ege Yavuz (https://sketchfab.com/egeyavuzozsoy03)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Classic street skateboard (Free to use)" (https://sketchfab.com/3d-models/classic-street-skateboard-free-to-use-9f59277f51d249fbb72ba7a3ed6d3985) by Ege Yavuz (https://sketchfab.com/egeyavuzozsoy03) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

@@ -8,6 +8,7 @@ import { ConfigureToolOptionComponent } from './windows/configure-tool-option/co
 import { SelectedItemComponent } from './windows/selected-item/selected-item.component';
 import { CraftSkateboardComponent } from './windows/craft-skateboard/craft-skateboard.component';
 import { CraftSetupComponent } from './component/craft-setup/craft-setup.component';
+import { CraftSuccessComponent } from './component/craft-success/craft-success.component';
 
 @Component({
   selector: 'app-craft',

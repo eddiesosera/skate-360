@@ -1,0 +1,289 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.06402332335710526,
+        0.09444068372249603,
+        0.3264060914516449
+      ],
+      "min": [
+        -0.06402332335710526,
+        -0.09444068372249603,
+        -0.3264061212539673
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 251508,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9996403455734253,
+        0.9997648596763611,
+        0.9999571442604065
+      ],
+      "min": [
+        -0.999992311000824,
+        -0.9999665021896362,
+        -0.9993764162063599
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9993652701377869,
+        0.9997872710227966
+      ],
+      "min": [
+        1.765592605806887e-05,
+        2.834490624081809e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 167672,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9993652701377869,
+        0.9997872710227966
+      ],
+      "min": [
+        1.765592605806887e-05,
+        2.834490624081809e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 335344,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9993652701377869,
+        0.9997872710227966
+      ],
+      "min": [
+        1.765592605806887e-05,
+        2.834490624081809e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 503016,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9993652701377869,
+        0.9997872710227966
+      ],
+      "min": [
+        1.765592605806887e-05,
+        2.834490624081809e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 670688,
+      "componentType": 5126,
+      "count": 20959,
+      "max": [
+        0.9993652701377869,
+        0.9997872710227966
+      ],
+      "min": [
+        1.765592605806887e-05,
+        2.834490624081809e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 111804,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "alban (https://sketchfab.com/alban)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/d-street-lost-at-sea-cruiser-skateboard-3fb68260423d4a31bfecbbfb718d504f",
+      "title": "D Street Lost at Sea cruiser skateboard"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 447216,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 838360,
+      "byteOffset": 447216,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 503016,
+      "byteOffset": 1285576,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1788592,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/material_0_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "material_0",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3,
+            "TEXCOORD_2": 4,
+            "TEXCOORD_3": 5,
+            "TEXCOORD_4": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -0.0010831696897461718,
+        0.881004543243769,
+        0.08814504586150493,
+        0.0,
+        0.8854030066580769,
+        0.0010777887856333601,
+        0.0001078334243298522,
+        0.0,
+        -1.130444900610726e-15,
+        0.08814511182922066,
+        -0.88100517653384,
+        0.0,
+        8.120853181026177e-07,
+        4.002858844387428e-08,
+        8.553257657695212e-07,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "_0"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

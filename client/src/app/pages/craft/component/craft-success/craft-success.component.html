@@ -1,0 +1,16 @@
+<div class="craft-success" [style]="isVisible?'display: flex;':'display: none;'">
+    <div class="craft-success-inner">
+        <div class="craft-success-info">
+            Successfully <br /> Created Skateboard
+        </div>
+        <div class="craft-success-actions">
+            <app-button (click)="goToSkateboards('skateboards')" variant="fill" accent="red" style="width: 100%;"
+                width="100%">
+                See All Skateboards
+            </app-button>
+            <app-button (click)="goToSkateboards('craft/new')" style="width: 100%;" width="100%">
+                Create Another
+            </app-button>
+        </div>
+    </div>
+</div>

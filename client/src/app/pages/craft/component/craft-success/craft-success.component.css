@@ -1,0 +1,39 @@
+.craft-success {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: #010101cc;
+    backdrop-filter: blur(10px);
+}
+
+.craft-success-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    border: solid #4b4b4b 1px;
+}
+
+.craft-success-info {
+    font-family: League Gothic;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.craft-success-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}

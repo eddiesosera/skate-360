@@ -5,11 +5,17 @@ import { SkateboardService } from '../../../../services/data/skateboard.service'
 import { EditSkateboardConfigService } from '../../../../services/page/craft/edit-skateboard-config.service';
 import { StockNeeded } from '../../../../models/functions/data/stockNeeded';
 import { StockNeededService } from '../../../../services/data/stock-needed.service';
+import { Router } from '@angular/router';
+import { CraftSuccessComponent } from '../../component/craft-success/craft-success.component';
 
 @Component({
   selector: 'app-craft-skateboard',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [
+    CommonModule,
+    CraftSuccessComponent,
+    ButtonComponent
+  ],
   templateUrl: './craft-skateboard.component.html',
   styleUrl: './craft-skateboard.component.css'
 })
@@ -17,7 +23,8 @@ export class CraftSkateboardComponent implements OnInit {
   skateboardRecipe: any;
   skateboardForm: any;
   price: any;
-  skateboardQty: number = 1
+  skateboardQty: number = 1;
+  isSuccessPopupVisible = false;
 
   selectedItems = [
     {
@@ -43,7 +50,7 @@ export class CraftSkateboardComponent implements OnInit {
   ];
 
   constructor(private stockneeded: StockNeededService, private form: EditSkateboardConfigService,
-    private skateboard: SkateboardService) { }
+    private skateboard: SkateboardService, private router: Router) { }
 
   ngOnInit(): void {
     this.form.skateboardForm.subscribe(frm => this.skateboardForm = frm)
@@ -68,12 +75,13 @@ export class CraftSkateboardComponent implements OnInit {
 
   createSkateboard() {
     for (let index = 0; index < this.skateboardQty; index++) {
-      // index++
       this.skateboard.createSkateboard(this.skateboardForm).subscribe(created => {
         console.log("Success: " + JSON.stringify(created));
         console.log("Amount of times looped: " + index)
-      })
-
+      });
+      if ((index + 1) == this.skateboardQty) {
+        this.isSuccessPopupVisible = true
+      }
     }
 
   }
