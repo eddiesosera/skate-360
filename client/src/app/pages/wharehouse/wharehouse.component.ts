@@ -19,7 +19,7 @@ export class WharehouseComponent {
 
   // @Input() location: string = 'location'
 
-  constructor(private service: LocationService) { }
+  constructor(private service: LocationService,) {}
 
   // the arrays
   locationList?: any
