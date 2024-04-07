@@ -10,6 +10,7 @@ import { GridlayoutComponent } from '../../components/data-display/gridlayout/gr
 import { InventoryCardComponent } from '../../components/data-display/inventory-card/inventory-card.component';
 import { NewStockService } from '../../services/page/wharehouse/new-stock.service';
 import { NewStockComponent } from '../wharehouse/new-stock/new-stock.component';
+import { TrucksService } from '../../services/data/trucks.service';
 // import { NewStockComponent } from './new-stock/new-stock.component';
 
 @Component({
@@ -29,11 +30,12 @@ export class InventoryComponent {
 
   id: any;
   currentlocation: any;
-  skateboards:any
+  skateboards: any;
+  Truck: any;
 
   // constructor(private skateboardData: SkateboardService) { }
   // location service 
-  constructor(private locationData: LocationService, private route: ActivatedRoute, private newStockService: NewStockService) { }
+  constructor(private locationData: LocationService, private route: ActivatedRoute, private newStockService: NewStockService, private TruckService: TrucksService) { }
 
   // ngOnInit(): void {
   //   this.skateboardData.getAllSkateboards().subscribe((skateboards) => {
@@ -52,14 +54,14 @@ export class InventoryComponent {
         console.log('ID:', this.id);
       });
       console.log(locations)
-      for (let location of locations){
+      for (let location of locations) {
         console.log(location)
         console.log(location.id)
         console.log(this.id)
-        if(location.id == this.id){
-          console.log("you are on this location ",location)
-          this.currentlocation=location
-          this.skateboards=location.skateboards
+        if (location.id == this.id) {
+          console.log("you are on this location ", location)
+          this.currentlocation = location
+          this.skateboards = location.skateboards
           console.log(this.currentlocation.skateboards)
         }
       }
