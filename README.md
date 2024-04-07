@@ -92,6 +92,8 @@ Designed to fit every skater the site comes styled in only the best choice of th
 ### Built With
 <!-- angular -->
 - [Angular CLI](https://angular.io/cli)
+<!-- Angular Material -->
+- [Angular Material](https://material.angular.io/)
 <!-- 3JS -->
 - [Three.js](https://threejs.org/)
 <!-- other -->
@@ -106,7 +108,7 @@ The following instructions will get you a copy of the project up and running on 
 
 ### Prerequisites
 
-Ensure that you have the latest version of [Software](path/to/where/they/can/download/software) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
+Ensure that you have the latest version of [Angular](https://angular.io/guide/setup-local) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
 **The ```Backend``` for the Website**
 [BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
@@ -115,7 +117,7 @@ Ensure that you have the latest version of [Software](path/to/where/they/can/dow
 
 1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie. 
   - use this command in your terminal. ```npm install -g @angular/cli```
-2. Download Postgres and set up a database.
+2. Download Postgres (pgAdmin4) and set up a database.
 3. Clone the github repository using the URL.
 4. Clone the backend of For the site using the URL.
 5. Launch the repo through [Visual Studio](https://code.visualstudio.com/).
@@ -265,8 +267,9 @@ Account Page
 
 ### Database Architecture
 
-The database diagram we used to map out relational data
-<img src="readmeAssets\database Architecture.png">
+See Backend Repo For more!
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+<!-- <img src="readmeAssets\database Architecture.png"> -->
 
 <!-- DEVELOPMENT PROCESS -->
 
@@ -276,7 +279,9 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Back-End
 
-Setting Up the ```CRUD``` Functionality.
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+
+<!-- Setting Up the ```CRUD``` Functionality.
   >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
 
   Get all Items
@@ -508,7 +513,7 @@ Setting Up the ```CRUD``` Functionality.
             res.status(500).json({ error: 'Internal server error' })
         }
     });
-  ```
+  ``` -->
 
 <br>
 
@@ -710,6 +715,8 @@ Ungerer :
   - accounting page 
   - Home page warehouse section 
   - Side-Navbar component
+  - Frontend Readme file
+  - Mockup Photos
 
   **Backend**
   - Wheel Route and model
@@ -717,6 +724,7 @@ Ungerer :
   - Bearing Route and model
   - Board-Skin Route and model
   - Board-Type Route and model
+  - backend Readme file
 
 Shared :
 
@@ -724,6 +732,7 @@ Shared :
   - Site Layout
   - Populating the Site 
   - redirecting a un-loggedIn User to the login page when navigating to the account page
+  - inventory New Stock item Form 
 
 ### Reviews & Testing
 
@@ -852,7 +861,14 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - [Mockup Image 4](https://www.pexels.com/photo/computer-monitor-with-on-table-4499765/)
 - [Mockup Backgroung Image 5](https://www.pexels.com/photo/turned-on-grey-table-lamp-1643280/) Photo by Dorran
 - [Death Icon](https://www.flaticon.com/free-icons/skull) Flaticon
-
+- [classic Skateboard Model]()
+- [Longboard Skateboard Model]()
+- [Old School Skateboard Model]()
+- [Three.js]()
+- [Images 01]()
+- [Image 02]()
+- [background video]()
+- [Grunge Texture Ovelay]()
 <!-- MARKDOWN LINKS & IMAGES -->
 
 <!-- [image1]: /path/to/image.png
