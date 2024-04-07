@@ -10,6 +10,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { ToolOptionService } from '../../../../services/page/craft/tool-option.service';
+import { EditSkateboardConfigService } from '../../../../services/page/craft/edit-skateboard-config.service';
 
 @Component({
   selector: 'app-tool-option',
@@ -19,9 +21,10 @@ import {
   styleUrl: './tool-option.component.css'
 })
 export class ToolOptionComponent implements AfterViewInit, OnInit {
-  componentType: string = 'Item ';
+  componentType: string = 'Item';
   selectedComponent = 'none';
   selectedIndex = 0;
+  skateboardForm: any;
   inventoryList = [
     {
       type: 'wheels',
@@ -140,21 +143,27 @@ export class ToolOptionComponent implements AfterViewInit, OnInit {
       ]
     }
   ];
-  selectedList = this.inventoryList[this.selectedIndex].inventory;
+  selectedList = this.inventoryList[this.selectedIndex];
 
-  constructor(private selectedItem: SelectedItemService) {
+  constructor(private selectedItem: SelectedItemService, private dragDropService: ToolOptionService, private formConfig: EditSkateboardConfigService) {
     this.selectedItem.selectedItem.subscribe(item => {
-      this.componentType = item?.name
+      if (item?.name) {
+        this.componentType = item?.name;
+      } else {
+        this.componentType = 'Item'
+      }
     })
   }
 
   ngOnInit(): void {
-    this.selectedList = this.inventoryList[this.selectedIndex].inventory;
-    console.log(this.selectedList)
+    this.selectedList = this.inventoryList[this.selectedIndex];
+    console.log(this.selectedList);
+    this.formConfig.skateboardForm.subscribe(form => this.skateboardForm = form)
+    this.formConfig.setSkateboardForm(this.skateboardForm)
   }
 
   ngAfterViewInit(): void {
-    this.selectedList = this.inventoryList[this.selectedIndex].inventory;
+    this.selectedList = this.inventoryList[this.selectedIndex];
   }
 
   setMargin(index: any): string {
@@ -172,6 +181,11 @@ export class ToolOptionComponent implements AfterViewInit, OnInit {
         event.currentIndex,
       );
     }
+    this.dragDropService.emitItemDropped(); // Emit event when item is dropped
+  }
+
+  onDragEnded(event: CdkDragDrop<string[]> | any, item: any) {
+    console.log('Drag ended:', item);
   }
 
 }

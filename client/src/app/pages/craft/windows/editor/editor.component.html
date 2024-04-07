@@ -1,12 +1,14 @@
 <div class="dashboard-window-content-wrapper">
 
     <div class="dashboard-editor-3dArea">
-        <div class="dashboard-window-content" style="opacity: 0; pointer-events: none;">
-            <div class="dashboard-window-content-item">
-                <div class="dashboard-window-content-item-content">
-                    <!-- Editor 1 -->
-                </div>
+        <div class="dashboard-window-content" cdkDropList (cdkDropListDropped)="drop($event)"
+            style="opacity: 1; pointer-events: none;background: rgba(255, 0, 0, 0.084);position: relative;z-index: 99;">
+            @for (item of updatedData; track item) {
+            <div class="example-box dashboard-window-content-item" cdkDrag>
+                <app-tool-option-card [option]="item" class="dashboard-window-content-item-content">
+                </app-tool-option-card>
             </div>
+            }
         </div>
         <div style="width: 600px; height: 513px; position: absolute;top: 0;">
             <app-three-object></app-three-object>

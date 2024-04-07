@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import Muuri from 'muuri'
 import { ButtonComponent } from '../../components/inputs/button/button.component';
 import { EditorComponent } from './windows/editor/editor.component';
@@ -9,6 +9,9 @@ import { SelectedItemComponent } from './windows/selected-item/selected-item.com
 import { CraftSkateboardComponent } from './windows/craft-skateboard/craft-skateboard.component';
 import { CraftSetupComponent } from './component/craft-setup/craft-setup.component';
 import { CraftSuccessComponent } from './component/craft-success/craft-success.component';
+import { User } from '../../models/functions/data/user.model';
+import { EditSkateboardView } from '../../services/page/craft/edit-skateboard-view.service';
+import { EditSkateboardConfigService } from '../../services/page/craft/edit-skateboard-config.service';
 
 @Component({
   selector: 'app-craft',
@@ -26,56 +29,37 @@ import { CraftSuccessComponent } from './component/craft-success/craft-success.c
   templateUrl: './craft.component.html',
   styleUrl: './craft.component.css'
 })
-export class CraftComponent implements OnInit {
+export class CraftComponent implements OnInit, AfterViewChecked {
   grid: any;
   dragContainer: any;
   itemContainers: any[] = [];
   columnGrids: any[] = [];
   boardGrid: any;
 
+  loggedInUser?: User;
+  loggedInState: any
+
+  constructor(private router: Router, private editSkateboard: EditSkateboardConfigService) { }
+
   ngOnInit() {
-    // this.dragContainer = document.querySelector('.dashboard-window-content');
-    // this.itemContainers = Array.from(document.querySelectorAll('.dashboard-window-content-item'));
+    // If user not logged in route to onboarding
+    let userParsed = JSON.parse(localStorage.getItem('loggedInUser')!)
+    this.loggedInUser = JSON.parse(userParsed.user);
 
-    // this.itemContainers.forEach((container: any) => {
-    //   const grid = new Muuri(container, {
-    //     items: '.dashboard-window-content-item',
-    //     dragEnabled: true,
-    //     dragSort: () => this.columnGrids,
-    //     dragContainer: this.dragContainer,
-    //     dragAutoScroll: {
-    //       targets: (item: any) => [
-    //         { element: window, priority: 0 },
-    //         { element: item.getGrid().getElement().parentNode, priority: 1 },
-    //       ]
-    //     }
-    //   })
-    //     .on('dragInit', (item: any) => {
-    //       item.getElement().style.width = item.getWidth() + 'px';
-    //       item.getElement().style.height = item.getHeight() + 'px';
-    //     })
-    //     .on('dragReleaseEnd', (item: any) => {
-    //       item.getElement().style.width = '';
-    //       item.getElement().style.height = '';
-    //       item.getGrid().refreshItems([item]);
+    console.log(this.loggedInState);
+    this.loggedInState = localStorage.getItem('isLoggedIn');
 
-    //       console.log(item);
-    //     })
-    //     .on('layoutStart', () => {
-    //       grid.refreshItems().layout();
-    //     });
-
-    //   this.columnGrids.push(grid);
-    // });
-
-    // this.grid = new Muuri('.dashboard', {
-    //   dragEnabled: false,
-    //   layout: {
-    //     fillGaps: true
-    //   }
-    // }).on('dragEnd', (item, event) => {
-    //   console.log(event);
-    //   console.log(item);
-    // });
+    this.editSkateboard.skateboardForm.subscribe((form) => {
+      this.loggedInState = localStorage.getItem('isLoggedIn')
+      console.log(JSON.parse(this.loggedInState));
+      if (this.loggedInState === 'false') {
+        this.router.navigate(['/onboarding']);
+      }
+    });
   }
+
+  ngAfterViewChecked(): void {
+    console.log(this.loggedInState);
+  }
+
 }

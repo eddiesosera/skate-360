@@ -10,8 +10,8 @@ export class EditSkateboardConfigService implements OnInit {
 
   constructor() {
     let localStorageUser: any = localStorage.getItem('loggedInUser')
-    let userParsed = JSON.parse(localStorageUser).user;
-    this.loggedInUser = JSON.parse(userParsed)
+    let userParsed = JSON?.parse(localStorageUser).user;
+    this.loggedInUser = JSON?.parse(userParsed)
   }
 
   private skateboardFormSource = new BehaviorSubject<any>(
