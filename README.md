@@ -265,8 +265,9 @@ Account Page
 
 ### Database Architecture
 
-The database diagram we used to map out relational data
-<img src="readmeAssets\database Architecture.png">
+See Backend Repo For more!
+[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+<!-- <img src="readmeAssets\database Architecture.png"> -->
 
 <!-- DEVELOPMENT PROCESS -->
 
