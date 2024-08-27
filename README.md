@@ -122,9 +122,7 @@ Ensure that you have the latest version of [Angular](https://angular.io/guide/se
 
 Here are a couple of ways to clone this repo:
 
-1.  Software </br>
-    `Android Studio` -> `File` -> `New` -> `From Version Control` -> `Git`</br>
-    Enter `https://github.com/username/projectname.git` into the URL field and press the `Clone` button.
+1.  Open any IDE.
 
 2.  Clone Repository </br>
     Run the following in the command-line to clone the project:
