@@ -3,7 +3,6 @@
 <!-- Repository Information & Links-->
 <br />
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/username/projectname?color=%000000)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Instagram][instagram-shield]][instagram-url]
 [![Behance][behance-shield]][behance-url]
