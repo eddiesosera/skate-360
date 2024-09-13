@@ -8,8 +8,11 @@
 [![Behance][behance-shield]][behance-url]
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Eddie Sosera 21100419 & </h5>
+ <p align="center">
+<h5 align="center" style="padding:0;margin:0;">Eddie Sosera 21100419</h5>
+·
 <h5 align="center" style="padding:0;margin:0;">Ungerer Hattingh 221302</h5>
+</p>
 </br>
 
 <!-- Cover Image-->
@@ -18,6 +21,7 @@
   </a>
 
 <!-- HEADER SECTION -->
+<br />
 <br />
 
 <p align="center">
@@ -73,13 +77,19 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
+<br />
+<br />
+
 <!--PROJECT DESCRIPTION-->
 
-### Project Description
+## Project Description
 
 Skate360 is an inventory managment website for skateboards that allows the user to store stock and create to create unique and custom skateboard configurations. With a touch of that good'ol Grungy Punk theme to take you back into every skate park and make you feel right at home.
 
-### Built With
+<br />
+<br />
+
+## Built With
 
 <!-- angular -->
 
@@ -94,9 +104,15 @@ Skate360 is an inventory managment website for skateboards that allows the user 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
 
+<br />
+<br />
+
 ## Getting Started
 
 The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+<br />
+<br />
 
 ### Prerequisites
 
@@ -104,6 +120,8 @@ Ensure that you have the latest version of [Angular](https://angular.io/guide/se
 
 **The `Backend` for the Website**
 [BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+
+<br />
 
 ### How to install
 
@@ -116,7 +134,10 @@ Ensure that you have the latest version of [Angular](https://angular.io/guide/se
 4. Clone the backend of For the site using the URL.
 5. Launch the repo through [Visual Studio](https://code.visualstudio.com/).
 
-### Installation
+<br />
+<br />
+
+## Installation
 
 Here are a couple of ways to clone this repo:
 
@@ -143,7 +164,10 @@ Here are a couple of ways to clone this repo:
     const API_KEY = "ENTER YOUR API";
     ```
 
-### How to Run the App
+<br />
+<br />
+
+## How to Run the App
 
 1. fist link your backend to your database by filling in the required data in the "\*\*\*" fields in both your config file and the datasource file
 
@@ -169,6 +193,9 @@ Here are a couple of ways to clone this repo:
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 
+<br />
+<br />
+
 ## Features and Functionality
 
 ### Feature 1 : Crafting In 3D
@@ -191,6 +218,9 @@ When creating a new item to add to the inventory the user will have to fill out 
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
+
+<br />
+<br />
 
 ## Concept Process
 
@@ -222,10 +252,11 @@ The warehouse page wireframe
 
 <br>
 
-### User-flow
+### User Flow Diagram
 
-The userflow diagram
 <img src="readmeAssets\userJourney.png">
+
+<br />
 
 ### Page Designs
 
@@ -253,6 +284,8 @@ Account Page
 
 <img src="readmeAssets\Account.png">
 
+<br />
+
 ### Database Architecture
 
 See Backend Repo For more!
@@ -260,13 +293,16 @@ See Backend Repo For more!
 
 <!-- <img src="readmeAssets\database Architecture.png"> -->
 
+<br />
+<br />
+
 <!-- DEVELOPMENT PROCESS -->
 
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
 
-### Back-End
+### Backend
 
 [BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
 
@@ -506,7 +542,7 @@ The `Development Process` is the technical implementations and functionality don
 
 <br>
 
-### Front-End
+### Frontend
 
 **CRUD Functionality**
 
@@ -652,7 +688,10 @@ this is an example of the code used in the skateboard service file for the `CRUD
 
 > To redirect the user to the login page if they havent been logged in
 
-### Implementation Process
+<br />
+<br />
+
+## Implementation Process
 
 <!-- stipulate all of the functionality you included in the project -->
 
@@ -661,12 +700,16 @@ this is an example of the code used in the skateboard service file for the `CRUD
 - `Plugin` for this.
 - ETC.
 
+<br />
+
 #### Highlights
 
 <!-- stipulated the highlight you experienced with the project -->
 
 - Getting the 3D Js models to work and function properly.
 - getting all the data to work properly.
+
+<br />
 
 #### Challenges
 
@@ -677,6 +720,8 @@ this is an example of the code used in the skateboard service file for the `CRUD
 - Injecting Other information from one table into another and then calling that infomation **(Ungerer)**.
 - Getting the warehouse cards to show for the home page **(Ungerer)**.
 - Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
+
+<br />
 
 ### Responsibilities
 
@@ -734,9 +779,13 @@ Shared :
 - redirecting a un-loggedIn User to the login page when navigating to the account page
 - inventory New Stock item Form
 
+<br />
+
 ### Reviews & Testing
 
 <!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
+
+<br />
 
 #### Feedback from Reviews
 
@@ -744,6 +793,8 @@ Shared :
 
 - Feedback one.
 - Feedback two.
+
+<br />
 
 #### Unit Tests
 
@@ -765,6 +816,8 @@ Shared :
 
 - when clicking on the warehouse inventory it takes you to the inventory that is linked to that specific warehouse. Showing all items that match that specific loaction.
 
+<br />
+
 ### Future Implementation
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
@@ -772,7 +825,8 @@ Shared :
 - Refining The crafting process.
 - Improving the resposivness of the website.
 
-<br>
+<br />
+<br />
 
 ## Final Outcome
 
@@ -791,19 +845,6 @@ Shared :
 
 <br>
 
-<h5>Mockup 3</h5>
-<img src="readmeAssets\Mockup03.jpeg">
-
-<br>
-
-<h5>Mockup 4</h5>
-<img src="readmeAssets\Mockup 4.png">
-
-<br>
-
-<h5>Mocup 5</h5>
-<img src="readmeAssets\Mockup 5.png">
-
 <!-- VIDEO DEMONSTRATION -->
 
 ### Video Demonstration
@@ -812,11 +853,8 @@ To see a run through of the application, click below:
 
 [View Demonstration](https://drive.google.com/drive/folders/1UVmXXdD3UPih2JOfLJc1vha8G8sXqz5x?usp=sharing)
 
-<!-- ROADMAP -->
-
-## Roadmap
-
-See the [open issues](https://github.com/username/projectname/issues) for a list of proposed features (and known issues).
+<br />
+<br />
 
 <!-- CONTRIBUTING -->
 
@@ -830,6 +868,9 @@ Contributions are what makes the open-source community such an amazing place to 
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<br />
+<br />
+
 <!-- AUTHORS -->
 
 ## Authors
@@ -839,11 +880,17 @@ Contributions are what makes the open-source community such an amazing place to 
 
 <!-- LICENSE -->
 
+<br />
+<br />
+
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.\
+Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- LICENSE -->
+<br />
+<br />
+
+<!-- CONTACT -->
 
 ## Contact
 
@@ -851,6 +898,9 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 - **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
 - **Backend Link** - https://github.com/eddiesosera/dv300-term1-backend
+
+<br />
+<br />
 
 <!-- ACKNOWLEDGEMENTS -->
 
