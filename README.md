@@ -8,8 +8,8 @@
 [![Behance][behance-shield]][behance-url]
 
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Eddie Sosera</h5><h5 align="center" style="padding:0;margin:0;">21100419</h5>
-<h5 align="center" style="padding:0;margin:0;">Ungerer Hattingh</h5><h5 align="center" style="padding:0;margin:0;">221302</h5>
+<h5 align="center" style="padding:0;margin:0;">Eddie Sosera 21100419 & </h5>
+<h5 align="center" style="padding:0;margin:0;">Ungerer Hattingh 221302</h5>
 </br>
 
 <!-- Cover Image-->
@@ -23,7 +23,7 @@
 <p align="center">
 
   <a href="https://github.com/eddiesosera/dbhunt-v1">
-    <img src="./readmeAssets/skate-360-logo.png" alt="Logo" >
+    <img src="./readmeAssets/skate-360-logo.png" alt="Logo" width="140">
   </a>
   
   <h3 align="center">Skate 360</h3>
