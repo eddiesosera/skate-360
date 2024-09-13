@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, ButtonComponent, DropdownComponent],
   templateUrl: './craft-setup.component.html',
-  styleUrl: './craft-setup.component.css'
+  styleUrl: './craft-setup.component.css',
 })
 export class CraftSetupComponent implements OnInit {
   @Input() isVisible = true;
@@ -25,44 +25,57 @@ export class CraftSetupComponent implements OnInit {
     {
       id: 1,
       name: 'Classic board',
-      avatar: '../../../../../assets/img/inventory/selected/classic_board_board.png'
+      avatar:
+        '../../../../../assets/img/inventory/selected/classic_board_board.png',
     },
     {
       id: 2,
       name: 'Long board ',
-      avatar: '../../../../../assets/img/inventory/selected/long_skateboard_board.png'
+      avatar:
+        '../../../../../assets/img/inventory/selected/long_skateboard_board.png',
     },
     {
       id: 3,
       name: 'Old School board',
-      avatar: '../../../../../assets/img/inventory/selected/oldschool_board_board.png'
-    }
+      avatar:
+        '../../../../../assets/img/inventory/selected/oldschool_board_board.png',
+    },
   ];
 
   skateboardVariant = [
     {
       id: 1,
       label: 'Standard',
-      action: () => { alert('yes') }
+      action: () => {
+        alert('yes');
+      },
     },
     {
       id: 2,
       label: 'Permium',
-      action: () => { alert('yes') }
-    }
+      action: () => {
+        alert('yes');
+      },
+    },
   ];
-  skateboardVariantLabel = this.skateboardVariant[0].label + ' board'
+  skateboardVariantLabel = this.skateboardVariant[0].label + ' board';
 
-  constructor(private editSkateboard: EditSkateboardConfigService, private router: Router) { }
+  constructor(
+    private editSkateboard: EditSkateboardConfigService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.editSkateboard.skateboardForm.subscribe(form => this.skateboardForm = form)
+    this.editSkateboard.skateboardForm.subscribe(
+      (form) => (this.skateboardForm = form)
+    );
   }
 
   setSkateForm(type: any) {
+    console.log('Clicked  skate type');
     this.skateboardForm.configuration.board_type = type.id;
     this.editSkateboard.setSkateboardForm(this.skateboardForm);
-    this.selectedSkateboardType = type;
+    this.selectedSkateboardType = 'Classic board';
     this.isButtonVisible = true;
   }
 
@@ -73,5 +86,4 @@ export class CraftSetupComponent implements OnInit {
   backPage() {
     history.back();
   }
-
 }
