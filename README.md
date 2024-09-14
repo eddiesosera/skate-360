@@ -147,7 +147,7 @@ Here are a couple of ways to clone this repo:
     Run the following in the command-line to clone the project:
 
     ```sh
-    git clone https://github.com/username/projectname.git
+    git clone https://github.com/eddiesosera/skate-360
     ```
 
         Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
@@ -157,11 +157,6 @@ Here are a couple of ways to clone this repo:
 
     ```sh
     npm install
-    ```
-
-4.  Get a free API Key at [https://example.com](https://example.com) and enter it in the `config.js` file:
-    ```js
-    const API_KEY = "ENTER YOUR API";
     ```
 
 <br />
@@ -289,7 +284,7 @@ Account Page
 ### Database Architecture
 
 See Backend Repo For more!
-[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+[Backend repository](https://github.com/eddiesosera/dv300-term1-backend)
 
 <!-- <img src="readmeAssets\database Architecture.png"> -->
 
@@ -830,13 +825,11 @@ Shared :
 
 ### Mockups
 
-<h5>Mockup 1</h5>
+<!-- <h5>Mockup 1</h5> -->
 <!-- <img src="readmeAssets\Mockup01.jpeg"> -->
 <img src="readmeAssets\NewMockup01.png">
 
-<br>
-
-<h5>Mockup 2</h5>
+<!-- <h5>Mockup 2</h5> -->
 <img src="readmeAssets\MockUp02.png">
 
 <br>
@@ -848,6 +841,7 @@ Shared :
 To see a run through of the application, click below:
 
 [View Demonstration Video](https://drive.google.com/drive/folders/1UVmXXdD3UPih2JOfLJc1vha8G8sXqz5x?usp=sharing)
+·
 [View Cool Promo Video](https://www.instagram.com/p/C51WRk8NO8z/?next=%2F)
 
 <br />
