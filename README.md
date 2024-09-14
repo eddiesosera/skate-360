@@ -304,7 +304,7 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Backend
 
-[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+[Backend repository](https://github.com/eddiesosera/dv300-term1-backend)
 
 <!-- Setting Up the ```CRUD``` Functionality.
   >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
@@ -540,8 +540,6 @@ The `Development Process` is the technical implementations and functionality don
     });
   ``` -->
 
-<br>
-
 ### Frontend
 
 **CRUD Functionality**
@@ -612,7 +610,7 @@ To display the data on the `warehouse-card-component` we call the variable liste
 
 **Skateboard Service Code**
 
-this is an example of the code used in the skateboard service file for the `CRUD` Functionality
+This is an example of the code used in the skateboard service file for the `CRUD` Functionality
 
 ```
   getAllSkateboards(): Observable<Skateboard[]> {
@@ -695,12 +693,12 @@ this is an example of the code used in the skateboard service file for the `CRUD
 
 <!-- stipulate all of the functionality you included in the project -->
 
-- Made use of both `functionality` to implement a specific feature.
+<!-- - Made use of both `functionality` to implement a specific feature.
 - `MVC/MVVM` design architecture implemented.
 - `Plugin` for this.
-- ETC.
+- ETC. -->
 
-<br />
+<!-- <br /> -->
 
 #### Highlights
 
@@ -709,7 +707,7 @@ this is an example of the code used in the skateboard service file for the `CRUD
 - Getting the 3D Js models to work and function properly.
 - getting all the data to work properly.
 
-<br />
+<!-- <br /> -->
 
 #### Challenges
 
@@ -721,7 +719,7 @@ this is an example of the code used in the skateboard service file for the `CRUD
 - Getting the warehouse cards to show for the home page **(Ungerer)**.
 - Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
 
-<br />
+<!-- <br /> -->
 
 ### Responsibilities
 
@@ -781,20 +779,18 @@ Shared :
 
 <br />
 
-### Reviews & Testing
+<!-- ### Reviews & Testing
 
 <!-- stipulate how you've conducted testing in the form of peer reviews, feedback and also functionality testing, like unit tests (if applicable) -->
 
-<br />
-
-#### Feedback from Reviews
+<!-- #### Feedback from Reviews
 
 `Peer Reviews` were conducted by my fellow students and lecturer. The following feedback I found useful:
 
 - Feedback one.
-- Feedback two.
+- Feedback two. -->
 
-<br />
+<!-- <br /> -->
 
 #### Unit Tests
 
@@ -851,7 +847,8 @@ Shared :
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://drive.google.com/drive/folders/1UVmXXdD3UPih2JOfLJc1vha8G8sXqz5x?usp=sharing)
+[View Demonstration Video](https://drive.google.com/drive/folders/1UVmXXdD3UPih2JOfLJc1vha8G8sXqz5x?usp=sharing)
+[View Cool Promo Video](https://www.instagram.com/p/C51WRk8NO8z/?next=%2F)
 
 <br />
 <br />
@@ -875,7 +872,25 @@ Contributions are what makes the open-source community such an amazing place to 
 
 ## Authors
 
-- [eddiesosera](https://github.com/eddiesosera)
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a href="https://github.com/eddiesosera/">
+      <img src="https://github.com/eddiesosera.png" alt="eddie Sosera" width="100px">
+    </a>
+    <br>
+    <sub>Eddie Sosera</sub>
+  </div>
+
+  <br />
+
+ <div style="text-align: center;">
+    <a href="https://github.com/Ungerer221">
+      <img src="https://github.com/Ungerer221.png" alt="eddie Sosera" width="100px">
+    </a>
+    <br>
+    <sub>Eddie Sosera</sub>
+  </div>
+  </div>
 - [Ungerer221](https://github.com/Ungerer221)
 
 <!-- LICENSE -->
@@ -885,8 +900,7 @@ Contributions are what makes the open-source community such an amazing place to 
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
+Distributed under the MIT License. See [`License`](https://opensource.org/license/mit/) for more information
 <br />
 <br />
 
@@ -895,6 +909,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 - **Eddie Sosera** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
+- **LinkedIn** - [@eddiesosera](https://www.linkedin.com/in/eddiesosera/), or
+  [Visit website](https://engineeredimagination.co.za).
 - **Ungerer Hattingh** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/)
 - **Project Link** - https://github.com/eddiesosera/dv300-term1
 - **Backend Link** - https://github.com/eddiesosera/dv300-term1-backend
