@@ -9,9 +9,9 @@
 
 <!-- HEADER SECTION -->
  <p align="center">
-<h5 align="center" style="padding:0;margin:0;">Eddie Sosera 21100419</h5>
+<h5 align="center" style="padding:0;margin:0;">Eddie Sosera 21100419  |  Ungerer Hattingh 221302</h5>
 ·
-<h5 align="center" style="padding:0;margin:0;">Ungerer Hattingh 221302</h5>
+<!-- <h5 align="center" style="padding:0;margin:0;">Ungerer Hattingh 221302</h5> -->
 </p>
 </br>
 
