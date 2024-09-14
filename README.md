@@ -84,7 +84,7 @@
 
 ## Project Description
 
-Skate360 is an inventory managment website for skateboards that allows the user to store stock and create to create unique and custom skateboard configurations. With a touch of that good'ol Grungy Punk theme to take you back into every skate park and make you feel right at home.
+Skate360 is an inventory management website for skateboards that allows the user to store stock and create unique and custom skateboard configurations with a touch of that good Grungy Punk theme to take you back into every skate park and make you feel right at home.
 
 <br />
 <br />
@@ -102,36 +102,36 @@ Skate360 is an inventory managment website for skateboards that allows the user 
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 <!-- GETTING STARTED -->
-<!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
+<!-- Make sure to add appropriate information about what prerequisite technologies the user would need and also the steps to install your project on their own machines -->
 
 <br />
 <br />
 
 ## Getting Started
 
-The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+The following instructions will get you a copy of the project up and running on your local machine for development and testing.
 
 <br />
 <br />
 
 ### Prerequisites
 
-Ensure that you have the latest version of [Angular](https://angular.io/guide/setup-local) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
+Please ensure you have the latest version of [Angular](https://angular.io/guide/setup-local) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
 **The `Backend` for the Website**
-[BackendRepository](https://github.com/eddiesosera/dv300-term1-backend)
+[Backend repository](https://github.com/eddiesosera/dv300-term1-backend)
 
 <br />
 
 ### How to install
 
-1. Download the latest version of [Angular CLI](https://angular.io/cli) on your machie.
+1. Download the latest version of [Angular CLI](https://angular.io/cli).
 
 - use this command in your terminal. `npm install -g @angular/cli`
 
 2. Download Postgres (pgAdmin4) and set up a database.
-3. Clone the github repository using the URL.
-4. Clone the backend of For the site using the URL.
+3. Clone the GitHub repository using the URL.
+4. Clone the backend of the site using the URL.
 5. Launch the repo through [Visual Studio](https://code.visualstudio.com/).
 
 <br />
@@ -144,16 +144,16 @@ Here are a couple of ways to clone this repo:
 1.  Open any IDE.
 
 2.  Clone Repository </br>
-    Run the following in the command-line to clone the project:
+    Run the following in the command line to clone the project:
 
     ```sh
     git clone https://github.com/eddiesosera/skate-360
     ```
 
-        Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
+        Open `Software` and select `File | Open...` from the menu. Select the cloned directory and press `Open` button.
 
 3.  Install Dependencies </br>
-    Run the following in the command-line to install all the required dependencies:
+    Run the following in the command line to install all the required dependencies:
 
     ```sh
     npm install
@@ -164,7 +164,7 @@ Here are a couple of ways to clone this repo:
 
 ## How to Run the App
 
-1. fist link your backend to your database by filling in the required data in the "\*\*\*" fields in both your config file and the datasource file
+1. First, link your backend to your database by filling in the required data in the "\*\*\*" fields in both your config file and the data source file:
 
 ```
 {
@@ -181,9 +181,9 @@ Here are a couple of ways to clone this repo:
 
 2. Run your database `npm run dev`
 
-3. Open and run your front end project ` ng serve --open`
+3. Open and run your front-end project ` ng serve --open`
 
-4. See The site Open in your Defulat browser and enjoy.
+4. See the site, open it in your Defulat browser, and enjoy.
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
@@ -193,21 +193,21 @@ Here are a couple of ways to clone this repo:
 
 ## Features and Functionality
 
-### Feature 1 : Crafting In 3D
+### Feature 1: Crafting In 3D
 
 In this site you are able to view the skateboard you are crafting in a 3D space where you can change each part as you wish.
 
 <img src="readmeAssets\Craft Page.png">
 
-### Feature 2 : Drag'n Drop
+### Feature 2: Drag'n Drop
 
-You the user when crafting a skateboard will be able to drag and drop the parts you want into the craft view to apply them to the skateboard.
+When crafting a skateboard, you, the user, can drag and drop the parts you want into the craft view to apply them to the skateboard.
 
 <img src="readmeAssets\Craft Page drag and drop.png">
 
-### Feature 3 : Create New Inventory Items
+### Feature 3: Create New Inventory Items
 
-When creating a new item to add to the inventory the user will have to fill out this form with the valid information to add the new item.
+When creating a new item to add to the inventory, the user must fill out this form with valid information.
 
 <img src="readmeAssets\addnew item function.png">
 
@@ -219,7 +219,7 @@ When creating a new item to add to the inventory the user will have to fill out 
 
 ## Concept Process
 
-The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
+The `Conceptual Process` is the set of actions, activities, and research that were undertaken when this project was started.
 
 ### Ideation
 
@@ -243,7 +243,7 @@ The Inventory Page Wireframe
 
 The warehouse page wireframe
 <br>
-<img src="readmeAssets\Warehouse page Wire frame (no Rounded Corners).png"> -->
+<img src="readmeAssets\Warehouse page Wireframe (no Rounded Corners).png"> -->
 
 <br>
 
@@ -295,19 +295,19 @@ See Backend Repo For more!
 
 ## Development Process
 
-The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
+The `Development Process` refers to the technical implementations and functionality in the application's frontend and backend.
 
 ### Backend
 
 [Backend repository](https://github.com/eddiesosera/dv300-term1-backend)
 
 <!-- Setting Up the ```CRUD``` Functionality.
-  >This is the crud functionality for the skateboards and their configuration. This being the most complicated example of the ```CRUD``` functionality
+  >This is the crud functionality for the skateboards and their configuration. This is the most complicated example of the ```CRUD``` functionality.
 
   Get all Items
 
     > [!NOTE]
-    > The GET ALL Function in the route.ts file used to get all items in the specific array
+    > The GET ALL Function in the route.ts file is used to get all items in the specific array
 
   ```
     // Get All Skateboards
@@ -547,7 +547,7 @@ Using the Openstock-Form To add a new item to the designated warehouse
 
 **Warehouse Page**
 
-This is a function that loops through the location array to find the information that has been joined to the array and allow for it to be fetched.
+This is a function that loops through the location array to find the information that has been joined to it and allows it to be fetched.
 
 ```
   filterSkateboardsByBoardType(boardTypeName: string, locations: any): any[] {
@@ -565,7 +565,7 @@ This is a function that loops through the location array to find the information
   }
 ```
 
-After the Looping function we have an ``ngOnInit` so that in site init we call all the relevant data that will be displayed in the warehouse card.
+After the Looping function, we have an ``ngOnInit`, so in site init, we call all the relevant data that will be displayed in the warehouse card.
 
 ```
     // to get all the location data
@@ -605,7 +605,7 @@ To display the data on the `warehouse-card-component` we call the variable liste
 
 **Skateboard Service Code**
 
-This is an example of the code used in the skateboard service file for the `CRUD` Functionality
+This is an example of the code used in the skateboard service file for the `CRUD` functionality.
 
 ```
   getAllSkateboards(): Observable<Skateboard[]> {
@@ -623,7 +623,7 @@ This is an example of the code used in the skateboard service file for the `CRUD
   }
 ```
 
-> To get a single skate board
+> To get a single skateboard
 
 <br>
 
@@ -679,7 +679,7 @@ This is an example of the code used in the skateboard service file for the `CRUD
     }, // defualt route
 ```
 
-> To redirect the user to the login page if they havent been logged in
+> To redirect the user to the login page if they haven't been logged in
 
 <br />
 <br />
@@ -699,7 +699,7 @@ This is an example of the code used in the skateboard service file for the `CRUD
 
 <!-- stipulated the highlight you experienced with the project -->
 
-- Getting the 3D Js models to work and function properly.
+- Getting the 3D.js models to work and function properly.
 - getting all the data to work properly.
 
 <!-- <br /> -->
@@ -709,10 +709,10 @@ This is an example of the code used in the skateboard service file for the `CRUD
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
 
 - Bugs.
-- Looping through the skateboard array within the location database to get the number of each differnet board type and the total number of boards **(Ungerer)**.
-- Injecting Other information from one table into another and then calling that infomation **(Ungerer)**.
-- Getting the warehouse cards to show for the home page **(Ungerer)**.
-- Populating the account page with the logged in users information and Calling in the skateboards that the user has made **(Ungerer)**.
+- Looping through the skateboard array within the location database to get the number of each different board type and the total number of boards **(Ungerer)**.
+- Inject other information from one table into another and then call that information **(Ungerer)**.
+- Get the warehouse cards for the home page **(Ungerer)**.
+- Populating the account page with the logged-in user's information and Calling in the skateboards that the user has made **(Ungerer)**.
 
 <!-- <br /> -->
 
@@ -735,7 +735,7 @@ Eddie :
 
 **Backend**
 
-- skateboard Route and Model
+- Skateboard Route and Model
 - Configuration Route and Model
 - Location Route and Model
 - User Model Route
@@ -761,16 +761,16 @@ Ungerer :
 - Truck Route and model
 - Bearing Route and model
 - Board-Skin Route and model
-- Board-Type Route and model
+- Board-type Route and model
 - backend Readme file
 
 Shared :
 
-- Genreal Desing
+- General Desing
 - Site Layout
 - Populating the Site
-- redirecting a un-loggedIn User to the login page when navigating to the account page
-- inventory New Stock item Form
+- Redirecting an un-logged User to the login page when navigating to the account page
+- Inventory New Stock item Form
 
 <br />
 
@@ -789,32 +789,32 @@ Shared :
 
 #### Unit Tests
 
-`Unit Tests` were conducted to establish working functionality. Here are all the tests that were ran:
+`Unit Tests` were conducted to establish working functionality. Here are all the tests that were run:
 
 > [!Note]
-> Post man and insomnia where both used to test all backend CRUD functionality.
+> Postman and insomnia were both used to test all backend CRUD functionality.
 
 **Test 1** of Create User functionality :
 
-- We tested the back of the user create function using Postman to test the CRUD
+- We tested the back of the user-create function using Postman to test the CRUD
 
 **Test 2** of Login Authentication Quiz functionality :
 
-- To test the Authentication quiz we purposely got the answer wrong to test if it was working properly then selected the right answer to test.
-- we also tried loggin in without completing the quiz to test if you could bypass the quiz.
+To test the Authentication quiz, we purposely got the answer wrong to see if it was working properly and then selected the right answer.
+- We also tried logging in without completing the quiz to test if you could bypass the quiz.
 
 **Test 3** of Warehouse inventory route
 
-- when clicking on the warehouse inventory it takes you to the inventory that is linked to that specific warehouse. Showing all items that match that specific loaction.
+- When clicking on the warehouse inventory, you are taken to the inventory linked to that specific warehouse, which shows all items that match that specific location.
 
 <br />
 
 ### Future Implementation
 
-<!-- stipulate functionality and improvements that can be implemented in the future. -->
+<!-- stipulate functionality and improvements that can be implemented. -->
 
 - Refining The crafting process.
-- Improving the resposivness of the website.
+- Improving the responsiveness of the website.
 
 <br />
 <br />
@@ -838,7 +838,7 @@ Shared :
 
 ### Video Demonstration
 
-To see a run through of the application, click below:
+To see a run-through of the application, click below:
 
 [View Demonstration Video](https://drive.google.com/drive/folders/1UVmXXdD3UPih2JOfLJc1vha8G8sXqz5x?usp=sharing)
 ·
@@ -851,7 +851,7 @@ To see a run through of the application, click below:
 
 ## Contributing
 
-Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
