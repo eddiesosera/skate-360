@@ -888,10 +888,10 @@ Contributions are what makes the open-source community such an amazing place to 
       <img src="https://github.com/Ungerer221.png" alt="eddie Sosera" width="100px">
     </a>
     <br>
-    <sub>Eddie Sosera</sub>
+    <sub>Ungerer Hattingh</sub>
   </div>
   </div>
-- [Ungerer221](https://github.com/Ungerer221)
+<!-- - [Ungerer221](https://github.com/Ungerer221) -->
 
 <!-- LICENSE -->
 
