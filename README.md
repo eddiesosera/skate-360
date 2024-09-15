@@ -5,7 +5,6 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Instagram][instagram-shield]][instagram-url]
-[![Behance][behance-shield]][behance-url]
 
 <!-- HEADER SECTION -->
  <p align="center">
