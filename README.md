@@ -15,7 +15,7 @@
 </br>
 
 <!-- Cover Image-->
- <a href="https://github.com/eddiesosera/dbhunt">
+ <a href="https://github.com/eddiesosera/skate-360">
     <img src="./readmeAssets/skate-360-cover.png" alt="Cover Image">
   </a>
 
@@ -25,7 +25,7 @@
 
 <p align="center">
 
-  <a href="https://github.com/eddiesosera/dbhunt-v1">
+  <a href="https://github.com/eddiesosera/skate-360">
     <img src="./readmeAssets/skate-360-logo.png" alt="Logo" width="140">
   </a>
   
@@ -83,7 +83,7 @@
 
 ## Project Description
 
-    <img src="./readmeAssets/skate-360-logo.png" alt="Logo" width="140">
+<img src="./readmeAssets/skate-360-logo.png" alt="Logo" width="140">
 
 Skate360 is an inventory management website for skateboards that allows the user to store stock and create unique and custom skateboard configurations with a touch of that good Grungy Punk theme to take you back into every skate park and make you feel right at home.
 
