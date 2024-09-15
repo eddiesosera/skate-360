@@ -119,8 +119,7 @@ The following instructions will get you a copy of the project up and running on 
 
 Please ensure you have the latest version of [Angular](https://angular.io/guide/setup-local) installed on your machine. The [Plugin](path/to/where/they/can/download/plugin) plugin will also be required.
 
-**The `Backend` for the Website**
-[Backend repository](https://github.com/eddiesosera/dv300-term1-backend)
+The following is the link to the `backend repo`: [backend repository](https://github.com/eddiesosera/dv300-term1-backend)
 
 <br />
 
