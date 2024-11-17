@@ -10,22 +10,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    // AppComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule,
-    HomeComponent, RouterOutlet, NavbarComponent,
-    // Ng5SliderModule,
-    ConfigureToolOptionComponent
+    HomeComponent,
+    RouterOutlet,
+    NavbarComponent,
+    ConfigureToolOptionComponent,
   ],
-  exports: [
-    ConfigureToolOptionComponent
-  ],
-  bootstrap: [
-    // AppComponent
-  ]
+  exports: [ConfigureToolOptionComponent],
+  bootstrap: [],
 })
-export class AppModule { }
+export class AppModule {}

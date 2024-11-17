@@ -1,146 +1,133 @@
 .home-hero {
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    cursor: default;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  cursor: default;
 }
 
 .home-hero-img-letterhead-wrap {
-    width: 100%;
-    height: 100vh;
-    /* transform: translateZ(20px); */
-    transform: translateZ(0);
-    transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  transform: translateZ(0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .home-hero-img-letterhead-imagewrap {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .home-hero-img-letterhead {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
-
-/* 
-.home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead {
-    transform: translateZ(10px) scale(1.1);
-}
-
-.home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead-blur {
-    transform: translateZ(20px) scale(1.2);
-} */
 
 .home-hero-img-letterhead-blur {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    filter: blur(0px);
-    animation: pulse 4s infinite;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(0px);
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
+  0%,
+  100% {
+    filter: blur(0px);
+  }
 
-    0%,
-    100% {
-        filter: blur(0px);
-    }
-
-    50% {
-        filter: blur(15px);
-    }
+  50% {
+    filter: blur(15px);
+  }
 }
 
 .hero-skateboard-wrap {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    transform: translateZ(20px)
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transform: translateZ(20px);
 }
 
 .hero-skateboard-wrap:hover .hero-text-wrap {
-    transform: translateZ(10px) scale(1.2);
-    z-index: 3;
+  transform: translateZ(10px) scale(1.2);
+  z-index: 3;
 }
 
 .hero-skateboard-wrap:hover .hero-img-skateboard {
-    transform: translateZ(50px) scale(1.8);
+  transform: translateZ(50px) scale(1.8);
 }
 
-
 .home-hero-img-letterhead-wrap:hover .home-hero-img-letterhead-wrap {
-    transform: translateZ(10px) scale(1.8);
+  transform: translateZ(10px) scale(1.8);
 }
 
 .hero-text-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .hero-text {
-    font-family: 'Skate Fall';
-    font-size: 60px;
-    z-index: 1;
+  font-family: "Skate Fall";
+  font-size: 60px;
+  z-index: 1;
 }
 
 .hero-text-bg {
-    position: absolute;
-    border-radius: 100px;
-    width: 300px;
-    height: 100px;
-    filter: blur(15px);
-    background: #121212;
+  position: absolute;
+  border-radius: 100px;
+  width: 300px;
+  height: 100px;
+  filter: blur(15px);
+  background: #121212;
 }
 
 .hero-down-icon-wrap {
-    position: absolute;
-    bottom: 20px;
-    z-index: 3;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: bounce 1s infinite;
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 1s infinite;
 }
 
 .hero-down-icon {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .hero-down-icon-bg {
-    height: 10px;
-    width: 30px;
-    border-radius: 20px;
-    z-index: -1;
-    background: #121212;
-    position: absolute;
-    filter: blur(12.5px);
+  height: 10px;
+  width: 30px;
+  border-radius: 20px;
+  z-index: -1;
+  background: #121212;
+  position: absolute;
+  filter: blur(12.5px);
 }
 
 @keyframes bounce {
+  0%,
+  100% {
+    bottom: 10px;
+  }
 
-    0%,
-    100% {
-        bottom: 10px;
-    }
-
-    50% {
-        bottom: 25px;
-    }
+  50% {
+    bottom: 25px;
+  }
 }

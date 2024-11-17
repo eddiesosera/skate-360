@@ -1,25 +1,18 @@
 <div class="home-locations">
-    <div class="home-locations-heading">
-        Our Locations
+  <div class="home-locations-heading">Our Locations</div>
+
+  <div class="home-locations-content">
+    <div class="warehouse-card-display-grid">
+      <app-warehouse-card
+        *ngFor="let item of locationList"
+        [location]="item"
+        [id]="item.id"
+        [numberOfClassicBoards]="classicboardsLength"
+        [numberOfLongBoards]="longboardsLength"
+        [numberOfOldschoolBoards]="oldschoolboardsLength"
+        [numberOfWheels]="wheelsLength"
+        [numberOfTrucks]="trucksLength"
+      ></app-warehouse-card>
     </div>
-    <div class="home-locations-content">
-        <!-- <app-gridlayout [gap]="160"> -->
-            <!-- <div>Location #1</div>
-            <div>Location #2</div>
-            <div>Location #2</div> -->
-            <!-- <app-warehouse-card *ngFor="let location of locations"></app-warehouse-card> -->
-            
-        <!-- </app-gridlayout> -->
-        <div class="warehouse-card-display-grid">
-            <app-warehouse-card *ngFor="let item of locationList"
-                [location]="item"
-                [id]="item.id"
-                [numberOfClassicBoards]="classicboardsLength"
-                [numberOfLongBoards]="longboardsLength"
-                [numberOfOldschoolBoards]="oldschoolboardsLength"
-                [numberOfWheels]="wheelsLength"
-                [numberOfTrucks]="trucksLength"
-                ></app-warehouse-card>
-        </div>
-    </div>
+  </div>
 </div>

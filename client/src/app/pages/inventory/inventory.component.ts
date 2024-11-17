@@ -11,68 +11,62 @@ import { InventoryCardComponent } from '../../components/data-display/inventory-
 import { NewStockService } from '../../services/page/wharehouse/new-stock.service';
 import { NewStockComponent } from '../wharehouse/new-stock/new-stock.component';
 import { TrucksService } from '../../services/data/trucks.service';
-// import { NewStockComponent } from './new-stock/new-stock.component';
 
 @Component({
   selector: 'app-inventory',
   standalone: true,
-  imports: [SidebarComponent, SearchBarComponent, ProductCardComponent, CommonModule, GridlayoutComponent, InventoryCardComponent, NewStockComponent],
+  imports: [
+    SidebarComponent,
+    SearchBarComponent,
+    ProductCardComponent,
+    CommonModule,
+    GridlayoutComponent,
+    InventoryCardComponent,
+    NewStockComponent,
+  ],
   templateUrl: './inventory.component.html',
-  styleUrl: './inventory.component.css'
+  styleUrl: './inventory.component.css',
 })
 export class InventoryComponent {
+  skateboardCollection: any = [];
+  pages = this.skateboardCollection.length;
 
-  skateboardCollection: any = []
-  pages = this.skateboardCollection.length
-
-  locationCollection: any = []
-  location = this.locationCollection.name
+  locationCollection: any = [];
+  location = this.locationCollection.name;
 
   id: any;
   currentlocation: any;
   skateboards: any;
   Truck: any;
 
-  // constructor(private skateboardData: SkateboardService) { }
-  // location service 
-  constructor(private locationData: LocationService, private route: ActivatedRoute, private newStockService: NewStockService, private TruckService: TrucksService) { }
-
-  // ngOnInit(): void {
-  //   this.skateboardData.getAllSkateboards().subscribe((skateboards) => {
-  //     this.skateboardCollection = skateboards;
-  //     console.log(skateboards)
-  //   }
-  //   )
-  // }
+  // Location service
+  constructor(
+    private locationData: LocationService,
+    private route: ActivatedRoute,
+    private newStockService: NewStockService,
+    private TruckService: TrucksService
+  ) {}
 
   ngOnInit(): void {
     this.locationData.getAllLocations().subscribe((locations) => {
       this.locationCollection = locations;
-      this.route.paramMap.subscribe(params => {
-        // Assuming 'id' is the parameter name defined in your route
-        this.id = params.get('id');
-        console.log('ID:', this.id);
+      this.route.paramMap.subscribe((params) => {
+        this.id = params.get('id'); // 'id' is the parameter name defined in the route.
       });
-      console.log(locations)
+
       for (let location of locations) {
-        console.log(location)
-        console.log(location.id)
-        console.log(this.id)
+        console.log(location);
+        console.log(location.id);
+        console.log(this.id);
         if (location.id == this.id) {
-          console.log("you are on this location ", location)
-          this.currentlocation = location
-          this.skateboards = location.skateboards
-          console.log(this.currentlocation.skateboards)
+          this.currentlocation = location;
+          this.skateboards = location.skateboards;
         }
       }
-
-    })
+    });
   }
-  // need a function that loopr throught the array of the locations and matches the id parameter with locations
-
 
   openStockForm() {
-    this.newStockService.toggleVisibility(true)
+    this.newStockService.toggleVisibility(true);
   }
-
 }

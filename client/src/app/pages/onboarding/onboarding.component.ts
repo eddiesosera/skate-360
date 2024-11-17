@@ -10,9 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-onboarding',
   standalone: true,
-  imports: [RouterLink, CommonModule, ReactiveFormsModule, QuizComponent, ButtonComponent],
+  imports: [
+    RouterLink,
+    CommonModule,
+    ReactiveFormsModule,
+    QuizComponent,
+    ButtonComponent,
+  ],
   templateUrl: './onboarding.component.html',
-  styleUrl: './onboarding.component.css'
+  styleUrl: './onboarding.component.css',
 })
 export class OnboardingComponent implements OnInit {
   // UI variables
@@ -20,41 +26,44 @@ export class OnboardingComponent implements OnInit {
   isQuizDisplayed!: boolean;
   userResult: 'true' | 'false' | 'null' = 'null';
   resultFeedback!: string;
-  init = 0
+  init = 0;
 
   // DATA variables
   userForm = {
     email: '',
-    password: ''
+    password: '',
   };
   loginMessage: any = '';
 
-  constructor(private toggleQuiz: ToggleQuizService, private userService: UserService, private router: Router) {
-
-  }
+  constructor(
+    private toggleQuiz: ToggleQuizService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-
     // UI Logic
-    this.toggleQuiz.currentToggleState.subscribe(state => this.isQuizDisplayed = state)
-    this.toggleQuiz.userResult.subscribe(result => this.userResult = result)
-    // console.log(this.userResult, ' user result');
+    this.toggleQuiz.currentToggleState.subscribe(
+      (state) => (this.isQuizDisplayed = state)
+    );
+    this.toggleQuiz.userResult.subscribe(
+      (result) => (this.userResult = result)
+    );
 
-    if (this.userResult === "true") {
-      this.resultFeedback = "Verification Successful!"
-    } else if (this.userResult === "false") {
-      this.resultFeedback = "Verification failed, Try again.!"
+    if (this.userResult === 'true') {
+      this.resultFeedback = 'Verification Successful!';
+    } else if (this.userResult === 'false') {
+      this.resultFeedback = 'Verification failed, Try again.!';
     }
 
     // DATA Logic
-    this.loginUser()
+    this.loginUser();
   }
 
   // UI Logic
-
   displayQuiz() {
-    this.toggleQuiz.changeToggleState(true)
-  };
+    this.toggleQuiz.changeToggleState(true);
+  }
 
   backPage() {
     history.back();
@@ -62,30 +71,30 @@ export class OnboardingComponent implements OnInit {
 
   // DATA Logic
   updateInput(event: any, field: 'email' | 'password') {
-    if (field === 'email') { this.userForm.email = event.target.value }
-    if (field === 'password') { this.userForm.password = event.target.value }
-    // console.log(this.userForm)
-  }
-  loginUser() {
-    this.init = this.init + 1
-    if (this.userResult === 'true') {
-      // console.log(this.userForm)
-      this.userService.login(this.userForm).subscribe(user => {
-        localStorage.setItem('loggedInUser', JSON.stringify(user));
-        localStorage.setItem('isLoggedIn', 'true')
-        this.loginMessage = user.message
-        // console.log(user)
-        // this.router.navigate(['/']);
-        if (user.message === "Success") {
-          this.router.navigate(['/']);
-        }
-        console.log(user.message)
-      })
-    } else if (this.userResult === 'false') {
-      alert('Yo bro, Try the verification test again.')
-    } else if (this.userResult === 'null' && this.init > 1) {
-      alert('Get skate360 verified to be able to login.')
+    if (field === 'email') {
+      this.userForm.email = event.target.value;
+    }
+    if (field === 'password') {
+      this.userForm.password = event.target.value;
     }
   }
 
+  loginUser() {
+    this.init = this.init + 1;
+    if (this.userResult === 'true') {
+      this.userService.login(this.userForm).subscribe((user) => {
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
+        localStorage.setItem('isLoggedIn', 'true');
+        this.loginMessage = user.message;
+
+        if (user.message === 'Success') {
+          this.router.navigate(['/']);
+        }
+      });
+    } else if (this.userResult === 'false') {
+      alert('Yo bro, Try the verification test again.');
+    } else if (this.userResult === 'null' && this.init > 1) {
+      alert('Get skate360 verified to be able to login.');
+    }
+  }
 }

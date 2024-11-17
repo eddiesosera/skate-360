@@ -1,82 +1,103 @@
 <div class="skateboards">
+  <app-sidebar></app-sidebar>
 
-    <app-sidebar></app-sidebar>
-
-    <div class="skateboards-content">
-        <!-- Header Section: Top Title and Actions -->
-        <div class="skateboards-header">
-
-            <!-- Header Section: Top Title and Actions -->
-            <div class="skateboards-header-top">
-                <div class="skateboards-header-top-title-wrap">
-                    <div class="skateboards-header-top-title">Skateboards</div>
-                    <div class="skateboards-header-top-title-info">
-                        A page view of all our current Skateboards stocking inventory
-                    </div>
-                </div>
-                <div class="skateboards-header-top-actions">
-                    <a href="craft/new"><app-button accent="red" type="round">Add New</app-button></a>
-                    <!-- <a href="craft"><app-button type="round" custom="border: none;">Edit</app-button></a> -->
-                </div>
-            </div>
-
-            <!-- Header Section: Bottom Filter  -->
-            <div class="skateboards-header-btm">
-                <div class="skateboards-header-btm-filter-wrap">
-                    <app-dropdown class="filter-dropdown" [label]="label1" [options]="filterOptions1"
-                        idPos="0"></app-dropdown>
-                    <app-dropdown class="filter-dropdown" [label]="label2" [options]="filterOptions2"
-                        idPos="1"></app-dropdown>
-                    <app-dropdown class="filter-dropdown" [label]="label3" [options]="filterOptions3"
-                        idPos="2"></app-dropdown>
-                </div>
-                <app-search-bar style="width:-webkit-fill-available"></app-search-bar>
-                <div class="skateboards-header-btm-sort-wrap">
-                    <app-dropdown class="filter-dropdown" [label]="label4" [options]="filterOptions4"
-                        idPos="3"></app-dropdown>
-                    <app-dropdown class="filter-dropdown" [label]="label5" [options]="filterOptions5"
-                        idPos="4"></app-dropdown>
-                </div>
-            </div>
-
+  <div class="skateboards-content">
+    <!-- Header Section: Top Title and Actions -->
+    <div class="skateboards-header">
+      <!-- Header Section: Top Title and Actions -->
+      <div class="skateboards-header-top">
+        <div class="skateboards-header-top-title-wrap">
+          <div class="skateboards-header-top-title">Skateboards</div>
+          <div class="skateboards-header-top-title-info">
+            A page view of all our current Skateboards stocking inventory
+          </div>
         </div>
-
-        <!-- Skateboard Items section -->
-        <div class="skateboards-items">
-            <app-gridlayout [gap]="20">
-                <div class="grid-item" *ngFor="let skateboardItem of skateboardCollection">
-                    <app-product-card [type]="skateboardItem?.configuration?.board_type?.name"
-                        [craftedBy]="skateboardItem?.craftedBy"
-                        [avatar]="skateboardItem?.configuration?.board_type?.avatar"
-                        [location]="skateboardItem?.location" [price]="skateboardItem?.price"
-                        [id]="skateboardItem?.id"></app-product-card>
-                </div>
-            </app-gridlayout>
+        <div class="skateboards-header-top-actions">
+          <a href="craft/new"
+            ><app-button accent="red" type="round">Add New</app-button></a
+          >
         </div>
+      </div>
 
-        <!-- Pagination Items section: display if there is more than 1 page -->
-        <div class="skateboards-paginate" *ngIf="pages>1">
-            <!-- <div class="skateboards-paginate-inner"> -->
-            <div class="skateboards-paginate-left paginate-item">
-                <i class="ri-arrow-left-line">
-                </i>
-            </div>
-            <div class="skateboards-paginate-pages">
-                <a class="skateboards-paginate-page-first paginate-item active-paginate">
-                    1
-                </a>
-                <div class="skateboards-paginate-page-label">
-                    out of
-                </div>
-                <a class="skateboards-paginate-page-last paginate-item">
-                    {{pages}}
-                </a>
-            </div>
-            <div class="skateboards-paginate-right paginate-item">
-                <i class="ri-arrow-right-line"></i>
-            </div>
-            <!-- </div> -->
+      <!-- Header Section: Bottom Filter  -->
+      <div class="skateboards-header-btm">
+        <div class="skateboards-header-btm-filter-wrap">
+          <app-dropdown
+            class="filter-dropdown"
+            [label]="label1"
+            [options]="filterOptions1"
+            idPos="0"
+          ></app-dropdown>
+          <app-dropdown
+            class="filter-dropdown"
+            [label]="label2"
+            [options]="filterOptions2"
+            idPos="1"
+          ></app-dropdown>
+          <app-dropdown
+            class="filter-dropdown"
+            [label]="label3"
+            [options]="filterOptions3"
+            idPos="2"
+          ></app-dropdown>
         </div>
-
+        <app-search-bar style="width: -webkit-fill-available"></app-search-bar>
+        <div class="skateboards-header-btm-sort-wrap">
+          <app-dropdown
+            class="filter-dropdown"
+            [label]="label4"
+            [options]="filterOptions4"
+            idPos="3"
+          ></app-dropdown>
+          <app-dropdown
+            class="filter-dropdown"
+            [label]="label5"
+            [options]="filterOptions5"
+            idPos="4"
+          ></app-dropdown>
+        </div>
+      </div>
     </div>
+
+    <!-- Skateboard Items section -->
+    <div class="skateboards-items">
+      <app-gridlayout [gap]="20">
+        <div
+          class="grid-item"
+          *ngFor="let skateboardItem of skateboardCollection"
+        >
+          <app-product-card
+            [type]="skateboardItem?.configuration?.board_type?.name"
+            [craftedBy]="skateboardItem?.craftedBy"
+            [avatar]="skateboardItem?.configuration?.board_type?.avatar"
+            [location]="skateboardItem?.location"
+            [price]="skateboardItem?.price"
+            [id]="skateboardItem?.id"
+          ></app-product-card>
+        </div>
+      </app-gridlayout>
+    </div>
+
+    <!-- Pagination Items section: display if there is more than 1 page -->
+    <div class="skateboards-paginate" *ngIf="pages > 1">
+      <!-- <div class="skateboards-paginate-inner"> -->
+      <div class="skateboards-paginate-left paginate-item">
+        <i class="ri-arrow-left-line"> </i>
+      </div>
+      <div class="skateboards-paginate-pages">
+        <a
+          class="skateboards-paginate-page-first paginate-item active-paginate"
+        >
+          1
+        </a>
+        <div class="skateboards-paginate-page-label">out of</div>
+        <a class="skateboards-paginate-page-last paginate-item">
+          {{ pages }}
+        </a>
+      </div>
+      <div class="skateboards-paginate-right paginate-item">
+        <i class="ri-arrow-right-line"></i>
+      </div>
+    </div>
+  </div>
 </div>

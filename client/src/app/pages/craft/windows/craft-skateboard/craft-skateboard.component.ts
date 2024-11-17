@@ -11,13 +11,9 @@ import { CraftSuccessComponent } from '../../component/craft-success/craft-succe
 @Component({
   selector: 'app-craft-skateboard',
   standalone: true,
-  imports: [
-    CommonModule,
-    CraftSuccessComponent,
-    ButtonComponent
-  ],
+  imports: [CommonModule, CraftSuccessComponent, ButtonComponent],
   templateUrl: './craft-skateboard.component.html',
-  styleUrl: './craft-skateboard.component.css'
+  styleUrl: './craft-skateboard.component.css',
 })
 export class CraftSkateboardComponent implements OnInit {
   skateboardRecipe: any;
@@ -49,40 +45,44 @@ export class CraftSkateboardComponent implements OnInit {
     },
   ];
 
-  constructor(private stockneeded: StockNeededService, private form: EditSkateboardConfigService,
-    private skateboard: SkateboardService, private router: Router) { }
+  constructor(
+    private stockneeded: StockNeededService,
+    private form: EditSkateboardConfigService,
+    private skateboard: SkateboardService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.form.skateboardForm.subscribe(frm => this.skateboardForm = frm)
-    this.stockneeded.getSingleStockNeeded(this.skateboardForm?.stockNeeded)
-      .subscribe(recipe => {
-        // this.skateboardRecipe = recipe; 
+    this.form.skateboardForm.subscribe((frm) => (this.skateboardForm = frm));
+    this.stockneeded
+      .getSingleStockNeeded(this.skateboardForm?.stockNeeded)
+      .subscribe((recipe) => {
         console.log(recipe);
         this.price = recipe?.price;
-        this.selectedItems[0].quantity = recipe.board_type
-        this.selectedItems[1].quantity = recipe.trucks
-        this.selectedItems[2].quantity = recipe.wheels
-        this.selectedItems[3].quantity = recipe.bearings
-        this.selectedItems[4].quantity = recipe.board_skin
+        this.selectedItems[0].quantity = recipe.board_type;
+        this.selectedItems[1].quantity = recipe.trucks;
+        this.selectedItems[2].quantity = recipe.wheels;
+        this.selectedItems[3].quantity = recipe.bearings;
+        this.selectedItems[4].quantity = recipe.board_skin;
       });
   }
 
   setQty(e: any) {
     this.form.setSkateboardQuantity(e.target.value);
-    this.skateboardQty = e.target.value
-    // console.log(e.target.value)
+    this.skateboardQty = e.target.value;
   }
 
   createSkateboard() {
     for (let index = 0; index < this.skateboardQty; index++) {
-      this.skateboard.createSkateboard(this.skateboardForm).subscribe(created => {
-        console.log("Success: " + JSON.stringify(created));
-        console.log("Amount of times looped: " + index)
-      });
-      if ((index + 1) == this.skateboardQty) {
-        this.isSuccessPopupVisible = true
+      this.skateboard
+        .createSkateboard(this.skateboardForm)
+        .subscribe((created) => {
+          console.log('Success: ' + JSON.stringify(created));
+          console.log('Amount of times looped: ' + index);
+        });
+      if (index + 1 == this.skateboardQty) {
+        this.isSuccessPopupVisible = true;
       }
     }
-
   }
 }

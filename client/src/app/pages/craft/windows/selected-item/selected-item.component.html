@@ -1,31 +1,55 @@
-<div [class]="isSelectorActive?'dashboard-editor-selected-item':'dashboard-editor-selected-item inactiveSelector-gap'">
-    <div class="dashboard-editor-selected-item-head">
-        <div class="dashboard-editor-selected-item-head-title"> Selected Item</div>
-        <div class="dashboard-editor-selected-item-head-actions">
-            <div class="dashboard-editor-selected-item-head-button">
-                <i class="ri-close-line"></i>
-            </div>
-            <div class="dashboard-editor-selected-item-head-button" (click)="activateSelector()">
-                <i *ngIf="isSelectorActive" class="ri-arrow-down-wide-line"></i>
-                <i *ngIf="!isSelectorActive" class="ri-arrow-up-wide-line"></i>
-            </div>
-        </div>
+<div
+  [class]="
+    isSelectorActive
+      ? 'dashboard-editor-selected-item'
+      : 'dashboard-editor-selected-item inactiveSelector-gap'
+  "
+>
+  <div class="dashboard-editor-selected-item-head">
+    <div class="dashboard-editor-selected-item-head-title">Selected Item</div>
+    <div class="dashboard-editor-selected-item-head-actions">
+      <div class="dashboard-editor-selected-item-head-button">
+        <i class="ri-close-line"></i>
+      </div>
+      <div
+        class="dashboard-editor-selected-item-head-button"
+        (click)="activateSelector()"
+      >
+        <i *ngIf="isSelectorActive" class="ri-arrow-down-wide-line"></i>
+        <i *ngIf="!isSelectorActive" class="ri-arrow-up-wide-line"></i>
+      </div>
     </div>
-    <div [class]="isSelectorActive?'dashboard-editor-selected-item-content activeSelector':'inactiveSelector'">
-        <img src="" alt="Selected Part" class="dashboard-editor-selected-item-content-img" [src]="imgUrl" />
+  </div>
+  <div
+    [class]="
+      isSelectorActive
+        ? 'dashboard-editor-selected-item-content activeSelector'
+        : 'inactiveSelector'
+    "
+  >
+    <img
+      src=""
+      alt="Selected Part"
+      class="dashboard-editor-selected-item-content-img"
+      [src]="imgUrl"
+    />
+  </div>
+  <div
+    [class]="
+      isSelectorActive
+        ? 'dashboard-editor-selected-item-details'
+        : 'inactiveSelector'
+    "
+  >
+    <div
+      class="selected-item-detail dashboard-editor-selected-item-details-itemname"
+    >
+      {{ selected?.name }}
     </div>
-    <div [class]="isSelectorActive?'dashboard-editor-selected-item-details':'inactiveSelector'">
-        <div class="selected-item-detail dashboard-editor-selected-item-details-itemname">
-            {{selected?.name}}
-        </div>
-        <!-- <div class="selected-item-detail dashboard-editor-selected-item-details-parent">
-            Wheels
-        </div>
-        <div class="selected-item-detail dashboard-editor-selected-item-details-position">
-            Left Back
-        </div> -->
-        <div class="selected-item-detail dashboard-editor-selected-item-details-indexes">
-            {{selected?.pos}}
-        </div>
+    <div
+      class="selected-item-detail dashboard-editor-selected-item-details-indexes"
+    >
+      {{ selected?.pos }}
     </div>
+  </div>
 </div>

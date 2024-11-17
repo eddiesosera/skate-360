@@ -1,60 +1,59 @@
 .texture-grunge {
-    width: 100%;
-    position: fixed;
-    z-index: 99999997;
-    object-fit: cover;
-    opacity: 0.075;
-    mix-blend-mode: lighten;
-    pointer-events: none;
+  width: 100%;
+  position: fixed;
+  z-index: 99999997;
+  object-fit: cover;
+  opacity: 0.075;
+  mix-blend-mode: lighten;
+  pointer-events: none;
 }
 
 .texture-led {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 99999999;
-    object-fit: cover;
-    opacity: 0.2;
-    mix-blend-mode: soft-light;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999999;
+  object-fit: cover;
+  opacity: 0.2;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 .texture-noise {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 99999998;
-    object-fit: cover;
-    opacity: 0.15;
-    mix-blend-mode: soft-light;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999998;
+  object-fit: cover;
+  opacity: 0.15;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 .background-video-wrap {
-    /* background: blue; */
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 .background-video-blur {
-    background: #080909;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.95;
-    filter: blur(20px);
+  background: #080909;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.95;
+  filter: blur(20px);
 }
 
 .background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0 auto;
-    z-index: -2;
-    filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  z-index: -2;
+  filter: blur(10px);
 }

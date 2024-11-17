@@ -1,163 +1,162 @@
 .onboarding {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .onboarding-left {
-    width: 60%;
+  width: 60%;
 }
 
 .onboarding-left-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    background: #020202;
-    border: 1px solid #272A2A;
-    font-size: 21px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background: #020202;
+  border: 1px solid #272a2a;
+  font-size: 21px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
 }
 
 .onboarding-left-img-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .onboarding-left-text {
-    position: absolute;
-    font-size: 128px;
-    font-family: Neue Haas Grotesk Display Pro;
-    font-weight: 800;
-    text-transform: uppercase;
-    /* -webkit-text-stroke: #020202 1px; */
+  position: absolute;
+  font-size: 128px;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .onboarding-left-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .onboarding-form {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .onboarding-form-wrap {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #272A2A;
-    gap: 50px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #272a2a;
+  gap: 50px;
 }
 
 .onboarding-form-top {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .onboarding-form-top-head {
-    font-family: League Gothic;
-    font-size: 64px;
-    text-transform: uppercase;
-    color: #FD1313;
+  font-family: League Gothic;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #fd1313;
 }
 
 .onboarding-form-top-description {
-    font-family: IBM Plex Mono;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #FD1313;
+  font-family: IBM Plex Mono;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fd1313;
 }
 
 .onboarding-form-mid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .onboarding-form-mid-input-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .onboarding-form-mid-submit-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .onboarding-form-mid-input {
-    padding: 12px 15px;
-    width: 280px;
-    outline: none;
-    background: #0A0D0D;
-    border: 1px solid #353738;
-    color: #fff;
-    font-family: IBM Plex Mono;
+  padding: 12px 15px;
+  width: 280px;
+  outline: none;
+  background: #0a0d0d;
+  border: 1px solid #353738;
+  color: #fff;
+  font-family: IBM Plex Mono;
 }
 
 .onboarding-form-btm {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .onboarding-form-btm-forget {
-    font-family: League Gothic;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #ffffff;
+  font-family: League Gothic;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 #form-btn-hide {
-    display: none;
+  display: none;
 }
 
 .onboarding-form-mid-verify-success {
-    height: 40px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: rgba(112, 202, 112, 0.05);
-    border: 1px solid rgba(50, 205, 50, 0.125);
-    color: rgb(153, 245, 153);
-    font-family: IBM Plex Mono;
-    font-size: 0.4rem;
-    text-transform: uppercase;
-    cursor: default;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(112, 202, 112, 0.05);
+  border: 1px solid rgba(50, 205, 50, 0.125);
+  color: rgb(153, 245, 153);
+  font-family: IBM Plex Mono;
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .onboarding-form-mid-verify-fail {
-    height: 40px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    background: rgba(202, 133, 112, 0.05);
-    border: 1px solid rgba(202, 133, 112, 0.125);
-    color: rgb(245, 168, 145);
-    font-family: IBM Plex Mono;
-    font-size: 0.4rem;
-    text-transform: uppercase;
-    cursor: default;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(202, 133, 112, 0.05);
+  border: 1px solid rgba(202, 133, 112, 0.125);
+  color: rgb(245, 168, 145);
+  font-family: IBM Plex Mono;
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .underline {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    font-weight: 600;
-    cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  cursor: pointer;
 }

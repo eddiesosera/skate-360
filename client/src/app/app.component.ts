@@ -2,25 +2,18 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navigation/navbar/navbar.component';
-import 'atropos/css'
-import 'atropos/atropos.css'
+import 'atropos/css';
+import 'atropos/atropos.css';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [HomeComponent, RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-
 export class AppComponent implements AfterViewInit {
   backgroundVideo = '../assets/video/grunge_textures.mp4';
-
-  // constructor(private navbar: NavbarComponent) {
-  //   if (navbar.currentPage === 'skateboards') {
-  //     navbar.position = 'sticky'
-  //   }
-  // }
 
   autoPlayVideo(): void {
     const videoElement = document.querySelector('.background-video');
@@ -28,11 +21,11 @@ export class AppComponent implements AfterViewInit {
     if (videoElement instanceof HTMLVideoElement) {
       videoElement.play();
     } else {
-      console.error("Video element not found or is not an HTMLVideoElement.");
+      console.error('Video element not found or is not an HTMLVideoElement.');
     }
   }
 
   ngAfterViewInit(): void {
-    this.autoPlayVideo()
+    this.autoPlayVideo();
   }
 }
