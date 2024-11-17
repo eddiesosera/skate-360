@@ -55,9 +55,6 @@ export class InventoryComponent {
       });
 
       for (let location of locations) {
-        console.log(location);
-        console.log(location.id);
-        console.log(this.id);
         if (location.id == this.id) {
           this.currentlocation = location;
           this.skateboards = location.skateboards;

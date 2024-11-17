@@ -1,6 +1,6 @@
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import Muuri from 'muuri'
+import Muuri from 'muuri';
 import { ButtonComponent } from '../../components/inputs/button/button.component';
 import { EditorComponent } from './windows/editor/editor.component';
 import { ToolOptionComponent } from './windows/tool-option/tool-option.component';
@@ -24,10 +24,10 @@ import { EditSkateboardConfigService } from '../../services/page/craft/edit-skat
     ToolOptionComponent,
     ConfigureToolOptionComponent,
     CraftSetupComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   templateUrl: './craft.component.html',
-  styleUrl: './craft.component.css'
+  styleUrl: './craft.component.css',
 })
 export class CraftComponent implements OnInit, AfterViewChecked {
   grid: any;
@@ -37,21 +37,21 @@ export class CraftComponent implements OnInit, AfterViewChecked {
   boardGrid: any;
 
   loggedInUser?: User;
-  loggedInState: any
+  loggedInState: any;
 
-  constructor(private router: Router, private editSkateboard: EditSkateboardConfigService) { }
+  constructor(
+    private router: Router,
+    private editSkateboard: EditSkateboardConfigService
+  ) {}
 
   ngOnInit() {
     // If user not logged in route to onboarding
-    let userParsed = JSON.parse(localStorage.getItem('loggedInUser')!)
+    let userParsed = JSON.parse(localStorage.getItem('loggedInUser')!);
     this.loggedInUser = JSON.parse(userParsed.user);
-
-    console.log(this.loggedInState);
     this.loggedInState = localStorage.getItem('isLoggedIn');
 
     this.editSkateboard.skateboardForm.subscribe((form) => {
-      this.loggedInState = localStorage.getItem('isLoggedIn')
-      console.log(JSON.parse(this.loggedInState));
+      this.loggedInState = localStorage.getItem('isLoggedIn');
       if (this.loggedInState === 'false') {
         this.router.navigate(['/onboarding']);
       }
@@ -61,5 +61,4 @@ export class CraftComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     console.log(this.loggedInState);
   }
-
 }
